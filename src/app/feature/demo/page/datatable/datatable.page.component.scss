@@ -1,0 +1,37 @@
+::ng-deep .styled-table .youi-datatable-thead-tr {
+  background: darkblue;
+}
+
+::ng-deep .styled-table .youi-datatable-tbody-tr {
+  background-color: lightblue;
+}
+
+::ng-deep .styled-table .youi-datatable-tbody-tr:hover {
+  background: rgb(244, 186, 252);
+}
+
+::ng-deep .styled-table .youi-datatable-th-select-input:checked, ::ng-deep .styled-table .youi-datatable-td-select-input:checked{
+  background-color: black;
+}
+
+::ng-deep .styled-table .youi-datatable-tbody-tr-selected {
+  background: pink;
+}
+
+::ng-deep .styled2-table .youi-datatable-th-select-input:checked, ::ng-deep .styled2-table .youi-datatable-td-select-input:checked{
+  background-color: red;
+}
+
+::ng-deep .styled2-table .youi-datatable-th-name {
+  background: orange;
+  color: black;
+}
+
+::ng-deep .styled2-table .youi-datatable-td-username {
+  background-color: rgb(224, 238, 143);
+}
+
+::ng-deep .styled2-table .youi-datatable-td-select-input[type=checkbox]:disabled, ::ng-deep .styled2-table .youi-datatable-td-select-input[type=radio]:disabled,
+::ng-deep .styled2-table .youi-datatable-td-select-input[type=checkbox]:disabled:hover, ::ng-deep .styled2-table .youi-datatable-td-select-input[type=radio]:disabled:hover {
+  background: rgb(255,0,0,0.2);
+}

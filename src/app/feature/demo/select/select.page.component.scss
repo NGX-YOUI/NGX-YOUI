@@ -1,0 +1,42 @@
+::ng-deep .custom-select-body {
+  @apply bg-yellow-100 border border-yellow-300 text-yellow-600;
+}
+::ng-deep .custom-select-body:focus {
+  @apply border-2 border-yellow-400;
+}
+
+::ng-deep .custom-select-option-menu {
+  @apply shadow-md border-0 bg-orange-200;
+}
+::ng-deep .custom-select-option {
+  @apply text-orange-700;
+}
+::ng-deep .custom-select-option:hover {
+  @apply bg-orange-300;
+}
+::ng-deep .custom-select-option--active {
+  @apply bg-orange-500 text-white;
+}
+
+::ng-deep .custom-youi-select-option {
+  @apply bg-blue-200 text-blue-500;
+}
+::ng-deep .custom-youi-select-option:hover {
+  @apply bg-blue-300;
+}
+::ng-deep .custom-youi-select-option--active {
+  @apply bg-blue-500 text-white;
+}
+::ng-deep .custom-youi-select-option2 {
+  @apply bg-green-200 text-green-500;
+}
+::ng-deep .custom-youi-select-option2:hover {
+  @apply bg-green-300;
+}
+::ng-deep .custom-youi-select-option2--active {
+  @apply bg-green-500 text-white;
+}
+
+::ng-deep .custom-select-body-disabled {
+  @apply bg-yellow-100 border-yellow-200 text-yellow-300;
+}

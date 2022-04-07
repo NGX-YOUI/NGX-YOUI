@@ -1,0 +1,17 @@
+<ng-container *ngIf="visible">
+  <div class="custom-dialog-component-title">
+    Custom Dialog - {{customTitle}}
+  </div>
+  <div class="custom-dialog-component-body">
+    <label class="label" for="">{{customBody}}</label>
+    <input
+      class="field-input"
+      [(ngModel)]="value"
+      type="text"
+    />
+  </div>
+  <div class="custom-dialog-component-actions">
+    <button class="btn btn-block btn-yellow" (click)="handleOK()">OK</button>
+    <button class="btn btn-block btn-outline btn-gray" (click)="handleClose()">CLOSE</button>
+  </div>
+</ng-container>

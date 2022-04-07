@@ -1,0 +1,32 @@
+body {
+  font-size: 14px;
+}
+
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+@import './assets/style/**/*.scss';
+@import '../dist/ngx-youi/style/index.css';
+
+@import 'tailwindcss/utilities';
+/* You can add global styles to this file, and also import other style files */
+
+@import '~flexboxgrid/css/flexboxgrid.css';
+
+.action {
+  @apply flex flex-row gap-x-2;
+}
+
+.action-column {
+  @apply flex flex-row gap-x-2 justify-center  items-center;
+}
+
+@media only screen and (max-width: theme('screens.sm')) {
+  .action {
+    @apply flex-col gap-y-2;
+  }
+  
+  .action-column {
+    @apply flex-col gap-y-2;
+  }
+}

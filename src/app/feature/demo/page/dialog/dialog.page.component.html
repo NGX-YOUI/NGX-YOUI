@@ -1,0 +1,131 @@
+<div class="page-wrapper">
+  <youi-breadcrumb class="card breadcrumb">
+    <youi-breadcrumb-item>
+      UI Component
+    </youi-breadcrumb-item>
+    <youi-breadcrumb-item>
+      Dialog
+    </youi-breadcrumb-item>
+  </youi-breadcrumb>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Setup</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.setup.expanded = !sampleCode.setup.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.setup"></app-code-tab>
+
+    <div class="pl-4">
+      <ul class="list-decimal">
+        <li>import component css in project css file</li>
+        <li>import component module in your module file</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Basic Style</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.basicStyle.expanded = !sampleCode.basicStyle.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.basicStyle"></app-code-tab>
+
+    <div class="space-x-2">
+      <button class="btn btn-gray" (click)="openBasicDialog()" >basic</button>
+      <button class="btn btn-green" (click)="openSuccessDialog()">Success</button>
+      <button class="btn btn-cyan" (click)="openInfoDialog()">Info</button>
+      <button class="btn btn-yellow" (click)="openWarningDialog()">Warning</button>
+      <button class="btn btn-red" (click)="openAlertDialog()">Alert</button>
+      <button class="btn btn-pink" (click)="openCustomStyleDialog()">Custom Style</button>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Confirm</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.confirm.expanded = !sampleCode.confirm.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.confirm"></app-code-tab>
+
+    <div class="space-x-2">
+      <button (click)="openConfirmDialog()" class="btn btn-blue">confirm</button>
+      <button (click)="openConfirmStyleDialog()" class="btn btn-pink">custom confirm</button>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Backdrop</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.backdrop.expanded = !sampleCode.backdrop.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.backdrop"></app-code-tab>
+
+    <div class="space-x-2">
+      <button (click)="openBackdropDialog()" class="btn btn-red">Custom backdrop</button>
+      <button (click)="openBlockBackdropDialog()" class="btn btn-gray">Block backdrop</button>
+      <button (click)="openNoBackdropDialog()" class="btn btn-gray btn-outline">No backdrop</button>
+    </div>
+  </div>
+  
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Close outside dialog</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.closeOutsideDialog.expanded = !sampleCode.closeOutsideDialog.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.closeOutsideDialog"></app-code-tab>
+
+    <div class="space-x-2">
+      <button (click)="openAndCloseAfter3Seconds()" class="btn btn-gray">Close after 3 seconds</button>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Template</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.template.expanded = !sampleCode.template.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.template"></app-code-tab>
+
+    <div class="space-x-2">
+      <button (click)="openTemplate()" class="btn btn-gray">Template</button>
+
+      <ng-template #titleTemplate let-dialog>
+        title template
+      </ng-template>
+
+      <ng-template #bodyTemplate let-dialog>
+        body template {{dialog.dialogData}}
+      </ng-template>
+
+      <ng-template #actionsTemplate let-dialog>
+        <button class="btn btn-green" (click)="dialog.handleClose()">Button Template</button>
+      </ng-template>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Custom Component</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.customComponent.expanded = !sampleCode.customComponent.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.customComponent"></app-code-tab>
+
+    <div class="space-x-2">
+      <button (click)="openCustomComponent()" class="btn btn-gray">Custom Component</button>
+    </div>
+  </div>
+</div>

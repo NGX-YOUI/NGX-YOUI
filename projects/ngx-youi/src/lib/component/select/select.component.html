@@ -1,0 +1,15 @@
+<div class="select-body-wrapper" [attr.tabindex]="attrTabindex" [ngClass]="dynamicBodyCSSClass" (click)="toggleSelect()">
+  <div class="select-body-value" [innerHTML]="selectedOption?.label">
+</div>
+
+  <span class="select-body-arrow material-icons" [class.select-body-arrow-rotate]="isOpenOption">expand_more</span>
+</div>
+
+<div class="select-options-wrapper" [ngClass]="optionsMenuCSSClass" *ngIf="isOpenOption">
+  <ng-container *ngIf="optionsComponents?.length > 0">
+    <ng-content></ng-content>
+  </ng-container>
+  <ng-container *ngIf="optionsComponents?.length <= 0">
+    <youi-select-option *ngFor="let option of options" [label]="option.label" [value]="option.value"></youi-select-option>
+  </ng-container>
+</div>

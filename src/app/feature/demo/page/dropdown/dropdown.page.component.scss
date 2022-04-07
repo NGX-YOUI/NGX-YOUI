@@ -1,0 +1,7 @@
+::ng-deep .custom-dropdown {
+  @apply bg-gray-700 text-white shadow-none;
+}
+
+::ng-deep .custom-dropdown-title {
+  @apply bg-yellow-300 text-yellow-700 p-3 text-lg text-center font-bold;
+}

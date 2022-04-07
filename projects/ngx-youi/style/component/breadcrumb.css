@@ -1,0 +1,24 @@
+youi-breadcrumb {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+youi-breadcrumb-item, .breadcrumb-item-content {
+  display: flex;
+  align-items: center;
+
+  flex: 0 0 auto;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.breadcrumb-item__icon {
+  margin-right: 5px;
+}
+
+.breadcrumb-item-content-active {
+  color: #888;
+}

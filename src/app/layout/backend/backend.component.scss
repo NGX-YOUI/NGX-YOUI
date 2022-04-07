@@ -1,0 +1,82 @@
+.app-layout {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.menu-sidebar {
+  background: #222;
+}
+
+.header-trigger {
+  padding: 0 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all .3s,padding 0s;
+}
+
+.header-trigger:hover {
+  color: #1890ff;
+}
+
+.logo {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.backend-page-container {
+  background: #efefef;
+  min-width: 0;
+}
+
+.app-header {
+  height: 64px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,21,41,.08);
+}
+
+.backend-page-container__inner {
+  padding: 15px;
+}
+
+.user-btn-wrapper {
+  @apply h-full;
+}
+
+.user-btn {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 0.9rem;
+  transition: all ease 0.3s;
+}
+
+.user-btn:hover {
+  background: #efefef;
+}
+
+::ng-deep .user-dropdown {
+  @apply bg-white shadow-md;
+}
+
+::ng-deep .sider-youi-menu-item {
+  color: theme('colors.gray.400');
+}
+
+::ng-deep .sider-youi-menu-item:hover {
+  background-color: initial;
+  color: white;
+}
+
+::ng-deep .sider-youi-menu-item-active, ::ng-deep .sider-youi-menu-item-active > * {
+  color: white;
+}
+
+::ng-deep .footer {
+  padding: 15px;
+  color: white;
+  background: #444;
+  box-shadow: 0 -2px 5px rgba(0,21,41,.3);
+}

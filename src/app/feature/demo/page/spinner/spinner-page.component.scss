@@ -1,0 +1,23 @@
+::ng-deep .custom-svg {
+  fill: white;
+  stroke: white;
+  height: 40%;
+}
+
+::ng-deep .custom-backdrop {
+  @apply bg-red-500/90;
+}
+
+::ng-deep .custom-text {
+  margin-top: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+::ng-deep .custom-icon-template {
+  @apply animate-spin;
+  font-size: 32px;
+  line-height: 0.5;
+  color: white;
+}

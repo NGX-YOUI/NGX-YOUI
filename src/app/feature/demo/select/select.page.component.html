@@ -1,0 +1,117 @@
+<div class="page-wrapper">
+  <youi-breadcrumb class="card breadcrumb">
+    <youi-breadcrumb-item>
+      UI Component
+    </youi-breadcrumb-item>
+    <youi-breadcrumb-item>
+      Select
+    </youi-breadcrumb-item>
+  </youi-breadcrumb>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Setup</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.setup.expanded = !sampleCode.setup.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.setup"></app-code-tab>
+
+    <div class="pl-4">
+      <ul class="list-decimal">
+        <li>import component css in project css file</li>
+        <li>import component module in your module file</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card p-3">
+    <div class="card-title">
+      <span>Basic</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.basic.expanded = !sampleCode.basic.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.basic"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-select [options]="options">
+      </youi-select>
+
+      <youi-select [(ngModel)]="ngModelBinding" [options]="options">
+      </youi-select>
+  
+      <youi-select [(ngModel)]="ngModelBinding" [disableControl]="true" [options]="options">
+      </youi-select>
+    </div>
+  </div>
+
+  <div class="card p-3">
+    <div class="card-title">
+      <span>Style</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.style.expanded = !sampleCode.style.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.style"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-select [options]="options" [(ngModel)]="ngModelBinding"
+                   bodyCSSClass="custom-select-body" 
+                   optionsMenuCSSClass="custom-select-option-menu"
+                   optionCSSClass="custom-select-option"
+                   optionActiveCSSClass="custom-select-option--active">
+      </youi-select>
+
+      <youi-select bodyCSSClass="custom-select-body" [(ngModel)]="ngModelBinding"
+                   optionsMenuCSSClass="custom-select-option-menu"
+                   optionCSSClass="custom-select-option"
+                   optionActiveCSSClass="custom-select-option--active">
+        <youi-select-option label="test" [value]="0"></youi-select-option>
+        <youi-select-option label="test2" [value]="1"></youi-select-option>
+      </youi-select>
+
+      <youi-select bodyCSSClass="custom-select-body" [(ngModel)]="ngModelBinding"
+                   optionsMenuCSSClass="custom-select-option-menu"
+                   optionCSSClass="custom-select-option"
+                   optionActiveCSSClass="custom-select-option--active"
+                  >
+        <youi-select-option class="custom-youi-select-option" activeCSSClass="custom-youi-select-option--active" label="test" [value]="0"></youi-select-option>
+        <youi-select-option class="custom-youi-select-option2" activeCSSClass="custom-youi-select-option2--active" label="test2" [value]="1"></youi-select-option>
+        <youi-select-option label="test3" [value]="3"></youi-select-option>
+        <youi-select-option label="test4" [value]="4"></youi-select-option>
+      </youi-select>
+
+      <youi-select [options]="options" [(ngModel)]="ngModelBinding"
+                   [disableControl]="true"
+                   bodyCSSClass="custom-select-body" 
+                   bodyDisableCSSClass="custom-select-body-disabled"
+                   optionsMenuCSSClass="custom-select-option-menu"
+                   optionCSSClass="custom-select-option"
+                   optionActiveCSSClass="custom-select-option--active">
+      </youi-select>
+    </div>
+  </div>
+  
+  <div class="card p-3">
+    <div class="card-title">
+      <span>With youi-select-option component</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.withOptionTag.expanded = !sampleCode.withOptionTag.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.withOptionTag"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-select [(ngModel)]="ngModelBinding">
+        <youi-select-option label="test" [value]="0"></youi-select-option>
+        <youi-select-option label="test2" [value]="1"></youi-select-option>
+      </youi-select>
+  
+      <youi-select [(ngModel)]="ngModelBinding">
+        <youi-select-option [value]="0"><div class="flex items-center"><span class="material-icons">search</span> test</div></youi-select-option>
+        <youi-select-option [value]="1"><div class="flex items-center"><span class="material-icons">search</span> test2</div></youi-select-option>
+      </youi-select>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="tab-panels-title" [ngClass]="tabPanelTitleCSSClass">
+  <div class="tab-panels-title-button" [ngClass]="getTabPanelButtonCSS(tabPanel.youiTabPanel)"
+      [class.tab-panels-title-button--active]="activeTabPanel === tabPanel.youiTabPanel" 
+      *ngFor="let tabPanel of tabPanels"
+      (click)="activeTabPanel = tabPanel.youiTabPanel">
+    {{ tabPanel.label }}
+  </div>
+</div>
+
+<div class="tab-panels-content" [ngClass]="tabPanelContentCSSClass">
+  <ng-container #tabPanelContent></ng-container>
+</div>

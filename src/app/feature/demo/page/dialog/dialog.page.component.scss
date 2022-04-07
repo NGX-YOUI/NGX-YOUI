@@ -1,0 +1,32 @@
+::ng-deep .custom-dialog-title {
+  @apply bg-pink-200 text-pink-700;
+}
+
+::ng-deep .custom-dialog-body {
+  @apply text-pink-600;
+}
+
+::ng-deep .custom-dialog-actions {
+  @apply bg-pink-200;
+}
+
+::ng-deep .custom-dialog-actions__button {
+  @apply shadow-md;
+}
+
+::ng-deep .custom-dialog-actions__button-ok:hover {
+  @apply bg-pink-500;
+}
+::ng-deep .custom-dialog-actions__button-ok, ::ng-deep .custom-dialog-actions__button-ok:active {
+  @apply bg-pink-600;
+}
+
+::ng-deep .custom-dialog-actions__button-close {
+  @apply bg-transparent border text-gray-600 border-gray-500;
+}
+::ng-deep .custom-dialog-actions__button-close:hover {
+  @apply bg-gray-500 text-white;
+}
+::ng-deep .custom-dialog-actions__button-close:active {
+  @apply bg-gray-600;
+}

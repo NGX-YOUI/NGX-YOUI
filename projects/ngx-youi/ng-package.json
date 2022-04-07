@@ -1,0 +1,11 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/ngx-youi",
+  "allowedNonPeerDependencies": ["@angular/cdk", "material-icons", "svg-loaders"],
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  },
+  "assets": [
+    "style/**/*.css"
+  ]
+}

@@ -1,0 +1,78 @@
+<table class="youi-datatable" [ngClass]="[tableCSSClass]">
+  <thead class="youi-datatable-thead">
+    <ng-container *ngTemplateOutlet="getTableTemplate('headerTemplate')?.template; context: { $implicit: columns }">
+    </ng-container>
+    
+    <tr class="youi-datatable-thead-tr" *ngIf="!getTableTemplate('headerTemplate')">
+      <th class="youi-datatable-th youi-datatable-th-select" *ngIf="selectedMode !== '' && !getTableTemplate('headerTemplate') && !getTableTemplate('bodyTemplate')">
+        <input
+          *ngIf="selectedMode === 'checkbox'"
+          class="youi-datatable-th-select-input"
+          type="checkbox"
+          [checked]="
+            selectedList.size === tableData.length &&
+            tableData.length > 0
+          "
+          [indeterminate]="
+            selectedList.size !== tableData.length &&
+            selectedList.size > 0
+          "
+          (input)="toggleAllSelected($event)"
+        />
+      </th>
+      <ng-container *ngFor="let column of columns">
+        <th class="youi-datatable-th" [ngClass]="'youi-datatable-th-' + column.name" *ngIf="!getTableTemplate(column.name, 'header')">
+          {{ column.label }}
+        </th>
+        <th class="youi-datatable-th" [ngClass]="'youi-datatable-th-' + column.name" *ngIf="getTableTemplate(column.name, 'header')">
+          <ng-container 
+            *ngTemplateOutlet="
+            getTableTemplate(column.name, 'header').template;
+              context: { $implicit: column }
+          "></ng-container>
+        </th>
+      </ng-container>
+    </tr>
+  </thead>
+  <tbody class="youi-datatable-tbody">
+    <ng-container *ngTemplateOutlet="getTableTemplate('bodyTemplate')?.template context: { $implicit: tableData, columns }">
+    </ng-container>
+
+    <ng-container *ngIf="!getTableTemplate('bodyTemplate')">
+      <tr class="youi-datatable-tbody-tr" [ngClass]="rowCSSClassFn(rowData)" [class.youi-datatable-tbody-tr-selected]="selectedList.has(rowData)"  *ngFor="let rowData of tableData">
+        <td class="youi-datatable-td youi-datatable-td-select" *ngIf="selectedMode !== '' && !getTableTemplate('headerTemplate') && !getTableTemplate('bodyTemplate')">
+          <input
+            *ngIf="selectedMode === 'checkbox'"
+            [attr.disabled]="rowSelectDisableFn(rowData)"
+            class="youi-datatable-td-select-input"
+            [checked]="selectedList.has(rowData)"
+            type="checkbox"
+            (click)="toggleSelectedData(rowData)"
+          />
+          <input
+            *ngIf="selectedMode === 'radio'"
+            [attr.disabled]="rowSelectDisableFn(rowData)"
+            class="youi-datatable-td-select-input"
+            [checked]="selectedList.has(rowData)"
+            type="radio"
+            (click)="toggleSelectedData(rowData)"
+          />
+        </td>
+  
+        <ng-container *ngFor="let column of columns">
+          <td class="youi-datatable-td" [ngClass]="'youi-datatable-td-' + column.name" *ngIf="!getTableTemplate(column.name, 'body')">
+            {{ getDataByField(rowData, column.name) }}
+          </td>
+  
+          <td class="youi-datatable-td" [ngClass]="'youi-datatable-td-' + column.name" *ngIf="getTableTemplate(column.name, 'body')">
+            <ng-container 
+              *ngTemplateOutlet="
+              getTableTemplate(column.name, 'body').template;
+                context: { $implicit: getDataByField(rowData, column.name), rowData, columns }
+            "></ng-container>
+          </td>
+        </ng-container>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

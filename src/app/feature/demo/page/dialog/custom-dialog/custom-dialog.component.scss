@@ -1,0 +1,20 @@
+.custom-dialog-component-title {
+  @apply bg-yellow-200 text-yellow-700 font-bold text-center;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.custom-dialog-component-body {
+  padding: 15px;
+}
+
+.custom-dialog-component-actions {
+  display: flex;
+  justify-content: center;
+  padding: 0 10px 10px;
+  margin: 0 -10px;
+}
+
+.custom-dialog-component-actions > * {
+  margin: 0 15px;
+}

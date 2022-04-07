@@ -1,0 +1,30 @@
+youi-tab {
+  display: block;
+  border: 1px solid #efefef;
+}
+
+.tab-panels-title {
+  color: #666;
+  background-color: #efefef;
+  display: flex;
+  overflow-x: auto;
+}
+
+.tab-panels-title-button {
+  transition: background 0.2s ease;
+  border-top: 3px solid transparent;
+  cursor: pointer;
+  padding: 8px 10px;
+  flex: 0 0 auto;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.tab-panels-title-button:hover {
+  background-color: #ddd;
+}
+
+.tab-panels-title-button--active {
+  font-weight: bold;
+  border-top-color: #71717A;
+}

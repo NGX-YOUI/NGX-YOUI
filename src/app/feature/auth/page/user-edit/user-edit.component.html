@@ -1,0 +1,27 @@
+<div class="page-wrapper">
+  <youi-breadcrumb class="card breadcrumb">
+    <youi-breadcrumb-item>
+      Auth
+    </youi-breadcrumb-item>
+    <youi-breadcrumb-item>
+      Edit User
+    </youi-breadcrumb-item>
+  </youi-breadcrumb>
+
+  <user_crud_wrapper mode="edit" #crud_wrapper></user_crud_wrapper>
+
+  <div class="card p-5">
+    <div class="row gap-y-2">
+      <div class="col-xs-12 col-sm-6">
+        <button class="btn btn-block btn-green" (click)="submitForm()">
+          <span>Save</span>
+        </button>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <button class="btn btn-block btn-gray" routerLink="../../list">
+          <span>Back</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

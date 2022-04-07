@@ -1,0 +1,26 @@
+<div class="page-wrapper">
+  <div class="card p-2 flex gap-x-2">
+    <button
+      class="btn btn-green"
+      (click)="router.navigate(['/auth/user/edit', getFormValue('userId')])"
+    >
+      <i class="material-icons-outlined">edit</i
+      ><span>Edit</span>
+    </button>
+    <button class="btn btn-red" (click)="delete()">
+      <i class="material-icons-outlined">delete</i
+      ><span>Delete</span>
+    </button>
+  </div>
+
+  <youi-breadcrumb class="card breadcrumb">
+    <youi-breadcrumb-item>
+      Auth
+    </youi-breadcrumb-item>
+    <youi-breadcrumb-item>
+      Browse User
+    </youi-breadcrumb-item>
+  </youi-breadcrumb>
+
+  <user_crud_wrapper mode="read" #crud_wrapper></user_crud_wrapper>
+</div>

@@ -1,0 +1,19 @@
+::ng-deep .custom-breadcrumb {
+  @apply p-3 bg-red-200 rounded-md shadow-md;
+}
+
+::ng-deep .custom-breadcrumb-item {
+  @apply text-gray-600;
+}
+
+::ng-deep .custom-breadcrumb-icon {
+  @apply text-2xl;
+}
+
+::ng-deep .custom-breadcrumb-sperator {
+  @apply text-red-600;
+}
+
+::ng-deep .custom-breadcrumb--active { 
+  @apply text-blue-500;
+}

@@ -1,0 +1,85 @@
+<div class="page-wrapper">
+  <div class="card p-4">
+    <div class="card-title">
+      <span>What is NGX-YOUI ?</span>
+    </div>
+
+    <div>
+      NGX-YOUI is an Angular UI Library that can be <strong>highly customized with content and styles.</strong>
+
+      <div class="feature">
+        <h3 class="feature-title"><span class="material-icons feature-title__icon">check</span>  Customize the presentation content of components through ng-template or dynamic custom components.</h3>
+        <div class="feature-content">
+          <div class="feature-content__case">
+            <app-code-tab [sample]="sampleCode.feature1_1"></app-code-tab>
+
+            <youi-datatable
+              [tableData]="columnTemplateTable.tableData"
+              [columns]="columnTemplateTable.columns"
+            >
+              <ng-template youi-datatable-template="header-status" let-column>
+                {{ column.label }} (status)
+              </ng-template>
+
+              <ng-template
+                youi-datatable-template="body-status"
+                let-cellData
+                let-rowData="rowData"
+              >
+                {{ getOptionText("status", cellData) }} ({{ cellData }})
+              </ng-template>
+
+              <ng-template
+                youi-datatable-template="body-action"
+                let-cellData
+                let-rowData="rowData"
+              >
+                <div class="action-column">
+                  <button class="btn btn-cyan">
+                    <i class="material-icons-outlined">visibility</i
+                    ><span>Browse</span>
+                  </button>
+                  <button class="btn btn-green">
+                    <i class="material-icons-outlined">edit</i><span>Edit</span>
+                  </button>
+                </div>
+              </ng-template>
+            </youi-datatable>
+          </div>
+
+          <div class="feature-content__case">
+            <app-code-tab [sample]="sampleCode.feature1_2"></app-code-tab>
+            <button class="btn btn-gray" (click)="openCustomComponent()">Custom Component</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature">
+        <h3 class="feature-title"><span class="material-icons feature-title__icon">check</span> Customize the rendering style of the component through CSSClass properties.</h3>
+        <div class="feature-content">
+          <div class="feature-content__case">
+            <app-code-tab [sample]="sampleCode.feature2_1"></app-code-tab>
+
+            <button class="btn btn-red bg-red-200 text-black" (click)="showCustomNotify()">Custom Notification</button>
+          </div>
+
+          <div class="feature-content__case">
+            <app-code-tab [sample]="sampleCode.feature2_2"></app-code-tab>
+
+            <youi-breadcrumb
+              class="custom-breadcrumb"
+              itemCSSClass="custom-breadcrumb-item"
+              itemActiveCSSClass="custom-breadcrumb--active"
+              iconCSSClass="custom-breadcrumb-icon"
+              speratorCSSClass="custom-breadcrumb-sperator"
+            >
+              <youi-breadcrumb-item icon="home"> One </youi-breadcrumb-item>
+              <youi-breadcrumb-item icon="maps_home_work"> Two </youi-breadcrumb-item>
+              <youi-breadcrumb-item icon="format_list_numbered"> Three </youi-breadcrumb-item>
+            </youi-breadcrumb>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

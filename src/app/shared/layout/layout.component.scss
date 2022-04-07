@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+::ng-deep .removeTransition * {
+  transition: none !important;
+}

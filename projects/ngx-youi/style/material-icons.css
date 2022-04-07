@@ -1,0 +1,7 @@
+@import '~material-icons/iconfont/filled.css';
+@import '~material-icons/iconfont/outlined.css';
+
+.material-icons, .material-icons-outlined {
+  font-size: 16px;
+  line-height: inherit;
+}

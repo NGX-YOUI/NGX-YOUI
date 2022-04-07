@@ -1,0 +1,12 @@
+<ng-container *ngIf="visible">
+  <youi-spinner [isLoading]="true" backdropCSSClass="loading-dialog-spinner-backdrop" [svgCSSClass]="'loading-dialog-content ' + (styles?.loadingCSSClass ?? '')" [textTemplateCSSClass]="'loading-dialog-content' + (styles?.loadingCSSClass ?? '')">
+    <div class="loading-dialog-body">
+    </div>
+
+    <ng-template #textTemplate>
+      <div>
+        {{ body }}
+      </div>
+    </ng-template>
+  </youi-spinner>
+</ng-container>

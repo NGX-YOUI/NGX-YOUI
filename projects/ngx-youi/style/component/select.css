@@ -1,0 +1,59 @@
+youi-select {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.select-body-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.select-body-wrapper:focus {
+  border: 1px solid #aaa;
+}
+
+.select-body-wrapper--disabled {
+  cursor: not-allowed;
+  background: #f9f9f9;
+  color: #aaa;
+}
+
+.select-body-value {
+  padding: 0 5px;
+}
+
+.select-body-arrow {
+}
+
+.select-body-arrow-rotate {
+  transform: rotate(180deg);
+}
+
+.select-options-wrapper {
+  position: absolute;
+  width: 100%;
+
+  background-color: white;
+  top: calc(100%);
+  border: 1px solid #ccc;
+  z-index: 1;
+}
+
+youi-select-option {
+  display: block;
+  padding: 8px;
+}
+
+youi-select-option:hover {
+  cursor: pointer;
+  background-color: #efefef;
+}
+
+.select-option--active {
+  background-color: #eaeaea;
+}

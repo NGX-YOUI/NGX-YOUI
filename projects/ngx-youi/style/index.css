@@ -1,0 +1,18 @@
+@import "~@angular/cdk/overlay-prebuilt.css";
+@import "./material-icons.css";
+
+@import './component/breadcrumb.css';
+@import './component/datatable.css';
+@import './component/dropdown.css';
+@import './component/expansion-menu-item.css';
+@import './component/menu-item.css';
+@import './component/notification.css';
+@import './component/pagination.css';
+@import './component/select.css';
+@import './component/spinner.css';
+@import './component/dialog.css';
+@import './component/tab.css';
+
+.cdk-overlay-pane {
+  max-height: initial;
+}

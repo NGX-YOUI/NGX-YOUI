@@ -1,0 +1,63 @@
+layout-sider {
+  overflow: auto;
+  scrollbar-width: thin;
+  transition: width ease .2s;
+
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  &::-webkit-scrollbar-button {
+    background: transparent;
+    border-radius: 4px;
+  }
+  
+  &::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgba(90, 90, 90);
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
+
+.sider-fixed {
+  position: fixed;
+  z-index: 3;
+}
+
+.sider-backward {
+  z-index: 10;
+}
+
+::ng-deep .collapsed {
+  overflow: hidden;
+}
+
+.sider-wrapper {
+  position: relative;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.backward {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}

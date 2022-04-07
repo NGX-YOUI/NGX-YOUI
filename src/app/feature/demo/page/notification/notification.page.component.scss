@@ -1,0 +1,23 @@
+::ng-deep .custom-notification-icon {
+  @apply text-red-700 text-xl mt-1;
+}
+
+::ng-deep .custom-notification-wrapper {
+  @apply bg-red-200;
+}
+
+::ng-deep .custom-notification-title {
+  @apply text-red-700 text-2xl;
+}
+
+::ng-deep .custom-notification-content {
+  @apply text-red-700 text-lg;
+}
+
+::ng-deep .custom-notification-close {
+  @apply bg-black/10 text-white rounded-full;
+}
+
+::ng-deep .custom-notification-close:hover {
+  @apply bg-black/30;
+}

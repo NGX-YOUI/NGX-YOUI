@@ -1,0 +1,73 @@
+<div class="pagination-wrapper">
+  <button
+    (click)="setCurrentPage(1)"
+    class="pagination-button pagination-arrow"
+    [ngClass]="[buttonCSSClass, arrowCSSClass]"
+    [attr.disabled]="this.currentPage === 1 ? true : null"
+    *ngIf="showFirstLastIconButton"
+  >
+    <span class="pagination-arrow-icon material-icons" *ngIf="!first">first_page</span>
+    <ng-container *ngTemplateOutlet="first"></ng-container>
+  </button>
+  
+  <button
+      (click)="setCurrentPage(previousPage)"
+      class="pagination-button pagination-arrow"
+      [ngClass]="[buttonCSSClass, arrowCSSClass]"
+      [attr.disabled]="this.currentPage === 1 ? true : null"
+  >
+    <span class="pagination-arrow-icon material-icons" *ngIf="!previous">chevron_left</span>
+    <ng-container  *ngTemplateOutlet="previous"></ng-container>
+  </button>
+  
+  <div class="pagination__numbers">
+    <button
+      class="pagination-button pagination-number"
+      [class.pagination-button--active]="page.value === currentPage"
+      [ngClass]="dynamicNumberClass(page.value)"
+      (click)="setCurrentPage(page.value)"
+      *ngFor="let page of showPages"
+    >
+      <ng-container *ngIf="!number">
+        {{ page.label }}
+      </ng-container>
+
+      <ng-container
+        *ngTemplateOutlet="
+          number;
+          context: { $implicit: page, currentPage: currentPage }
+        "
+      >
+      </ng-container>
+    </button>
+  </div>
+  
+  <button
+    (click)="setCurrentPage(nextPage)"
+    class="pagination-button pagination-arrow"
+    [ngClass]="[buttonCSSClass, arrowCSSClass]"
+    [attr.disabled]="this.currentPage === this.totalPages ? true : null"
+  >
+    <span class="pagination-arrow-icon material-icons" *ngIf="!next">chevron_right</span>
+    <ng-container *ngTemplateOutlet="next"></ng-container>
+  </button>
+  
+  <button
+    (click)="setCurrentPage(this.totalPages)"
+    class="pagination-button pagination-arrow"
+    [ngClass]="[buttonCSSClass, arrowCSSClass]"
+    (click)="setCurrentPage(totalPages)"
+    [attr.disabled]="this.currentPage === this.totalPages ? true : null"
+    *ngIf="showFirstLastIconButton"
+  >
+    <span class="pagination-arrow-icon material-icons" *ngIf="!last">last_page</span>
+    <ng-container *ngTemplateOutlet="last"></ng-container>
+  </button>
+</div>
+
+<select *ngIf="showRowPerPageSelect && rowPerPageOptions.length" class="pagination-row-per-page-select" [ngClass]="rowPerPageSelectCSSClass"  name="" id="" (input)="rowPerPageSelectInput($event)">
+  <ng-container *ngFor="let option of rowPerPageOptions">
+    <option *ngIf="option === 0"  label="All" value="0"></option>
+    <option *ngIf="option !== 0"  [label]="option + ' / page'" [value]="option"></option>
+  </ng-container>
+</select>

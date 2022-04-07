@@ -1,0 +1,12 @@
+<div class="breadcrumb-item-content" [ngClass]="itemCSSClass">
+  <i class="material-icons breadcrumb-item__icon" [ngClass]="[breadcrumb.iconCSSClass]" *ngIf="icon">{{ icon }}</i>
+  <ng-content></ng-content>
+</div>
+
+<div class="breadcrumb_item_sperator" [ngClass]="breadcrumb.speratorCSSClass" [ngStyle]="separatorSpace"  *ngIf="breadcrumb.breadcrumbItems.last !== this && (breadcrumb.separator || breadcrumb.separatorTemp)">
+  <span class="breadcrumb_item_sperator_inner" *ngIf="!breadcrumb.separatorTemp">
+    <ng-container *ngIf="breadcrumb.separatorType === 'text'">{{ breadcrumb.separator }}</ng-container>
+    <i *ngIf="breadcrumb.separatorType === 'icon'" class="material-icons">{{ breadcrumb.separator }}</i>
+  </span>
+  <ng-container *ngTemplateOutlet="breadcrumb.separatorTemp"></ng-container>
+</div>

@@ -1,0 +1,33 @@
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NotificationPositionEnum, NotificationService } from 'ngx-youi';
+import { UserCrudComponent } from '../../component/user-crud-wrapper/user-crud-wrapper.component';
+
+@Component({
+  selector: 'app-user_edit',
+  templateUrl: './user-edit.component.html',
+  styleUrls: ['./user-edit.component.scss']
+})
+export class UserEditComponent implements OnInit {
+  @ViewChild('crud_wrapper', {static: false}) crud_wrapper: UserCrudComponent
+
+  constructor(private notificationService: NotificationService) { }
+
+  ngOnInit(): void {
+  }
+
+  public submitForm() {
+    this.crud_wrapper.form.markAllAsTouched()
+    
+    if (this.crud_wrapper.form.valid === true) {
+      this.notificationService.success(NotificationPositionEnum.topRight, {
+        title: 'Success !',
+        content: 'Finish edit user !'
+      })
+    } else {
+      this.notificationService.error(NotificationPositionEnum.topRight, {
+        title: 'Failed !',
+        content: 'Form validation error !'
+      })
+    }
+  }
+}

@@ -1,0 +1,7 @@
+<ng-container *ngIf="childrenEl?.childNodes.length <= 0">
+  {{ label }}
+</ng-container>
+
+<div #childrenEl>
+  <ng-content></ng-content>
+</div>

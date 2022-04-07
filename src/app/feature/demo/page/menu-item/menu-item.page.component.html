@@ -1,0 +1,356 @@
+<div class="page-wrapper">
+  <youi-breadcrumb class="card breadcrumb">
+    <youi-breadcrumb-item>UI Component</youi-breadcrumb-item>
+    <youi-breadcrumb-item>Menu Item</youi-breadcrumb-item>
+  </youi-breadcrumb>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Setup</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.setup.expanded = !sampleCode.setup.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.setup"></app-code-tab>
+
+    <div class="pl-4">
+      <ul class="list-decimal">
+        <li>import component css in project css file</li>
+        <li>import component module in your module file</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Basic</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.basic.expanded = !sampleCode.basic.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.basic"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-menu-item>
+        Basic
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="title Label"
+        preIconName="toc"
+      >
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="Has End Icon"
+        preIconName="grade"
+        lastIconName="lock_open"
+      >
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="Disabled"
+        preIconName="info"
+        [disabled]="true"
+      >
+      </youi-menu-item>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Style</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.style.expanded = !sampleCode.style.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.style"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-menu-item
+        cssClass="custom-menu"
+        titleLabel="Style Menu"
+        preIconName="mouse"
+      >
+      </youi-menu-item>
+
+      <youi-menu-item
+        cssClass="custom-menu"
+        [disabled]="true"
+        titleLabel="Style Menu (Disabled)"
+        preIconName="mouse"
+      >
+      </youi-menu-item>
+
+      <youi-menu-item
+        cssClass="custom-menu"
+        activeCSSClass="custom-active-menu"
+        [isActive]="true"
+        titleLabel="Style Menu (Active)"
+        preIconName="mouse"
+      >
+      </youi-menu-item>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Router Link</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.routerLink.expanded = !sampleCode.routerLink.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.routerLink"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-menu-item
+        cssClass="custom-router-link-menu"
+        preIconName="home"
+        routerLink="/"
+        routerLinkActive="text-blue-500"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Router Link to Home
+      </youi-menu-item>
+      <youi-menu-item
+        cssClass="custom-router-link-menu"
+        preIconName="home"
+        lastIconName="link"
+        routerLink="/"
+        [disabled]="true"
+        routerLinkActive="text-blue-500"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Router Link to Home
+      </youi-menu-item>
+      <youi-menu-item
+        cssClass="custom-router-link-menu"
+        preIconName="help"
+        routerLink="/demo/youi-menu-item"
+        routerLinkActive="router-menu-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Current Route Active
+      </youi-menu-item>
+    </div>
+  </div>
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Active</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.active.expanded = !sampleCode.active.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.active"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-menu-item
+        titleLabel="item 1"
+        preIconName="settings"
+        (click)="activeItem = 'item 1'"
+        [isActive]="activeItem === 'item 1'"
+        activeCSSClass="menu-active"
+      >
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="item 2"
+        preIconName="verified"
+        (click)="activeItem = 'item 2'"
+        [isActive]="activeItem === 'item 2'"
+        activeCSSClass="menu-active"
+      >
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="item 3"
+        [disabled]="true"
+        preIconName="lightbulb"
+        (click)="activeItem = 'item 3'"
+        [isActive]="activeItem === 'item 3'"
+        activeCSSClass="menu-active"
+      >
+      </youi-menu-item>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Inset Level</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.insetLevel.expanded = !sampleCode.insetLevel.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.insetLevel"></app-code-tab>
+
+    <div class="border-b space-y-2">
+      <youi-menu-item>
+        Basic Default Level 0
+      </youi-menu-item>
+      <youi-menu-item
+        [insetLevel]="1"
+      >
+        Basic Level 1
+      </youi-menu-item>
+      <youi-menu-item
+        [insetLevel]="1"
+      >
+        Basic Level 1
+      </youi-menu-item>
+      <youi-menu-item
+        [insetLevel]="2"
+      >
+        Basic Level 2
+      </youi-menu-item>
+      <youi-menu-item
+        [insetLevel]="3"
+      >
+        Basic Level 3
+      </youi-menu-item>
+    </div>
+    <div class="border-b space-y-2">
+      <youi-menu-item
+        titleLabel="Thumb Up Default Level 0"
+        preIconName="navigate_next"
+      >
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="Thumb Up Level 1"
+        preIconName="navigate_next"
+        [insetLevel]="1"
+      >
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="Thumb Up Level 1"
+        preIconName="navigate_next"
+        [insetLevel]="1"
+      >
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="Thumb Up Level 2"
+        preIconName="navigate_next"
+        [insetLevel]="2"
+      >
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="Thumb Up Level 3"
+        preIconName="navigate_next"
+        [insetLevel]="3"
+      >
+      </youi-menu-item>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>With Expansion Menu</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.withExpansionMenu.expanded = !sampleCode.withExpansionMenu.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.withExpansionMenu"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-expansion-youi-menu-item
+        titleLabel="Level 0"
+        preIconName="room"
+      >
+        <youi-menu-item
+          titleLabel="Level 1"
+          [insetLevel]="1"
+        >
+        </youi-menu-item>
+        <youi-expansion-youi-menu-item
+          titleLabel="Level 1"
+          [headerInsetLevel]="1"
+        >
+          <youi-menu-item
+            titleLabel="Level 2"
+            [insetLevel]="2"
+          >
+          </youi-menu-item>
+        </youi-expansion-youi-menu-item>
+        <youi-expansion-youi-menu-item
+          titleLabel="Level 1"
+          [headerInsetLevel]="1"
+          preIconName="room"
+        >
+          <youi-menu-item
+            titleLabel="Level 2"
+            [insetLevel]="2"
+            preIconName="room"
+          >
+          </youi-menu-item>
+        </youi-expansion-youi-menu-item>
+      </youi-expansion-youi-menu-item>
+
+      <youi-expansion-youi-menu-item
+        titleLabel="Level 0"
+        preIconName="room"
+        [isActive]="true"
+        headerActiveCSSClass="text-blue-500"
+      >
+        <youi-menu-item
+          titleLabel="Level 1"
+          preIconName="pets"
+          [insetLevel]="1"
+        >
+        </youi-menu-item>
+        <youi-menu-item
+          titleLabel="Level 1"
+          preIconName="pets"
+          [insetLevel]="1"
+          [isActive]="true"
+          activeCSSClass="text-blue-500"
+        >
+        </youi-menu-item>
+        <youi-expansion-youi-menu-item
+          titleLabel="Level 1"
+          [headerInsetLevel]="1"
+          preIconName="room"
+        >
+          <youi-menu-item
+            titleLabel="Level 2"
+            [insetLevel]="2"
+            preIconName="pets"
+          >
+          </youi-menu-item>
+        </youi-expansion-youi-menu-item>
+        <youi-expansion-youi-menu-item
+          titleLabel="Level 1"
+          [headerInsetLevel]="1"
+        >
+          <youi-menu-item
+            titleLabel="Level 2"
+            [insetLevel]="2"
+          >
+          </youi-menu-item>
+        </youi-expansion-youi-menu-item>
+      </youi-expansion-youi-menu-item>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Template</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.template.expanded = !sampleCode.template.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.template"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-menu-item
+      >
+        Custom Template
+
+        <ng-template #prepend>
+          <div class="shadow-sm p-2 bg-green-200">
+            <span class="text-emerald-500 font-bold">Prepend</span>
+          </div>
+        </ng-template>
+
+        <ng-template #append>
+          <div class="shadow-sm p-2 bg-rose-200">
+            <span class="text-rose-700 font-bold">Append</span>
+          </div>
+        </ng-template>
+      </youi-menu-item>
+    </div>
+  </div>
+</div>

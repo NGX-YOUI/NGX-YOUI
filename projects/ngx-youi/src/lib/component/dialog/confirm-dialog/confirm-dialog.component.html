@@ -1,0 +1,8 @@
+<ng-container *ngIf="visible">
+  <div class="dialog-title dialog-title-confirm" [ngClass]="styles?.titleCSSClass ?? ''">{{title}}</div>
+  <div class="dialog-body" [ngClass]="styles?.bodyCSSClass ?? ''">{{body}}</div>
+  <div class="dialog-actions" [ngClass]="styles?.actionsCSSClass ?? ''">
+    <button class="dialog-actions__btn dialog-actions__btn-confirm" [ngClass]="[styles?.actionsBtnCSSClass ?? '', ok?.cssClass ?? '']" (click)="handleClose(true)">{{ok.label}}</button>
+    <button class="dialog-actions__btn" [ngClass]="[styles?.actionsBtnCSSClass ?? '', close?.cssClass ?? '']" (click)="handleClose(false)">{{close.label}}</button>
+  </div>
+</ng-container>

@@ -1,0 +1,59 @@
+[disabled] {
+  cursor: not-allowed;
+}
+
+.label {
+  @apply block mb-2 font-medium text-gray-900;
+}
+
+.field-input {
+  @apply border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2;
+}
+.field-input:focus {
+  @apply ring-blue-500;
+}
+
+.field-select {
+  @apply py-1 px-0;
+}
+
+.field-disabled {
+  background: #f9f9f9;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.error-input, .error-input:focus {
+  @apply ring-red-600 border-red-600;
+}
+
+.error-msg {
+  @apply mt-1 text-red-600;
+}
+
+[type=checkbox], [type=radio] {
+  cursor: pointer;
+  transition: background-color ease 0.1s;
+  background: transparent;
+}
+
+[type=checkbox]:checked, [type=checkbox]:focus, [type=radio]:checked, [type=radio]:focus {
+  @apply ring-0 ring-offset-0;
+}
+
+[type='radio']:checked {
+  background-size: 150%;
+}
+
+.dark {
+  .label {
+    @apply text-gray-300;
+  }
+  .field-input {
+    @apply bg-gray-700 border-gray-600 placeholder-gray-400 text-white
+  }
+
+  .field-input:focus {
+    @apply ring-blue-500 outline-blue-500;
+  }  
+}

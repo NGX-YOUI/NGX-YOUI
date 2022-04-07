@@ -1,0 +1,168 @@
+<div class="page-wrapper">
+  <youi-breadcrumb class="card breadcrumb">
+    <youi-breadcrumb-item>Auth</youi-breadcrumb-item>
+    <youi-breadcrumb-item >User List</youi-breadcrumb-item>
+  </youi-breadcrumb>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Search Box</span>
+    </div>
+    <form [formGroup]="searchForm" (ngSubmit)="submitForm()">
+      <div class="row gap-y-4">
+        <div class="col-xs-12 col-sm-6">
+          <label for="username" class="label">Username</label>
+          <input
+            class="field-input"
+            formControlName="username"
+            type="text"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <label for="name" class="label">Show Name</label>
+          <input
+            class="field-input"
+            formControlName="name"
+            type="text"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <label for="role" class="label">Role</label>
+          <youi-select formControlName="role" [options]="options.roles">
+          </youi-select>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <label for="status" class="label">Status</label>
+          <youi-select formControlName="status" [options]="options.status">
+          </youi-select>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <button type="submit" value="Submit" class="btn btn-blue btn-block">
+            <i class="material-icons-outlined">search</i
+            ><span>Search</span>
+          </button>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <button
+            (click)="resetSearch()"
+            class="btn btn-gray btn-outline btn-block"
+          >
+            <i class="material-icons-outlined">refresh</i
+            ><span>Reset</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>User List</span>
+      <div class="action gap-x-2">
+        <button
+          class="btn btn-red"
+          [attr.disabled]="table.selectedList.size <= 0 ? true : null"
+          (click)="deleteBatch()"
+        >
+          <i class="material-icons-outlined">delete</i
+          ><span>Batch Delete</span>
+        </button>
+        <button
+          class="btn btn-blue"
+          (click)="router.navigate(['auth/user/create'])"
+        >
+          <i class="material-icons-outlined">add</i
+          ><span>Add User</span>
+        </button>
+      </div>
+    </div>
+    <youi-spinner [isLoading]="isLoading">
+      <ng-template #textTemplate>
+        <div>
+          Loading
+        </div>
+      </ng-template>
+
+      <div class="overflow-x-auto">
+        <youi-datatable
+          tableCSSClass="user-table"
+          [tableData]="table.tableData"
+          [columns]="table.columns"
+          selectedMode="checkbox"
+          (selectedChange)="selectedChange($event)"
+        >
+        <!-- <ng-template youi-datatable-template="headerTemplate" let-columns>
+          <th class="" *ngFor="let column of columns">
+            {{ column.name }}
+          </th>
+        </ng-template> -->
+        <!-- <ng-template youi-datatable-template="bodyTemplate" let-tableData let-columns="columns">
+          <tr *ngFor="let rowData of tableData">
+            <td *ngFor="let column of columns">
+              test {{ rowData[column.name] }}
+            </td>
+          </tr>
+        </ng-template> -->
+          <!-- <ng-template youi-datatable-template="header-status" let-column>
+            {{ column.label }} test
+          </ng-template> -->
+  <!-- 
+          <ng-template youi-datatable-template="body-username" cssClass="bg-blue-300" let-cellData let-rowData="rowData">
+            帳號: {{ cellData }}
+          </ng-template> -->
+          
+
+          <ng-template youi-datatable-template="body-status" let-cellData let-rowData="rowData">
+            {{ getOptionText("status", cellData) }}
+          </ng-template>
+
+          <ng-template youi-datatable-template="body-roles" let-cellData let-rowData="rowData">
+            {{ getOptionText("roles", cellData) }}
+          </ng-template>
+
+          <ng-template youi-datatable-template="body-actions" let-cellData let-rowData="rowData">
+            <div class="action-column">
+              <button
+                class="btn btn-cyan"
+                (click)="router.navigate(['auth/user/read', rowData.userId])"
+              >
+                <i class="material-icons-outlined">visibility</i
+                ><span>Browse</span>
+              </button>
+              <button
+                class="btn btn-green"
+                (click)="router.navigate(['auth/user/edit', rowData.userId])"
+              >
+                <i class="material-icons-outlined">edit</i
+                ><span>Edit</span>
+              </button>
+              <button class="btn btn-red" (click)="deleteUser(rowData)">
+                <i class="material-icons-outlined">delete</i
+                ><span>Delete</span>
+              </button>
+            </div>
+          </ng-template>
+        </youi-datatable>
+        <youi-pagination
+          class="justify-center"
+          [currentPage]="pagination.nowPage"
+          [rowPerPage]="pagination.rowPerPage"
+          [totalRowsCount]="pagination.totalRowsCount"
+          [maxDsiplayPages]="6"
+          (currentPageChange)="onPageChange($event)"
+          (rowPerPageChange)="onPageChange(null, $event)"
+          [showRowPerPageSelect]="true"
+        >
+      
+        <!-- <ng-template #numbers let-showPages let-currentPage="currentPage">
+          {{ currentPage }}
+          <div *ngFor="let page of showPages">
+            {{page.value}}
+          </div>
+        </ng-template> -->
+      </youi-pagination>
+      </div>
+          
+    </youi-spinner>
+  </div>
+</div>

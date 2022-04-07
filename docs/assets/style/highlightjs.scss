@@ -1,0 +1,20 @@
+@import 'highlight.js/styles/github-dark.css';
+
+.hljs-ln td.hljs-ln-numbers {
+  user-select: none;
+  text-align: center;
+  border-right: 1px solid gray;
+  vertical-align: top;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.hljs-ln td.hljs-ln-code {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.hljs-pre { 
+  word-break: break-word;
+  white-space: pre-wrap;
+}

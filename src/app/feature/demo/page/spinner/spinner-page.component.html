@@ -1,0 +1,187 @@
+<div class="page-wrapper">
+  <youi-breadcrumb class="card breadcrumb">
+    <youi-breadcrumb-item> UI Component </youi-breadcrumb-item>
+    <youi-breadcrumb-item> Spinner </youi-breadcrumb-item>
+  </youi-breadcrumb>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Setup</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.setup.expanded = !sampleCode.setup.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.setup"></app-code-tab>
+
+    <div class="pl-4">
+      <ul class="list-decimal">
+        <li>import component css in project css file</li>
+        <li>import component module in your module file</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Basic</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.basic.expanded = !sampleCode.basic.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.basic"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-spinner [isLoading]="isLoading">
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus id
+          augue nec porttitor. Cras ut velit libero. Suspendisse semper justo non
+          libero lobortis, et commodo augue vehicula. Maecenas tincidunt, mi sit
+          amet mattis iaculis, libero purus congue nisi, vel porttitor massa
+          tellus id justo. Nulla magna ipsum, mollis non rutrum non, blandit at
+          purus. Donec lobortis urna vitae eros efficitur viverra. Quisque
+          placerat leo volutpat libero dictum semper. Donec mauris sem, ultrices
+          ut porttitor at, rutrum sit amet ipsum. Etiam at molestie odio. Quisque
+          viverra erat maximus metus vulputate, ut sodales enim tincidunt. Etiam
+          et turpis cursus, sagittis est id, pharetra nibh.
+        </div>
+      </youi-spinner>
+      
+      <youi-spinner [isLoading]="isLoading" iconName="">
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus id
+          augue nec porttitor. Cras ut velit libero. Suspendisse semper justo non
+          libero lobortis, et commodo augue vehicula. Maecenas tincidunt, mi sit
+          amet mattis iaculis, libero purus congue nisi, vel porttitor massa
+          tellus id justo. Nulla magna ipsum, mollis non rutrum non, blandit at
+          purus. Donec lobortis urna vitae eros efficitur viverra. Quisque
+          placerat leo volutpat libero dictum semper. Donec mauris sem, ultrices
+          ut porttitor at, rutrum sit amet ipsum. Etiam at molestie odio. Quisque
+          viverra erat maximus metus vulputate, ut sodales enim tincidunt. Etiam
+          et turpis cursus, sagittis est id, pharetra nibh.
+        </div>
+  
+        <ng-template #textTemplate>
+          <div>
+            Loading
+          </div>
+        </ng-template>
+      </youi-spinner>
+      
+      <youi-spinner [isLoading]="isLoading" iconName="audio">
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus id
+          augue nec porttitor. Cras ut velit libero. Suspendisse semper justo non
+          libero lobortis, et commodo augue vehicula. Maecenas tincidunt, mi sit
+          amet mattis iaculis, libero purus congue nisi, vel porttitor massa
+          tellus id justo. Nulla magna ipsum, mollis non rutrum non, blandit at
+          purus. Donec lobortis urna vitae eros efficitur viverra. Quisque
+          placerat leo volutpat libero dictum semper. Donec mauris sem, ultrices
+          ut porttitor at, rutrum sit amet ipsum. Etiam at molestie odio. Quisque
+          viverra erat maximus metus vulputate, ut sodales enim tincidunt. Etiam
+          et turpis cursus, sagittis est id, pharetra nibh.
+        </div>
+  
+        <ng-template #textTemplate>
+          <div>
+            Loading
+          </div>
+        </ng-template>
+      </youi-spinner>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Template</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.template.expanded = !sampleCode.template.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.template"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-spinner [isLoading]="isLoading">
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus id
+          augue nec porttitor. Cras ut velit libero. Suspendisse semper justo non
+          libero lobortis, et commodo augue vehicula. Maecenas tincidunt, mi sit
+          amet mattis iaculis, libero purus congue nisi, vel porttitor massa
+          tellus id justo. Nulla magna ipsum, mollis non rutrum non, blandit at
+          purus. Donec lobortis urna vitae eros efficitur viverra. Quisque
+          placerat leo volutpat libero dictum semper. Donec mauris sem, ultrices
+          ut porttitor at, rutrum sit amet ipsum. Etiam at molestie odio. Quisque
+          viverra erat maximus metus vulputate, ut sodales enim tincidunt. Etiam
+          et turpis cursus, sagittis est id, pharetra nibh.
+        </div>
+        
+        <ng-template #iconTemplate>
+          <span class="material-icons text-3xl animate-spin">sync</span>
+        </ng-template>
+
+        <ng-template #textTemplate>
+          <div>
+            Loading
+          </div>
+        </ng-template>
+      </youi-spinner>
+    </div>
+  </div>
+  
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Style</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.style.expanded = !sampleCode.style.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.style"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-spinner [isLoading]="isLoading" iconName="bars" backdropCSSClass="custom-backdrop" svgCSSClass="custom-svg" textTemplateCSSClass="custom-text">
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus id
+          augue nec porttitor. Cras ut velit libero. Suspendisse semper justo non
+          libero lobortis, et commodo augue vehicula. Maecenas tincidunt, mi sit
+          amet mattis iaculis, libero purus congue nisi, vel porttitor massa
+          tellus id justo. Nulla magna ipsum, mollis non rutrum non, blandit at
+          purus. Donec lobortis urna vitae eros efficitur viverra. Quisque
+          placerat leo volutpat libero dictum semper. Donec mauris sem, ultrices
+          ut porttitor at, rutrum sit amet ipsum. Etiam at molestie odio. Quisque
+          viverra erat maximus metus vulputate, ut sodales enim tincidunt. Etiam
+          et turpis cursus, sagittis est id, pharetra nibh.
+        </div>
+
+        <ng-template #textTemplate>
+          <div>
+            Loading
+          </div>
+        </ng-template>
+      </youi-spinner>
+
+      <youi-spinner [isLoading]="isLoading" backdropCSSClass="custom-backdrop" svgCSSClass="custom-svg" textTemplateCSSClass="custom-text">
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus id
+          augue nec porttitor. Cras ut velit libero. Suspendisse semper justo non
+          libero lobortis, et commodo augue vehicula. Maecenas tincidunt, mi sit
+          amet mattis iaculis, libero purus congue nisi, vel porttitor massa
+          tellus id justo. Nulla magna ipsum, mollis non rutrum non, blandit at
+          purus. Donec lobortis urna vitae eros efficitur viverra. Quisque
+          placerat leo volutpat libero dictum semper. Donec mauris sem, ultrices
+          ut porttitor at, rutrum sit amet ipsum. Etiam at molestie odio. Quisque
+          viverra erat maximus metus vulputate, ut sodales enim tincidunt. Etiam
+          et turpis cursus, sagittis est id, pharetra nibh.
+        </div>
+
+        <ng-template #iconTemplate>
+          <span class="material-icons custom-icon-template">hourglass_empty</span>
+        </ng-template>
+
+        <ng-template #textTemplate>
+          <div>
+            Loading
+          </div>
+        </ng-template>
+      </youi-spinner>
+    </div>
+  </div>
+</div>

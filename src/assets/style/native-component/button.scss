@@ -1,0 +1,64 @@
+$colors: 'gray', 'green', 'cyan', 'red', 'blue', 'orange', 'yellow', 'pink';
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  color: white;
+  border-radius: 3px;
+  white-space: nowrap;
+  font-size: 14px;
+  transition: all ease 0.3s;
+  padding: 4px 15px;
+}
+
+.btn-block {
+  @apply justify-center w-full;
+}
+
+.btn > i + * {
+  @apply ml-1;
+}
+ 
+@each $color in $colors {
+  .btn-#{$color} {
+      @apply bg-#{$color}-500;
+      &.btn-outline {
+        @apply border-#{$color}-500 text-#{$color}-500;
+      }
+  }
+
+  .btn-#{$color}:hover, .btn-#{$color}:focus{
+    @apply text-white bg-#{$color}-400;
+    &.btn-outline {
+      @apply bg-#{$color}-500
+    }
+  }
+
+  .btn-#{$color}:active {
+    @apply bg-#{$color}-600;
+    &.btn-outline {
+      @apply bg-#{$color}-600;
+    }
+  }
+}
+
+.btn-outline {
+  @apply bg-transparent;
+}
+
+.btn-outline, .btn-outline:hover {
+  @apply border border-solid;
+}
+
+.code-btn {
+  @apply p-2 text-sm text-gray-500 rounded-md;
+}
+
+.code-btn:hover {
+  @apply bg-gray-100;
+}
+
+.btn:disabled {
+  @apply bg-gray-300 text-gray-500;
+}

@@ -1,0 +1,132 @@
+<div [formGroup]="form" class="card p-5 grid gap-y-5">
+  <div class="row gap-y-2">
+    <div class="col-xs-12 sm:basis-[120px]">
+      <label for="">Username：</label>
+    </div>
+    <div class="col-xs-12 col-sm">
+      <input
+        formControlName="username"
+        type="text"
+        class="field-input"
+        [class.error-input]="fieldHasError('username').hasError"
+        [class.field-disabled]="matchCrudMode(['create']) ? null : true"
+        [attr.disabled]="matchCrudMode(['create']) ? null : true"
+      />
+      <div
+        class="error-msg"
+        *ngIf="fieldHasError('username').errors['required']"
+      >
+        Required
+      </div>
+    </div>
+  </div>
+
+  <div class="row gap-y-2" *ngIf="matchCrudMode(['create', 'edit'])">
+    <div class="col-xs-12 sm:basis-[120px]">
+      <label for="">Password:</label>
+    </div>
+    <div class="col-xs-12 col-sm">
+      <div class="flex gap-2 items-center">
+        <input
+          formControlName="password"
+          type="password"
+          class="field-input"
+          [class.field-disabled]="matchCrudMode(['create', 'edit']) ? null : true"
+          [attr.disabled]="matchCrudMode(['create', 'edit']) ? null : true"
+          [class.error-input]="fieldHasError('password').hasError"
+        />
+        <button class="btn btn-gray">
+          <span>Generate</span>
+        </button>
+      </div>
+      <div
+        class="error-msg"
+        *ngIf="fieldHasError('password').errors['required']"
+      >
+        Required
+      </div>
+    </div>
+  </div>
+
+  <div class="row gap-y-2" *ngIf="matchCrudMode(['create', 'edit'])">
+    <div class="col-xs-12 sm:basis-[120px]">
+      <label for="">Confirm Password：</label>
+    </div>
+    <div class="col-xs-12 col-sm">
+      <input
+        formControlName="confirmPassword"
+        type="password"
+        class="field-input"
+        [class.field-disabled]="matchCrudMode(['create', 'edit']) ? null : true"
+        [attr.disabled]="matchCrudMode(['create', 'edit']) ? null : true"
+        [class.error-input]="fieldHasError('confirmPassword').hasError"
+      />
+      <div
+        class="error-msg"
+        *ngIf="fieldHasError('confirmPassword').errors['required']"
+      >
+        Required
+      </div>
+      <div
+        class="error-msg"
+        *ngIf="fieldHasError('confirmPassword').errors['valueMatch']"
+      >
+        Must same as password
+      </div>
+    </div>
+  </div>
+
+  <div class="row gap-y-2">
+    <div class="col-xs-12 sm:basis-[120px]">
+      <label for="">Name：</label>
+    </div>
+    <div class="col-xs-12 col-sm">
+      <input
+        type="text"
+        class="field-input"
+        [class.field-disabled]="matchCrudMode(['create', 'edit']) ? null : true"
+        [attr.disabled]="matchCrudMode(['create', 'edit']) ? null : true"
+        [class.error-input]="fieldHasError('name').hasError"
+        formControlName="name"
+      />
+      <div class="error-msg" *ngIf="fieldHasError('name').errors['required']">
+        Required
+      </div>
+    </div>
+  </div>
+  <div class="row gap-y-2">
+    <div class="col-xs-12 sm:basis-[120px]">
+      <label for="">Email：</label>
+    </div>
+    <div class="col-xs-12 col-sm">
+      <input
+        type="text"
+        class="field-input"
+        [class.field-disabled]="matchCrudMode(['create', 'edit']) ? null : true"
+        [attr.disabled]="matchCrudMode(['create', 'edit']) ? null : true"
+        [class.error-input]="fieldHasError('email').hasError"
+        formControlName="email"
+      />
+      <div class="error-msg" *ngIf="fieldHasError('email').errors['required']">
+        Required
+      </div>
+      <div class="error-msg" *ngIf="fieldHasError('email').errors['email']">
+        Format invalid
+      </div>
+    </div>
+  </div>
+  <div class="row gap-y-2">
+    <div class="col-xs-12 sm:basis-[120px]">
+      <label for="">Role：</label>
+    </div>
+    <div class="col-xs-12 col-sm">
+      <youi-select formControlName="roles" [options]="options.roles"
+                  [class.error-input]="fieldHasError('roles').hasError"
+                  [disableControl]="matchCrudMode(['create', 'edit']) ? false : true">
+      </youi-select>
+      <div class="error-msg" *ngIf="fieldHasError('roles').errors['required']">
+        Required
+      </div>
+    </div>
+  </div>
+</div>

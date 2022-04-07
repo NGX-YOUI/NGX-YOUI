@@ -1,0 +1,200 @@
+<app-layout>
+  <layout-sider
+    [(isCollapsed)]="isCollapsed"
+    [siderWidth]="siderWidth"
+    class="menu-sidebar"
+    [fixed]="true"
+  >
+    <youi-menu-item
+      titleLabel="Index"
+      cssClass="sider-youi-menu-item"
+      activeCSSClass="text-white"
+      preIconName="home"
+      routerLink="/"
+      routerLinkActive="sider-youi-menu-item-active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+    </youi-menu-item>
+    <youi-expansion-youi-menu-item
+      titleLabel="Guide"
+      preIconName="anchor"
+      [isActive]="routeContainPath('/guide')"
+      headerCSSClass="sider-youi-menu-item"
+      headerActiveCSSClass="sider-youi-menu-item-active"
+    >
+      <youi-menu-item
+        titleLabel="Getting Start"
+        [insetLevel]="1"
+        cssClass="sider-youi-menu-item"
+        activeCSSClass="text-white"
+      >
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="Core Concept"
+        [insetLevel]="1"
+        cssClass="sider-youi-menu-item"
+        activeCSSClass="text-white"
+      >
+      </youi-menu-item>
+    </youi-expansion-youi-menu-item>
+    <youi-menu-item
+      preIconName="person"
+      titleLabel="User List"
+      cssClass="sider-youi-menu-item"
+      activeCSSClass="text-white"
+      routerLink="/auth/user/list"
+      routerLinkActive="sider-youi-menu-item-active"
+      [routerLinkActiveOptions]="{ exact: false }"
+    >
+    </youi-menu-item>
+    <youi-expansion-youi-menu-item
+      titleLabel="UI Component"
+      preIconName="build"
+      [isActive]="routeContainPath('/demo')"
+      headerCSSClass="sider-youi-menu-item"
+      headerActiveCSSClass="sider-youi-menu-item-active"
+    >
+      <youi-menu-item
+        titleLabel="Breadcrumb"
+        [insetLevel]="1"
+        cssClass="sider-youi-menu-item"
+        activeCSSClass="text-white"
+        routerLink="/demo/breadcrumb"
+        routerLinkActive="sider-youi-menu-item-active"
+        [routerLinkActiveOptions]="{ exact: false }"
+      >
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="Menu Item"
+        [insetLevel]="1"
+        cssClass="sider-youi-menu-item"
+        activeCSSClass="text-white"
+        routerLink="/demo/youi-menu-item"
+        routerLinkActive="sider-youi-menu-item-active"
+        [routerLinkActiveOptions]="{ exact: false }"
+      >
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="Expansion Menu Item"
+        [insetLevel]="1"
+        cssClass="sider-youi-menu-item"
+        activeCSSClass="text-white"
+        routerLink="/demo/youi-expansion-youi-menu-item"
+        routerLinkActive="sider-youi-menu-item-active"
+        [routerLinkActiveOptions]="{ exact: false }"
+      >
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="Dropdown"
+        [insetLevel]="1"
+        cssClass="sider-youi-menu-item"
+        activeCSSClass="text-white"
+        routerLink="/demo/dropdown"
+        routerLinkActive="sider-youi-menu-item-active"
+        [routerLinkActiveOptions]="{ exact: false }"
+      >
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="Spinner"
+        [insetLevel]="1"
+        cssClass="sider-youi-menu-item"
+        activeCSSClass="text-white"
+        routerLink="/demo/spinner"
+        routerLinkActive="sider-youi-menu-item-active"
+        [routerLinkActiveOptions]="{ exact: false }"
+      >
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="Dialog"
+        [insetLevel]="1"
+        cssClass="sider-youi-menu-item"
+        activeCSSClass="text-white"
+        routerLink="/demo/dialog"
+        routerLinkActive="sider-youi-menu-item-active"
+        [routerLinkActiveOptions]="{ exact: false }"
+      >
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="Notification"
+        [insetLevel]="1"
+        cssClass="sider-youi-menu-item"
+        activeCSSClass="text-white"
+        routerLink="/demo/notification"
+        routerLinkActive="sider-youi-menu-item-active"
+        [routerLinkActiveOptions]="{ exact: false }"
+      >
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="Select"
+        [insetLevel]="1"
+        cssClass="sider-youi-menu-item"
+        activeCSSClass="text-white"
+        routerLink="/demo/select"
+        routerLinkActive="sider-youi-menu-item-active"
+        [routerLinkActiveOptions]="{ exact: false }"
+      >
+      </youi-menu-item>
+      <youi-menu-item
+        titleLabel="Pagination"
+        [insetLevel]="1"
+        cssClass="sider-youi-menu-item"
+        activeCSSClass="text-white"
+        routerLink="/demo/pagination"
+        routerLinkActive="sider-youi-menu-item-active"
+        [routerLinkActiveOptions]="{ exact: false }"
+      ></youi-menu-item>
+      <youi-menu-item
+        titleLabel="Datatable"
+        [insetLevel]="1"
+        cssClass="sider-youi-menu-item"
+        activeCSSClass="text-white"
+        routerLink="/demo/datatable"
+        routerLinkActive="sider-youi-menu-item-active"
+        [routerLinkActiveOptions]="{ exact: false }"
+      >
+      </youi-menu-item>
+    </youi-expansion-youi-menu-item>
+  </layout-sider>
+
+  <layout-header [fixed]="true" class="app-header">
+    <i
+      class="material-icons header-trigger"
+      (click)="toggleCollapsed()"
+    >menu</i>
+    <h1 class="logo">NGX-YOUI</h1>
+    <div class="user-btn-wrapper">
+      <button
+        class="user-btn"
+        youi-dropdown-trigger
+        [targetDropdown]="menu"
+      >
+        v.0.0.1 <i class="material-icons text-lg ml-1">keyboard_arrow_down</i> 
+      </button>
+      <youi-dropdown-menu #menu="youiDropdownMenu" dropdownCSSClass="user-dropdown">
+        <youi-menu-item youi-dropdown-item titleLabel="GITHUB">
+          <ng-template #prepend>
+            <svg xmlns="http://www.w3.org/2000/svg" x="-2px" y="0px"
+      width="16" height="16"
+      viewBox="0 0 30 30"
+      style=" fill:#000000;">    <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"></path></svg>
+          </ng-template>
+        </youi-menu-item>
+        <youi-menu-item youi-dropdown-item titleLabel="NPM">
+          <ng-template #prepend>
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="16" height="16"
+viewBox="0 0 32 32"
+style=" fill:#000000;"><path d="M 0 10 L 0 21 L 9 21 L 9 23 L 16 23 L 16 21 L 32 21 L 32 10 L 0 10 z M 1.7773438 11.777344 L 8.8886719 11.777344 L 8.890625 11.777344 L 8.890625 19.445312 L 7.1113281 19.445312 L 7.1113281 13.556641 L 5.3339844 13.556641 L 5.3339844 19.445312 L 1.7773438 19.445312 L 1.7773438 11.777344 z M 10.667969 11.777344 L 17.777344 11.777344 L 17.779297 11.777344 L 17.779297 19.443359 L 14.222656 19.443359 L 14.222656 21.222656 L 10.667969 21.222656 L 10.667969 11.777344 z M 19.556641 11.777344 L 30.222656 11.777344 L 30.224609 11.777344 L 30.224609 19.445312 L 28.445312 19.445312 L 28.445312 13.556641 L 26.667969 13.556641 L 26.667969 19.445312 L 24.890625 19.445312 L 24.890625 13.556641 L 23.111328 13.556641 L 23.111328 19.445312 L 19.556641 19.445312 L 19.556641 11.777344 z M 14.222656 13.556641 L 14.222656 17.667969 L 16 17.667969 L 16 13.556641 L 14.222656 13.556641 z"></path></svg>
+          </ng-template>
+        </youi-menu-item>
+      </youi-dropdown-menu>
+    </div>
+  </layout-header>
+  <layout-page-container class="backend-page-container">
+    <div class="backend-page-container__inner">
+      <router-outlet></router-outlet>
+    </div>
+  </layout-page-container>
+
+  <!-- <layout-footer class="footer">footer</layout-footer> -->
+</app-layout>

@@ -1,0 +1,17 @@
+.card {
+  @apply shadow-sm rounded bg-white;
+}
+
+.page-wrapper {
+  position: relative;
+  @apply grid gap-4;
+  grid-template-columns: 100%;
+}
+
+.card-title {
+  @apply flex items-center justify-between font-bold text-xl mb-4 pb-3 border-b border-solid border-gray-300;
+}
+
+.breadcrumb {
+  @apply p-3;
+}

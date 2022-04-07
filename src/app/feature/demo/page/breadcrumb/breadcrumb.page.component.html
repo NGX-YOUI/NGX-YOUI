@@ -1,0 +1,134 @@
+<div class="page-wrapper">
+  <youi-breadcrumb class="card breadcrumb">
+    <youi-breadcrumb-item> UI Component </youi-breadcrumb-item>
+    <youi-breadcrumb-item> Breadcrumb </youi-breadcrumb-item>
+  </youi-breadcrumb>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Setup</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.setup.expanded = !sampleCode.setup.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.setup"></app-code-tab>
+
+    <div class="pl-4">
+      <ul class="list-decimal">
+        <li>import component css in project css file</li>
+        <li>import component module in your module file</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Basic</span>
+      <button class="code-btn material-icons" (click)="sampleCode.basic.expanded = !sampleCode.basic.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.basic"></app-code-tab>
+
+    <div class="space-y-5">
+      <youi-breadcrumb>
+        <youi-breadcrumb-item> One </youi-breadcrumb-item>
+        <youi-breadcrumb-item> Two </youi-breadcrumb-item>
+        <youi-breadcrumb-item> Three </youi-breadcrumb-item>
+      </youi-breadcrumb>
+    </div>
+  </div>
+  
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Style</span>
+      <button class="code-btn material-icons" (click)="sampleCode.styles.expanded = !sampleCode.styles.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.styles"></app-code-tab>
+
+    <div class="space-y-5">
+      <youi-breadcrumb
+        class="custom-breadcrumb"
+        itemCSSClass="custom-breadcrumb-item"
+        itemActiveCSSClass="custom-breadcrumb--active"
+        iconCSSClass="custom-breadcrumb-icon"
+        speratorCSSClass="custom-breadcrumb-sperator"
+      >
+        <youi-breadcrumb-item icon="home"> One </youi-breadcrumb-item>
+        <youi-breadcrumb-item icon="maps_home_work"> Two </youi-breadcrumb-item>
+        <youi-breadcrumb-item icon="format_list_numbered"> Three </youi-breadcrumb-item>
+      </youi-breadcrumb>
+    </div>
+  </div>
+  
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Icon & Separator</span>
+      <button class="code-btn material-icons" (click)="sampleCode.iconAndSeparator.expanded = !sampleCode.iconAndSeparator.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.iconAndSeparator"></app-code-tab>
+
+    <div class="space-y-5">
+      <youi-breadcrumb>
+        <youi-breadcrumb-item icon="home"> One </youi-breadcrumb-item>
+        <youi-breadcrumb-item icon="maps_home_work"> Two </youi-breadcrumb-item>
+        <youi-breadcrumb-item icon="format_list_numbered"> Three </youi-breadcrumb-item>
+      </youi-breadcrumb>
+
+      <youi-breadcrumb separator="→">
+        <youi-breadcrumb-item icon="home"> One </youi-breadcrumb-item>
+        <youi-breadcrumb-item icon="maps_home_work"> Two </youi-breadcrumb-item>
+        <youi-breadcrumb-item con="format_list_numbered"> Three </youi-breadcrumb-item>
+      </youi-breadcrumb>
+
+      <youi-breadcrumb separatorType="icon" separator="play_arrow">
+        <youi-breadcrumb-item icon="home"> One </youi-breadcrumb-item>
+        <youi-breadcrumb-item icon="maps_home_work"> Two </youi-breadcrumb-item>
+        <youi-breadcrumb-item icon="format_list_numbered"> Three </youi-breadcrumb-item>
+      </youi-breadcrumb>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Separator Space</span>
+      <button class="code-btn material-icons" (click)="sampleCode.separatorSpace.expanded = !sampleCode.separatorSpace.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.separatorSpace"></app-code-tab>
+
+    <div class="space-y-5">
+      <youi-breadcrumb>
+        <youi-breadcrumb-item> default-10px-1 </youi-breadcrumb-item>
+        <youi-breadcrumb-item> default-10px-2 </youi-breadcrumb-item>
+        <youi-breadcrumb-item> default-10px-3 </youi-breadcrumb-item>
+      </youi-breadcrumb>
+  
+      <youi-breadcrumb separatorSpace="30px">
+        <youi-breadcrumb-item> 30px-1 </youi-breadcrumb-item>
+        <youi-breadcrumb-item> 30px-2 </youi-breadcrumb-item>
+        <youi-breadcrumb-item> 30px-3 </youi-breadcrumb-item>
+      </youi-breadcrumb>
+    </div>
+  </div>
+  
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Template</span>
+      <button class="code-btn material-icons" (click)="sampleCode.templates.expanded = !sampleCode.templates.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.templates"></app-code-tab>
+
+    <youi-breadcrumb>
+      <ng-template #separatorTemp>
+        <div class="p-2 bg-green-200 text-green-700">separatorTemp</div>
+      </ng-template>
+
+      <youi-breadcrumb-item icon="home"> One </youi-breadcrumb-item>
+      <youi-breadcrumb-item icon="maps_home_work"> Two </youi-breadcrumb-item>
+      <youi-breadcrumb-item icon="format_list_numbered"> Three </youi-breadcrumb-item>
+    </youi-breadcrumb>
+  </div>
+</div>

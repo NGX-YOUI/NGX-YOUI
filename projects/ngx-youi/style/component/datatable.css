@@ -1,0 +1,46 @@
+youi-datatable {
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.youi-datatable {
+  width: 100%;
+  table-layout: auto;
+}
+
+.youi-datatable-thead-tr {
+  background: #333;
+  text-align: center;
+  color: white;
+}
+
+.youi-datatable-tbody-tr:hover {
+  background-color: #eee;
+}
+
+.youi-datatable-th, .youi-datatable-td {
+  padding: 15px 10px;
+}
+
+.youi-datatable-td {
+  white-space: nowrap;
+  text-align: center;
+}
+
+.youi-datatable-th-select-input[type='checkbox'], .youi-datatable-th-select-input[type='radio'] {
+  border-color: #aaa;
+}
+
+.youi-datatable-th-select-input:checked, .youi-datatable-th-select-input:indeterminate {
+  border-color: transparent;
+}
+
+.youi-datatable-td-select-input[type='checkbox']:disabled, .youi-datatable-td-select-input[type='radio']:disabled,
+.youi-datatable-td-select-input[type='checkbox']:disabled:hover, .youi-datatable-td-select-input[type='radio']:disabled:hover {
+  cursor: not-allowed;
+  border-color: transparent;
+  background: rgba(0,0,0,0.2);
+}

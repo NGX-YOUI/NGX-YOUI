@@ -1,0 +1,8 @@
+<ng-content></ng-content>
+<div *ngIf="isLoading" class="spinner-backdrop" [ngClass]="backdropCSSClass" [@showHide]>
+  <div class="spinner-svg" [innerHTML]="svgHTML | safeHtml" [ngClass]="svgCSSClass" *ngIf="svgHTML && !iconTemplate"></div>
+  <ng-container *ngTemplateOutlet="iconTemplate"></ng-container>
+  <div class="spinner-template" [ngClass]="textTemplateCSSClass" *ngIf="textTemplate">
+    <ng-container *ngTemplateOutlet="textTemplate"></ng-container>
+  </div>
+</div>

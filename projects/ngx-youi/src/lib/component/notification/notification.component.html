@@ -1,0 +1,24 @@
+
+<div class="notification" [ngClass]="notifyWrapperCSS">
+  <div *ngIf="templates?.iconTemplate" [ngClass]="styles?.iconCSSClass">
+    <ng-container *ngTemplateOutlet="templates?.iconTemplate"></ng-container>
+  </div>
+
+  <span *ngIf="!templates?.iconTemplate" class="notification-icon material-icons" [ngClass]="styles?.iconCSSClass">{{ icon }}</span>
+  <div class="notification-message">
+    <div class="notification-title" [ngClass]="styles?.titleCSSClass">
+      <ng-container *ngIf="!templates?.titleTemplate && title" >{{ title }}</ng-container>
+      <ng-container *ngTemplateOutlet="templates?.titleTemplate"></ng-container>
+    </div>
+    
+    <div class="notification_content" [ngClass]="styles?.contentCSSClass">
+      <ng-container *ngIf="!templates?.contentTemplate && content" >{{ content }}</ng-container>
+      <ng-container *ngTemplateOutlet="templates?.contentTemplate"></ng-container>
+    </div>
+  </div>
+  <div *ngIf="templates?.closeTemplate" [ngClass]="styles?.closeCSSClass">
+    <ng-container *ngTemplateOutlet="templates?.closeTemplate; context: { $implicit: this }"></ng-container>
+  </div>
+  
+  <div [ngClass]="styles?.closeCSSClass" *ngIf="!templates?.closeTemplate" class="notification-close material-icons" (click)="close()">close</div>
+</div>

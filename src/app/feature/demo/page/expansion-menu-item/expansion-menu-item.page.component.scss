@@ -1,0 +1,42 @@
+::ng-deep .custom-lorem-expansion {
+  @apply border border-red-300;
+}
+
+::ng-deep .custom-lorem-expansion-header {
+  @apply bg-red-200 border-b border-red-200 text-red-700;
+}
+::ng-deep .custom-lorem-expansion-header:hover {
+  @apply bg-red-300;
+}
+
+::ng-deep .custom-lorem-expansion-header:active {
+  @apply bg-red-200;
+}
+
+::ng-deep .custom-lorem-expansion-content {
+  @apply p-4 text-red-700;
+}
+
+::ng-deep .custom-expansion-menu-header {
+  @apply bg-blue-200 text-blue-700;
+}
+
+::ng-deep .custom-expansion-menu-header:hover {
+  @apply bg-blue-500 text-white;
+}
+
+::ng-deep .custom-expansion-menu-header:active {
+  @apply bg-blue-400;
+}
+
+::ng-deep .custom-expansion-menu-header-active, ::ng-deep .custom-expansion-menu-header-active:hover {
+  @apply bg-blue-500 text-white;
+}
+
+::ng-deep .custom-expansion-menu-content {
+  @apply bg-gray-100 m-2 p-3 text-gray-700 border border-gray-300;
+}
+
+::ng-deep .custom-expansion-menu-header:disabled, ::ng-deep .custom-expansion-menu-header:disabled:hover {
+  @apply bg-gray-200 text-gray-400;
+}

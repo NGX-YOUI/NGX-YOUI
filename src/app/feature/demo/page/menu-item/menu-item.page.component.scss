@@ -1,0 +1,28 @@
+::ng-deep .custom-menu {
+  @apply bg-yellow-200 text-yellow-700;
+}
+
+::ng-deep .custom-menu:hover {
+  @apply bg-yellow-500 text-white;
+}
+
+::ng-deep .custom-menu:active {
+  @apply bg-gray-200 text-gray-700;
+}
+
+::ng-deep .custom-menu:disabled, ::ng-deep .custom-menu:disabled:hover {
+  @apply bg-gray-200 text-gray-400;
+}
+
+::ng-deep .custom-active-menu, ::ng-deep .custom-active-menu:hover {
+  @apply bg-green-200 text-green-700;
+}
+
+::ng-deep .router-menu-active > .custom-router-link-menu, ::ng-deep .router-menu-active:hover > .custom-router-link-menu  {
+  @apply bg-blue-500 text-white;
+}
+
+
+::ng-deep .menu-active, ::ng-deep .menu-active:hover  {
+  @apply bg-red-500 text-white;
+}

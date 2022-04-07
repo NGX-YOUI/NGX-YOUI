@@ -1,0 +1,223 @@
+<div class="page-wrapper">
+  <youi-breadcrumb class="card breadcrumb">
+    <youi-breadcrumb-item> UI Component </youi-breadcrumb-item>
+    <youi-breadcrumb-item> Datatable </youi-breadcrumb-item>
+  </youi-breadcrumb>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Setup</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.setup.expanded = !sampleCode.setup.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.setup"></app-code-tab>
+
+    <div class="pl-4">
+      <ul class="list-decimal">
+        <li>import component css in project css file</li>
+        <li>import component module in your module file</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card p-3">
+    <div class="card-title">
+      <span>Basic</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.basic.expanded = !sampleCode.basic.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.basic"></app-code-tab>
+
+    <youi-datatable
+      [tableData]="basicTable.tableData"
+      [columns]="basicTable.columns"
+    ></youi-datatable>
+  </div>
+
+  <div class="card p-3">
+    <div class="card-title">
+      <span>Header-Column & Body-Column Template</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.columnTemplate.expanded = !sampleCode.columnTemplate.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.columnTemplate"></app-code-tab>
+
+    <youi-datatable
+      [tableData]="columnTemplateTable.tableData"
+      [columns]="columnTemplateTable.columns"
+    >
+      <ng-template youi-datatable-template="header-status" let-column>
+        {{ column.label }} (status)
+      </ng-template>
+
+      <ng-template
+        youi-datatable-template="body-status"
+        let-cellData
+        let-rowData="rowData"
+      >
+        {{ getOptionText("status", cellData) }} ({{ cellData }})
+      </ng-template>
+
+      <ng-template
+        youi-datatable-template="body-action"
+        let-cellData
+        let-rowData="rowData"
+      >
+        <div class="action-column">
+          <button class="btn btn-cyan">
+            <i class="material-icons-outlined">visibility</i
+            ><span>Browse</span>
+          </button>
+          <button class="btn btn-green">
+            <i class="material-icons-outlined">edit</i><span>Edit</span>
+          </button>
+        </div>
+      </ng-template>
+    </youi-datatable>
+  </div>
+
+  <div class="card p-3">
+    <div class="card-title">
+      <span>Header & Body Template</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.headerBodyTemplate.expanded = !sampleCode.headerBodyTemplate.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.headerBodyTemplate"></app-code-tab>
+
+    <youi-datatable
+      [tableData]="basicTable.tableData"
+      [columns]="basicTable.columns"
+    >
+      <ng-template youi-datatable-template="headerTemplate" let-columns>
+        <tr class="bg-blue-300 text-blue-800">
+          <th class="p-3" *ngFor="let column of columns">
+            {{ column.label }} - {{ column.name }}
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template
+        youi-datatable-template="bodyTemplate"
+        let-tableData
+        let-columns="columns"
+      >
+        <tr class="bg-gray-100 text-gray-800" *ngFor="let rowData of tableData">
+          <td class="p-3 text-center" *ngFor="let column of columns">
+            <ng-container *ngIf="column.name === 'status'">
+              {{ column.name }} : {{ getOptionText("status", rowData[column.name]) }}
+            </ng-container>
+            <ng-container *ngIf="column.name !== 'status'">
+              {{ column.name }} : {{ rowData[column.name] }}
+            </ng-container>
+          </td>
+        </tr>
+      </ng-template>
+    </youi-datatable>
+  </div>
+
+  <div class="card p-3">
+    <div class="card-title">
+      <span>Selection Table (See Console)</span>
+    
+      <button class="code-btn material-icons" (click)="sampleCode.selectionTable.expanded = !sampleCode.selectionTable.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.selectionTable"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-datatable
+        selectedMode="checkbox"
+        (selectedChange)="selectedChange($event)"
+        [tableData]="selectionTable.tableData"
+        [columns]="selectionTable.columns"
+        [rowSelectDisableFn] = selectionTable.rowSelectDisableFn
+      >
+        <ng-template
+          youi-datatable-template="body-status"
+          let-cellData
+          let-rowData="rowData"
+        >
+          {{ getOptionText("status", cellData) }}
+        </ng-template>
+      </youi-datatable>
+
+      <youi-datatable
+        selectedMode="radio"
+        (selectedChange)="selectedChange($event)"
+        [tableData]="selectionTable.tableData"
+        [columns]="selectionTable.columns"
+        [rowSelectDisableFn] = selectionTable.rowSelectDisableFn
+      >
+        <ng-template
+          youi-datatable-template="body-status"
+          let-cellData
+          let-rowData="rowData"
+        >
+          {{ getOptionText("status", cellData) }}
+        </ng-template>
+      </youi-datatable>
+    </div>
+  </div>
+
+  <div class="card p-3">
+    <div class="card-title">
+      <span>Style Table</span>
+    
+      <button class="code-btn material-icons" (click)="sampleCode.styleTable.expanded = !sampleCode.styleTable.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.styleTable"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-datatable
+        selectedMode="checkbox"
+        tableCSSClass="styled-table"
+        [tableData]="selectionTable.tableData"
+        [columns]="selectionTable.columns"
+      >
+        <ng-template
+          selectedMode="checkbox"
+          youi-datatable-template="body-status"
+          let-cellData
+          let-rowData="rowData"
+        >
+          {{ getOptionText("status", cellData) }}
+        </ng-template>
+      </youi-datatable>
+
+      <youi-datatable
+        selectedMode="radio"
+        tableCSSClass="styled2-table"
+        [tableData]="selectionTable.tableData"
+        [columns]="selectionTable.columns"
+        [rowSelectDisableFn] = selectionTable.rowSelectDisableFn
+      >
+        <ng-template
+          youi-datatable-template="body-status"
+          let-cellData
+          let-rowData="rowData"
+        >
+          {{ getOptionText("status", cellData) }}
+        </ng-template>
+      </youi-datatable>
+
+      <youi-datatable
+        selectedMode="checkbox"
+        [tableData]="selectionTable.tableData"
+        [columns]="selectionTable.columns"
+        [rowCSSClassFn]="selectionTable.rowCSSClassFn"
+      >
+        <ng-template
+          youi-datatable-template="body-status"
+          let-cellData
+          let-rowData="rowData"
+        >
+          {{ getOptionText("status", cellData) }}
+        </ng-template>
+      </youi-datatable>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,216 @@
+<div class="page-wrapper">
+  <youi-breadcrumb class="card breadcrumb">
+    <youi-breadcrumb-item>
+      UI Component
+    </youi-breadcrumb-item>
+    <youi-breadcrumb-item>
+      Pagination
+    </youi-breadcrumb-item>
+  </youi-breadcrumb>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Setup</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.setup.expanded = !sampleCode.setup.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.setup"></app-code-tab>
+
+    <div class="pl-4">
+      <ul class="list-decimal">
+        <li>import component css in project css file</li>
+        <li>import component module in your module file</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Basic</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.basic.expanded = !sampleCode.basic.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.basic"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-pagination
+        [(currentPage)]="pagination.currentPage"
+        [maxPages]="10"
+      >
+      </youi-pagination>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Show First Last Icon Button</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.showFirstLastIconButton.expanded = !sampleCode.showFirstLastIconButton.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.showFirstLastIconButton"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-pagination
+        [(currentPage)]="pagination.currentPage"
+        [maxPages]="10"
+        [showFirstLastIconButton]="true"
+      >
+      </youi-pagination>
+
+      <youi-pagination
+        [(currentPage)]="pagination.currentPage"
+        [maxPages]="10"
+        [showFirstLastIconButton]="false"
+      >
+      </youi-pagination>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Row Per Page</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.rowPerPage.expanded = !sampleCode.rowPerPage.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.rowPerPage"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-pagination
+        [(currentPage)]="pagination.currentPage"
+        [rowPerPage]="5"
+        [totalRowsCount]="40"
+      >
+      </youi-pagination>
+      <youi-pagination
+        [(currentPage)]="pagination.currentPage"
+        [rowPerPage]="5"
+        [rowPerPageOptions]="[10, 15, 20, 0]"
+        [totalRowsCount]="40"
+        [showRowPerPageSelect]="true"
+        (rowPerPageChange)="rowPerPageChange($event)"
+      >
+      </youi-pagination>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Boundary With MaxDisplayPages</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.boundaryWithMaxDisplayPages.expanded = !sampleCode.boundaryWithMaxDisplayPages.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.boundaryWithMaxDisplayPages"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-pagination
+        [(currentPage)]="pagination.currentPage"
+        [maxPages]="10"
+        [maxDsiplayPages]="5"
+      ></youi-pagination>
+      <youi-pagination
+        [(currentPage)]="pagination.currentPage"
+        [showFirstLastIconButton]="false"
+        [maxPages]="10"
+        [maxDsiplayPages]="5"
+      ></youi-pagination>
+    </div>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Template</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.template.expanded = !sampleCode.template.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.template"></app-code-tab>
+
+    <youi-pagination
+        [(currentPage)]="pagination.currentPage"
+        [maxPages]="10"
+        [maxDsiplayPages]="5"
+    >
+      <ng-template #first>
+        first
+      </ng-template>
+
+      <ng-template #previous>
+        previous
+      </ng-template>
+      <ng-template #number let-page>
+        {{page.label !== '...' ? '(' + page.label + ')' : '...'}}
+      </ng-template>
+
+      <ng-template #next>
+        next
+      </ng-template>
+
+      <ng-template #last>
+        last
+      </ng-template>
+    </youi-pagination>
+  </div>
+
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Style</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.style.expanded = !sampleCode.style.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.style"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-pagination
+        buttonCSSClass="custom-pagination-button"
+        activeNumberCSSClass="custom-pagination-button--active"
+        [(currentPage)]="pagination.currentPage"
+        [maxPages]="10"
+        [maxDsiplayPages]="5"
+      ></youi-pagination>
+      <youi-pagination
+        arrowCSSClass="custom-pagination2-arrow"
+        numberCSSClass="custom-pagination2-number"
+        activeNumberCSSClass="custom-pagination2-number-active"
+        rowPerPageSelectCSSClass="custom-rowPerPageSelect"
+        [(currentPage)]="pagination.currentPage"
+        [showRowPerPageSelect]="true"
+        [rowPerPage]="10"
+        [totalRowsCount]="100"
+        [maxDsiplayPages]="5"
+      ></youi-pagination>
+    </div>
+  </div>
+  
+  <div class="card p-4">
+    <div class="card-title">
+      <span>Horizontal Align</span>
+
+      <button class="code-btn material-icons" (click)="sampleCode.horizontalAlign.expanded = !sampleCode.horizontalAlign.expanded">code</button>
+    </div>
+
+    <app-code-tab [sample]="sampleCode.horizontalAlign"></app-code-tab>
+
+    <div class="space-y-2">
+      <youi-pagination
+        [(currentPage)]="pagination.currentPage"
+        [maxPages]="10"
+      ></youi-pagination>
+      <youi-pagination
+        class="justify-center"
+        [(currentPage)]="pagination.currentPage"
+        [maxPages]="10"
+      ></youi-pagination>
+      <youi-pagination
+        class="justify-end"
+        [(currentPage)]="pagination.currentPage"
+        [maxPages]="10"
+      ></youi-pagination>
+    </div>
+  </div>
+</div>

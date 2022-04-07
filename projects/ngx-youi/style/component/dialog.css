@@ -1,0 +1,134 @@
+.dialog-backdrop {
+  background-color: rgba(0,0,0,0.5);
+  cursor: pointer
+}
+
+.dialog-backdrop--block {
+  cursor: initial;
+}
+
+.dialog-container {
+  display: block;
+  max-width: 400px;
+  max-height: 90vh;
+  width: 90vw;
+
+  overflow: hidden;
+  border-radius: 5px;
+  background: white;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.dialog-title {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+
+  background-color: #212121;
+  color: white;
+}
+
+.dialog-body {
+  padding: 15px 10px;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 0 -10px;
+  border-top: 1px solid #ccc;
+}
+
+.dialog-actions > * {
+  margin: 0 10px;
+}
+
+.dialog-actions__btn {
+  flex-grow: 1;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 15px;
+  background-color: #757575;
+  color: white;
+  transition: background-color ease 0.2s;
+}
+
+.dialog-actions__btn:hover {
+  background-color: #9E9E9E;
+}
+
+.dialog-actions__btn:active {
+  background-color: #757575;
+}
+
+.dialog-title-confirm {
+  background-color: #0D47A1;
+}
+.dialog-actions__btn-confirm {
+  background-color: #1E88E5;
+}
+.dialog-actions__btn-confirm:hover {
+  background-color: #2196F3;
+}
+.dialog-actions__btn-confirm:active {
+  background-color: #1E88E5;
+}
+
+.dialog-title_info {
+  background-color: #0E7490;
+}
+.dialog-actions__btn_info {
+  background-color: #0891B2;
+}
+.dialog-actions__btn_info:hover {
+  background-color: #06B6D4;
+}
+.dialog-actions__btn_info:active {
+  background-color: #0891B2;
+}
+
+.dialog-title_success {
+  background-color: #2E7D32;
+}
+.dialog-actions__btn_success {
+  background-color: #43A047;
+}
+.dialog-actions__btn_success:hover {
+  background-color: #4CAF50;
+}
+.dialog-actions__btn_success:active {
+  background-color: #43A047;
+}
+
+.dialog-title_alert {
+  background-color: #C62828;
+}
+.dialog-actions__btn_alert {
+  background-color: #E53935;
+}
+.dialog-actions__btn_alert:hover {
+  background-color: #F44336;
+}
+.dialog-actions__btn_alert:active {
+  background-color: #E53935;
+}
+
+.dialog-title_warning {
+  background-color: #CA8A04;
+}
+.dialog-actions__btn_warning {
+  background-color: #CA8A04;
+}
+.dialog-actions__btn_warning:hover {
+  background-color: #EAB308;
+}
+.dialog-actions__btn_warning:active {
+  background-color: #CA8A04;
+}
+
+.loading-dialog-container {
+  background-color: transparent;
+  box-shadow: none;
+}

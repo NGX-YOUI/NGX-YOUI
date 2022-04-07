@@ -1,0 +1,37 @@
+.notification-container-topLeft {
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
+.notification-container-topCenter {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.notification-container-topRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.notification-container-bottomLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0
+}
+
+.notification-container-bottomCenter {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.notification-container-bottomRight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
