@@ -115,7 +115,7 @@ export class DatatablePageComponent implements OnInit {
   }
 
   selectedChange (seletedInfo: ITableSelected<any>) {
-    this.selectionTable.selectedList = seletedInfo.allSelectedData
+    console.log(this.selectionTable.selectedList)
     console.log(seletedInfo)
   }
 }

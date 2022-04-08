@@ -130,6 +130,7 @@
     <div class="space-y-2">
       <youi-datatable
         selectedMode="checkbox"
+        [(selectedList)]="selectionTable.selectedList"
         (selectedChange)="selectedChange($event)"
         [tableData]="selectionTable.tableData"
         [columns]="selectionTable.columns"
@@ -146,6 +147,7 @@
 
       <youi-datatable
         selectedMode="radio"
+        [(selectedList)]="selectionTable.selectedList"
         (selectedChange)="selectedChange($event)"
         [tableData]="selectionTable.tableData"
         [columns]="selectionTable.columns"

@@ -36,7 +36,9 @@ export class DatatableComponent<T> implements ITable<T>, OnInit {
    * setecedMode 僅限於沒有任何 headerTemplate 跟 bodyTemplate
    */
   @Input() selectedMode: 'checkbox' | 'radio' | '' = ''
-  selectedList?: Set<T> = new Set<T>();
+
+  @Input() selectedList: Set<T> = new Set<T>();
+  @Output() selectedListChange: EventEmitter<Set<T>> = new EventEmitter<Set<T>>(true)
   @Output() selectedChange: EventEmitter<ITableSelected<T>> = new EventEmitter<ITableSelected<T>>(true)
 
   @ContentChildren(DatatableTemplateDirective) columnTemplateDirectives: QueryList<DatatableTemplateDirective>
@@ -72,6 +74,8 @@ export class DatatableComponent<T> implements ITable<T>, OnInit {
       this.selectedList.delete(data)
     }
 
+    this.selectedListChange.emit(this.selectedList)
+
     this.selectedChange.emit({
       targetData: data,
       isSelected: checked,
@@ -88,6 +92,8 @@ export class DatatableComponent<T> implements ITable<T>, OnInit {
       this.selectedList = new Set()
     }
     
+    this.selectedListChange.emit(this.selectedList)
+
     this.selectedChange.emit({
       targetData: null,
       isSelected: checked,

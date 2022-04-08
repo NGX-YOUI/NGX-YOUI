@@ -239,6 +239,7 @@ export class YourComponentClass {
         title: 'component.html',
         code: `<youi-datatable
   selectedMode="checkbox"
+  [(selectedList)]="selectionTable.selectedList"
   (selectedChange)="selectedChange($event)"
   [tableData]="selectionTable.tableData"
   [columns]="selectionTable.columns"
@@ -255,6 +256,7 @@ export class YourComponentClass {
 
 <youi-datatable
   selectedMode="radio"
+  [(selectedList)]="selectionTable.selectedList"
   (selectedChange)="selectedChange($event)"
   [tableData]="selectionTable.tableData"
   [columns]="selectionTable.columns"
@@ -299,9 +301,6 @@ export class YourComponentClass {
       }
     ],
     selectedList: new Set<any>(),
-    rowCSSClassFn: (row: any) => {
-      return row.username === 'user' ? 'bg-red-300' : ''
-    },
     rowSelectDisableFn: (row: any) => {
       return row.username === 'user' ? true : null
     }
@@ -321,7 +320,7 @@ export class YourComponentClass {
   }
 
   selectedChange (seletedInfo: ITableSelected<any>) {
-    this.selectionTable.selectedList = seletedInfo.allSelectedData
+    console.log(this.selectionTable.selectedList)
     console.log(seletedInfo)
   }
 }`
@@ -474,7 +473,7 @@ export class YourComponentClass {
   }
 
   selectedChange (seletedInfo: ITableSelected<any>) {
-    this.selectionTable.selectedList = seletedInfo.allSelectedData
+    console.log(this.selectionTable.selectedList)
     console.log(seletedInfo)
   }
 }`
