@@ -7,4 +7,4 @@ import { BreadcrumbModule, DatatableModule, DialogModule, DropdownModule, Expans
   exports: [BreadcrumbModule, DropdownModule, DatatableModule, SpinnerModule, NotificationModule, SelectModule, ExpansionMenuItemModule, MenuItemModule, PaginationModule, DialogModule, TabModule]
 })
 
-export class SharedNgYouiModule {}
+export class SharedNgxYouiModule {}

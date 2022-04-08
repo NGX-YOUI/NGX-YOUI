@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "NgxYoui": {
+    "NGX-YOUI": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/NgxYoui",
+            "outputPath": "dist/NGX-YOUI",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -78,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "NgxYoui:build:production"
+              "browserTarget": "NGX-YOUI:build:production"
             },
             "development": {
-              "browserTarget": "NgxYoui:build:development"
+              "browserTarget": "NGX-YOUI:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,7 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "NgxYoui:build"
+            "browserTarget": "NGX-YOUI:build"
           }
         },
         "test": {
@@ -113,5 +113,5 @@
       }
     }
   },
-  "defaultProject": "NgxYoui"
+  "defaultProject": "NGX-YOUI"
 }

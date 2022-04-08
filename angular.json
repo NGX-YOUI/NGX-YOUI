@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "NgxYoui": {
+    "NGX-YOUI": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -91,10 +91,10 @@
           "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "NgxYoui:build:production"
+              "browserTarget": "NGX-YOUI:build:production"
             },
             "development": {
-              "browserTarget": "NgxYoui:build:development"
+              "browserTarget": "NGX-YOUI:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -102,7 +102,7 @@
         "extract-i18n": {
           "builder": "@angular-builders/custom-webpack:extract-i18n",
           "options": {
-            "browserTarget": "NgxYoui:build"
+            "browserTarget": "NGX-YOUI:build"
           }
         },
         "test": {
@@ -171,5 +171,5 @@
       }
     }
   },
-  "defaultProject": "NgxYoui"
+  "defaultProject": "NGX-YOUI"
 }
