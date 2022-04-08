@@ -1,0 +1,15 @@
+.description {
+  @apply my-2;
+}
+
+.description-title {
+  @apply flex items-center text-sm font-bold text-gray-600;
+}
+
+.description-title__icon {
+  @apply mr-2;
+}
+
+.description-content {
+  @apply mt-3;;
+}

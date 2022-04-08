@@ -1,6 +1,6 @@
 {
   "name": "ngx-youi",
-  "version": "0.3.0",
+  "version": "0.3.3",
   "description": "NGX-YOUI is a Highly customizable library of Angular UI components for content and styles",
   "author": "Ted Chang",
   "keywords": [
@@ -15,6 +15,11 @@
     "ui-components",
     "angular-ui-components",
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NGX-YOUI/NGX-YOUI.git"
+  },
+  "homepage": "https://ngx-youi.github.io/NGX-YOUI/",
   "peerDependencies": {
     "@angular/common": "^13.0.0",
     "@angular/core": "^13.0.0"
@@ -24,5 +29,6 @@
     "@angular/cdk": "^13.0.0",
     "material-icons": "^1.10.6",
     "svg-loaders": "^0.2.0"
-  }
+  },
+  "license": "MIT"
 }
