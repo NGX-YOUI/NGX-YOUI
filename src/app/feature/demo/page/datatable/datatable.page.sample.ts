@@ -94,10 +94,10 @@ export class YourComponentClass {
     <div class="action-column">
       <button class="btn btn-cyan">
         <i class="material-icons-outlined">visibility</i
-        ><span>瀏覽</span>
+        ><span>Browse</span>
       </button>
       <button class="btn btn-green">
-        <i class="material-icons-outlined">edit</i><span>編輯</span>
+        <i class="material-icons-outlined">edit</i><span>Edit</span>
       </button>
     </div>
   </ng-template>
@@ -299,6 +299,9 @@ export class YourComponentClass {
       }
     ],
     selectedList: new Set<any>(),
+    rowCSSClassFn: (row: any) => {
+      return row.username === 'user' ? 'bg-red-300' : ''
+    },
     rowSelectDisableFn: (row: any) => {
       return row.username === 'user' ? true : null
     }
@@ -335,6 +338,7 @@ export class YourComponentClass {
   tableCSSClass="styled-table"
   [tableData]="selectionTable.tableData"
   [columns]="selectionTable.columns"
+  [rowSelectDisableFn] = selectionTable.rowSelectDisableFn
 >
   <ng-template
     selectedMode="checkbox"
@@ -367,6 +371,7 @@ export class YourComponentClass {
   [tableData]="selectionTable.tableData"
   [columns]="selectionTable.columns"
   [rowCSSClassFn]="selectionTable.rowCSSClassFn"
+  [rowSelectDisableFn] = selectionTable.rowSelectDisableFn
 >
   <ng-template
     youi-datatable-template="body-status"
@@ -419,49 +424,58 @@ export class YourComponentClass {
       },
       {
         title: 'component.ts',
-        code: `export class YourComponentClass {
-  pagination = {
-    currentPage: 1
-  }
-}`
-      }
-    ]
-  },
-  horizontalAlign: {
-    expanded: false,
-    examples: [
-      {
-        title: 'component.html',
-        code: `<youi-pagination
-  [(currentPage)]="pagination.currentPage"
-  [maxPages]="10"
-></youi-pagination>
-<youi-pagination
-  class="justify-center"
-  [(currentPage)]="pagination.currentPage"
-  [maxPages]="10"
-></youi-pagination>
-<youi-pagination
-  class="justify-end"
-  [(currentPage)]="pagination.currentPage"
-  [maxPages]="10"
-></youi-pagination>`
-      },
-      {
-        title: 'component.css',
-        code: `.justify-end {
-  justify-content: flex-end;
-}
+        code: `import { ITable, ITableSelected } from 'ngx-youi';
 
-.justify-center {
-  justify-content: center;
-}`
+export class YourComponentClass {
+  selectionTable: ITable<any> = {
+    columns: [
+      { name: 'username', label: 'USER NAME' },
+      { name: 'name', label: 'NAME' },
+      { name: 'status', label: 'STATUS' },
+    ],
+
+    tableData: [
+      {
+        username: 'admin',
+        name: 'Alan',
+        status: 0
       },
       {
-        title: 'component.ts',
-        code: `export class YourComponentClass {
-  pagination = {
-    currentPage: 1
+        username: 'user',
+        name: 'Steven',
+        status: 1
+      },
+      {
+        username: 'guest',
+        name: 'Mike',
+        status: 2
+      }
+    ],
+    selectedList: new Set<any>(),
+    rowCSSClassFn: (row: any) => {
+      return row.username === 'user' ? 'bg-red-300' : ''
+    },
+    rowSelectDisableFn: (row: any) => {
+      return row.username === 'user' ? true : null
+    }
+  }
+
+  getOptionText (name: string, value: any) {
+    const options: {[key: string]: any[]} = {
+      status: [
+        { label: 'All', value: '' },
+        { label: 'InActive', value: 0 },
+        { label: 'Active', value: 1 },
+        { label: 'Disabled', value: 2 },
+      ]
+    }
+
+    return options[name].find((option: { value: any }) => option.value === value).label
+  }
+
+  selectedChange (seletedInfo: ITableSelected<any>) {
+    this.selectionTable.selectedList = seletedInfo.allSelectedData
+    console.log(seletedInfo)
   }
 }`
       }

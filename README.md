@@ -9,3 +9,9 @@ You can easily integrate with other CSS frameworks, such as Tailwind or Bootstra
 ```
 npm i ngx-youi --save
 ```
+
+## Document
+https://ngx-youi.github.io/NGX-YOUI/
+
+## Demo
+https://ngx-youi.github.io/NGX-YOUI/auth/user/list

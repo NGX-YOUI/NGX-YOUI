@@ -177,6 +177,7 @@
         tableCSSClass="styled-table"
         [tableData]="selectionTable.tableData"
         [columns]="selectionTable.columns"
+        [rowSelectDisableFn] = selectionTable.rowSelectDisableFn
       >
         <ng-template
           selectedMode="checkbox"
@@ -209,6 +210,7 @@
         [tableData]="selectionTable.tableData"
         [columns]="selectionTable.columns"
         [rowCSSClassFn]="selectionTable.rowCSSClassFn"
+        [rowSelectDisableFn] = selectionTable.rowSelectDisableFn
       >
         <ng-template
           youi-datatable-template="body-status"

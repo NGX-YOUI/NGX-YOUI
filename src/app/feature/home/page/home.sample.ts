@@ -30,10 +30,10 @@ export const HomeSample: { [key:string]: ICodeTab } = {
     <div class="action-column">
       <button class="btn btn-cyan">
         <i class="material-icons-outlined">visibility</i
-        ><span>瀏覽</span>
+        ><span>Browse</span>
       </button>
       <button class="btn btn-green">
-        <i class="material-icons-outlined">edit</i><span>編輯</span>
+        <i class="material-icons-outlined">edit</i><span>Edit</span>
       </button>
     </div>
   </ng-template>
@@ -44,11 +44,12 @@ export const HomeSample: { [key:string]: ICodeTab } = {
         code: `import { ITable } from 'ngx-youi';
 
 export class YourComponentClass {
-  basicTable: ITable<any> = {
+  columnTemplateTable: ITable<any> = {
     columns: [
       { name: 'username', label: 'USER NAME' },
       { name: 'name', label: 'NAME' },
       { name: 'status', label: 'STATUS' },
+      { name: 'action', label: 'ACTION' }
     ],
 
     tableData: [
