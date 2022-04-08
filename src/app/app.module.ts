@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, HammerModule } from '@angular/platform-browser';
+import { BrowserModule, HammerGestureConfig, HammerModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import * as Hammer from 'hammerjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,16 @@ import { HighlightModule, HighlightOptions, HIGHLIGHT_OPTIONS } from 'ngx-highli
 import { GettingStartComponent } from './feature/guide/page/getting-start/getting-start.component';
 
 registerLocaleData(zh);
+
+export class MyHammerConfig extends HammerGestureConfig {
+  buildHammer(element: HTMLElement) {
+    const mc = new Hammer(element, {
+      touchAction: 'pan-y'
+    });
+
+    return mc;
+  }
+}
 
 @NgModule({
   declarations: [
@@ -29,6 +40,10 @@ registerLocaleData(zh);
   ],
   bootstrap: [AppComponent],
   providers: [
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: MyHammerConfig
+    },
     {
       provide: HIGHLIGHT_OPTIONS,
       useValue: <HighlightOptions> {
