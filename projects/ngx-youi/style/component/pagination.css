@@ -11,7 +11,7 @@ youi-pagination {
 .pagination__numbers {
   display: flex;
   overflow-x: auto;
-  min-width: 50px;
+  min-width: 37px;
 }
 
 .pagination-button {
