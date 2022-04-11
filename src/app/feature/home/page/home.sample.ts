@@ -215,7 +215,7 @@ export class YourComponentClass {
       },
       {
         title: 'component.css',
-        code: `::ng-deep .custom-notification-icon {
+        code: `::ng-deep .custom-youi-notification-icon {
   margin-top: 0.25rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -226,7 +226,7 @@ export class YourComponentClass {
   background-color: rgb(254 202 202);
 }
 
-::ng-deep .custom-notification-title {
+::ng-deep .custom-youi-notification-title {
   font-size: 1.5rem;
   line-height: 2rem;
   color: rgb(185 28 28);
@@ -238,13 +238,13 @@ export class YourComponentClass {
   color: rgb(185 28 28);
 }
 
-::ng-deep .custom-notification-close {
+::ng-deep .custom-youi-notification-close {
   border-radius: 9999px;
   background-color: rgb(0 0 0 / 0.1);
   color: rgb(255 255 255);
 }
 
-::ng-deep .custom-notification-close:hover {
+::ng-deep .custom-youi-notification-close:hover {
   background-color: rgb(0 0 0 / 0.3);
 }`
       },
@@ -263,11 +263,11 @@ export class YourComponentClass {
       icon: 'thumb_up',
       timeout: 5000,
       styles: {
-        iconCSSClass: 'custom-notification-icon',
+        iconCSSClass: 'custom-youi-notification-icon',
         wrapperClass: 'custom-notification-wrapper',
-        titleCSSClass: 'custom-notification-title',
+        titleCSSClass: 'custom-youi-notification-title',
         contentCSSClass: 'custom-notification-content',
-        closeCSSClass: 'custom-notification-close'
+        closeCSSClass: 'custom-youi-notification-close'
       }
     }, null)
   }

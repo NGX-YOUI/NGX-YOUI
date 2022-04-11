@@ -1,29 +1,29 @@
-<div class="pagination-wrapper">
+<div class="youi-pagination-wrapper">
   <button
     (click)="setCurrentPage(1)"
-    class="pagination-button pagination-arrow"
+    class="youi-pagination-button youi-pagination-arrow"
     [ngClass]="[buttonCSSClass, arrowCSSClass]"
     [attr.disabled]="this.currentPage === 1 ? true : null"
     *ngIf="showFirstLastIconButton"
   >
-    <span class="pagination-arrow-icon material-icons" *ngIf="!first">first_page</span>
+    <span class="material-icons" *ngIf="!first">first_page</span>
     <ng-container *ngTemplateOutlet="first"></ng-container>
   </button>
   
   <button
       (click)="setCurrentPage(previousPage)"
-      class="pagination-button pagination-arrow"
+      class="youi-pagination-button youi-pagination-arrow"
       [ngClass]="[buttonCSSClass, arrowCSSClass]"
       [attr.disabled]="this.currentPage === 1 ? true : null"
   >
-    <span class="pagination-arrow-icon material-icons" *ngIf="!previous">chevron_left</span>
+    <span class="material-icons" *ngIf="!previous">chevron_left</span>
     <ng-container  *ngTemplateOutlet="previous"></ng-container>
   </button>
   
   <div class="pagination__numbers">
     <button
-      class="pagination-button pagination-number"
-      [class.pagination-button--active]="page.value === currentPage"
+      class="youi-pagination-button youi-pagination-number"
+      [class.youi-pagination-button--active]="page.value === currentPage"
       [ngClass]="dynamicNumberClass(page.value)"
       (click)="setCurrentPage(page.value)"
       *ngFor="let page of showPages"
@@ -44,23 +44,23 @@
   
   <button
     (click)="setCurrentPage(nextPage)"
-    class="pagination-button pagination-arrow"
+    class="youi-pagination-button youi-pagination-arrow"
     [ngClass]="[buttonCSSClass, arrowCSSClass]"
     [attr.disabled]="this.currentPage === this.totalPages ? true : null"
   >
-    <span class="pagination-arrow-icon material-icons" *ngIf="!next">chevron_right</span>
+    <span class="material-icons" *ngIf="!next">chevron_right</span>
     <ng-container *ngTemplateOutlet="next"></ng-container>
   </button>
   
   <button
     (click)="setCurrentPage(this.totalPages)"
-    class="pagination-button pagination-arrow"
+    class="youi-pagination-button youi-pagination-arrow"
     [ngClass]="[buttonCSSClass, arrowCSSClass]"
     (click)="setCurrentPage(totalPages)"
     [attr.disabled]="this.currentPage === this.totalPages ? true : null"
     *ngIf="showFirstLastIconButton"
   >
-    <span class="pagination-arrow-icon material-icons" *ngIf="!last">last_page</span>
+    <span class="material-icons" *ngIf="!last">last_page</span>
     <ng-container *ngTemplateOutlet="last"></ng-container>
   </button>
 </div>

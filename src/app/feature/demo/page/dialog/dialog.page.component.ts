@@ -90,9 +90,9 @@ export class DialogPageComponent implements OnInit {
         cssClass: 'custom-dialog-actions__button-ok'
       },
       styles: {
-        titleCSSClass: 'custom-dialog-title',
-        bodyCSSClass: 'custom-dialog-body',
-        actionsCSSClass: 'custom-dialog-actions',
+        titleCSSClass: 'custom-youi-dialog-title',
+        bodyCSSClass: 'custom-youi-dialog-body',
+        actionsCSSClass: 'custom-youi-dialog-actions',
         actionsBtnCSSClass: 'custom-dialog-actions__button'
       }
     })
@@ -127,9 +127,9 @@ export class DialogPageComponent implements OnInit {
         cssClass: 'custom-dialog-actions__button-close'
       },
       styles: {
-        titleCSSClass: 'custom-dialog-title',
-        bodyCSSClass: 'custom-dialog-body',
-        actionsCSSClass: 'custom-dialog-actions',
+        titleCSSClass: 'custom-youi-dialog-title',
+        bodyCSSClass: 'custom-youi-dialog-body',
+        actionsCSSClass: 'custom-youi-dialog-actions',
         actionsBtnCSSClass: 'custom-dialog-actions__button'
       }
     })

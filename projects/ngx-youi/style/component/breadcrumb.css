@@ -6,7 +6,7 @@ youi-breadcrumb {
   overflow-y: hidden;
 }
 
-youi-breadcrumb-item, .breadcrumb-item-content {
+youi-breadcrumb-item, .youi-breadcrumb-item-content {
   display: flex;
   align-items: center;
 
@@ -15,10 +15,10 @@ youi-breadcrumb-item, .breadcrumb-item-content {
   white-space: pre-wrap;
 }
 
-.breadcrumb-item__icon {
+.youi-breadcrumb-item__icon {
   margin-right: 5px;
 }
 
-.breadcrumb-item-content-active {
+.youi-breadcrumb-item-content-active {
   color: #888;
 }

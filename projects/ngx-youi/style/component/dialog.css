@@ -1,13 +1,13 @@
-.dialog-backdrop {
+.youi-dialog-backdrop {
   background-color: rgba(0,0,0,0.5);
   cursor: pointer
 }
 
-.dialog-backdrop--block {
+.youi-dialog-backdrop--block {
   cursor: initial;
 }
 
-.dialog-container {
+.youi-dialog-container {
   display: block;
   max-width: 400px;
   max-height: 90vh;
@@ -19,7 +19,7 @@
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
-.dialog-title {
+.youi-dialog-title {
   font-size: 16px;
   font-weight: bold;
   text-align: center;
@@ -29,11 +29,11 @@
   color: white;
 }
 
-.dialog-body {
+.youi-dialog-body {
   padding: 15px 10px;
 }
 
-.dialog-actions {
+.youi-dialog-actions {
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -41,11 +41,11 @@
   border-top: 1px solid #ccc;
 }
 
-.dialog-actions > * {
+.youi-dialog-actions > * {
   margin: 0 10px;
 }
 
-.dialog-actions__btn {
+.youi-dialog-actions__btn {
   flex-grow: 1;
   text-align: center;
   border-radius: 5px;
@@ -55,80 +55,75 @@
   transition: background-color ease 0.2s;
 }
 
-.dialog-actions__btn:hover {
+.youi-dialog-actions__btn:hover {
   background-color: #9E9E9E;
 }
 
-.dialog-actions__btn:active {
+.youi-dialog-actions__btn:active {
   background-color: #757575;
 }
 
-.dialog-title-confirm {
+.youi-dialog-title-confirm {
   background-color: #0D47A1;
 }
-.dialog-actions__btn-confirm {
+.youi-dialog-actions__btn-confirm {
   background-color: #1E88E5;
 }
-.dialog-actions__btn-confirm:hover {
+.youi-dialog-actions__btn-confirm:hover {
   background-color: #2196F3;
 }
-.dialog-actions__btn-confirm:active {
+.youi-dialog-actions__btn-confirm:active {
   background-color: #1E88E5;
 }
 
-.dialog-title_info {
+.youi-youi-dialog-title_info {
   background-color: #0E7490;
 }
-.dialog-actions__btn_info {
+.youi-dialog-actions__btn_info {
   background-color: #0891B2;
 }
-.dialog-actions__btn_info:hover {
+.youi-dialog-actions__btn_info:hover {
   background-color: #06B6D4;
 }
-.dialog-actions__btn_info:active {
+.youi-dialog-actions__btn_info:active {
   background-color: #0891B2;
 }
 
-.dialog-title_success {
+.youi-dialog-title_success {
   background-color: #2E7D32;
 }
-.dialog-actions__btn_success {
+.youi-dialog-actions__btn_success {
   background-color: #43A047;
 }
-.dialog-actions__btn_success:hover {
+.youi-dialog-actions__btn_success:hover {
   background-color: #4CAF50;
 }
-.dialog-actions__btn_success:active {
+.youi-dialog-actions__btn_success:active {
   background-color: #43A047;
 }
 
-.dialog-title_alert {
+.youi-dialog-title_alert {
   background-color: #C62828;
 }
-.dialog-actions__btn_alert {
+.youi-dialog-actions__btn_alert {
   background-color: #E53935;
 }
-.dialog-actions__btn_alert:hover {
+.youi-dialog-actions__btn_alert:hover {
   background-color: #F44336;
 }
-.dialog-actions__btn_alert:active {
+.youi-dialog-actions__btn_alert:active {
   background-color: #E53935;
 }
 
-.dialog-title_warning {
+.youi-dialog-title_warning {
   background-color: #CA8A04;
 }
-.dialog-actions__btn_warning {
+.youi-dialog-actions__btn_warning {
   background-color: #CA8A04;
 }
-.dialog-actions__btn_warning:hover {
+.youi-dialog-actions__btn_warning:hover {
   background-color: #EAB308;
 }
-.dialog-actions__btn_warning:active {
+.youi-dialog-actions__btn_warning:active {
   background-color: #CA8A04;
-}
-
-.loading-dialog-container {
-  background-color: transparent;
-  box-shadow: none;
 }

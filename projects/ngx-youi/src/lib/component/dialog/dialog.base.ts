@@ -20,7 +20,7 @@ export class DialogBase {
   constructor(@Inject(DIALOG_DATA) public dialogData: any) { }
 
   @HostBinding('class') get bindContainerCSS () {
-    return `dialog-container`
+    return `youi-dialog-container`
   }
 
   public handleClose (data?: any) {

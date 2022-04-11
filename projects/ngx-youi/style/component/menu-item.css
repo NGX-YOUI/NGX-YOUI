@@ -28,11 +28,11 @@ youi-menu-item {
   color: #aaa;
 }
 
-.menu-item__left {
+.youi-menu-item__left {
   display: flex;
   align-items: center;
 }
 
-.menu-item__left-prepend {
+.youi-menu-item__left-prepend {
   padding-right: 8px;
 }

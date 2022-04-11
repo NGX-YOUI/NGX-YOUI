@@ -3,12 +3,12 @@
   [attr.disabled]="disabled ? true : null"
   [ngClass]="eventCSS"
 >
-  <div class="menu-item__left" [ngStyle]="insetStyle" (click)="disabledRouterLink($event)">
-    <div class="menu-item__left-prepend" *ngIf="preIconName || prepend">
-      <span *ngIf="preIconName && !prepend" class="menu-item__left-icon material-icons">{{ preIconName }}</span>
+  <div class="youi-menu-item__left" [ngStyle]="insetStyle" (click)="disabledRouterLink($event)">
+    <div class="youi-menu-item__left-prepend" *ngIf="preIconName || prepend">
+      <span *ngIf="preIconName && !prepend" class="youi-menu-item__left-icon material-icons">{{ preIconName }}</span>
       <ng-container *ngTemplateOutlet="prepend"></ng-container>
     </div>
-    <div class="menu-item__left-title" *ngIf="titleLabel && titleEl?.children.length <= 0">
+    <div class="youi-menu-item__left-title" *ngIf="titleLabel && titleEl?.children.length <= 0">
       {{ titleLabel }}
     </div>
     <div #titleEl>

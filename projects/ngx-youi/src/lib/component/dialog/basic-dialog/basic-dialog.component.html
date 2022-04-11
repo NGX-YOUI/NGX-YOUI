@@ -1,20 +1,20 @@
 <ng-container *ngIf="visible">
-  <div class="dialog-title" [ngClass]="styles?.titleCSSClass ?? ''">
+  <div class="youi-dialog-title" [ngClass]="styles?.titleCSSClass ?? ''">
     <ng-container *ngIf="!templates?.titleTemplate">
       {{title}}
     </ng-container>
 
     <ng-container *ngTemplateOutlet="templates?.titleTemplate; context: { $implicit: this }"></ng-container>
   </div>
-  <div class="dialog-body" [ngClass]="styles?.bodyCSSClass ?? ''">
+  <div class="youi-dialog-body" [ngClass]="styles?.bodyCSSClass ?? ''">
     <ng-container *ngIf="!templates?.bodyTemplate">
       {{body}}
     </ng-container>
     <ng-container *ngTemplateOutlet="templates?.bodyTemplate; context: { $implicit: this }"></ng-container>
   </div>
-  <div class="dialog-actions" [ngClass]="styles?.actionsCSSClass ?? ''">
+  <div class="youi-dialog-actions" [ngClass]="styles?.actionsCSSClass ?? ''">
     <ng-container *ngIf="!templates?.actionsTemplate">
-      <button class="dialog-actions__btn" [ngClass]="[styles?.actionsBtnCSSClass ?? '', ok?.cssClass ?? '']" (click)="handleClose()">{{ok.label}}</button>
+      <button class="youi-dialog-actions__btn" [ngClass]="[styles?.actionsBtnCSSClass ?? '', ok?.cssClass ?? '']" (click)="handleClose()">{{ok.label}}</button>
     </ng-container>
 
     <ng-container *ngTemplateOutlet="templates?.actionsTemplate; context: { $implicit: this }"></ng-container>

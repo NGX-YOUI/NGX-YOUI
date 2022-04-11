@@ -1,4 +1,4 @@
-::ng-deep .custom-notification-icon {
+::ng-deep .custom-youi-notification-icon {
   @apply text-red-700 text-xl mt-1;
 }
 
@@ -6,7 +6,7 @@
   @apply bg-red-200;
 }
 
-::ng-deep .custom-notification-title {
+::ng-deep .custom-youi-notification-title {
   @apply text-red-700 text-2xl;
 }
 
@@ -14,10 +14,10 @@
   @apply text-red-700 text-lg;
 }
 
-::ng-deep .custom-notification-close {
+::ng-deep .custom-youi-notification-close {
   @apply bg-black/10 text-white rounded-full;
 }
 
-::ng-deep .custom-notification-close:hover {
+::ng-deep .custom-youi-notification-close:hover {
   @apply bg-black/30;
 }

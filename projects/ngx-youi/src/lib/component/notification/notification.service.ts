@@ -45,7 +45,7 @@ export class NotificationService {
   public success (position: NotificationPositionEnum, prop: INotificationBaseProp, data?: any) {
     prop.icon = prop.icon ?? 'check'
     prop.styles = prop.styles ?? {}
-    prop.styles.wrapperClass = 'notification_success'
+    prop.styles.wrapperClass = 'youi-notification_success'
 
     return this.basic(position, prop, data)
   }
@@ -53,7 +53,7 @@ export class NotificationService {
   public warning (position: NotificationPositionEnum, prop: INotificationBaseProp, data?: any) {
     prop.icon = prop.icon ?? 'warning'
     prop.styles = prop.styles ?? {}
-    prop.styles.wrapperClass = 'notification_warning'
+    prop.styles.wrapperClass = 'youi-notification_warning'
 
     return this.basic(position, prop, data)
   }
@@ -61,7 +61,7 @@ export class NotificationService {
   public error (position: NotificationPositionEnum, prop: INotificationBaseProp, data?: any) {
     prop.icon = prop.icon ?? 'error'
     prop.styles = prop.styles ?? {}
-    prop.styles.wrapperClass = 'notification_danger'
+    prop.styles.wrapperClass = 'youi-notification_danger'
 
     return this.basic(position, prop, data)
   }
@@ -69,7 +69,7 @@ export class NotificationService {
   public info (position: NotificationPositionEnum, prop: INotificationBaseProp, data?: any) {
     prop.icon = prop.icon ?? 'info'
     prop.styles = prop.styles ?? {}
-    prop.styles.wrapperClass = 'notification_info'
+    prop.styles.wrapperClass = 'youi-notification_info'
 
     return this.basic(position, prop, data)
   }

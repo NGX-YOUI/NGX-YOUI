@@ -8,7 +8,7 @@ youi-expansion-youi-menu-item {
   -webkit-tap-highlight-color: transparent;
 }
 
-.expansion-menu-item__header {
+.youi-expansion-menu-item__header {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -17,26 +17,26 @@ youi-expansion-youi-menu-item {
   transition: all ease 0.2s;
   padding: 12px 18px;
 }
-.expansion-menu-item__header:hover {
+.youi-expansion-menu-item__header:hover {
   background-color: #efefef;
 }
 
-.expansion-menu-item__header:active {
+.youi-expansion-menu-item__header:active {
   background-color: #ddd;
 }
 
-.expansion-menu-item__header:disabled, .expansion-menu-item__header:disabled:hover {
+.youi-expansion-menu-item__header:disabled, .youi-expansion-menu-item__header:disabled:hover {
   cursor: not-allowed;
   background-color: initial;
   color: #aaa;
 }
 
-.expansion-menu-item__header__left {
+.youi-expansion-menu-item__header__left {
   display: flex;
   align-items: center;
 }
 
-.expansion-menu-item__header__left-prepend {
+.youi-expansion-menu-item__header__left-prepend {
   padding-right: 8px;
 }
 
@@ -44,11 +44,11 @@ youi-expansion-youi-menu-item {
   transition: all ease 75ms;
 }
 
-.expansion-menu-item__header__right-icon--open {
+.youi-expansion-menu-item__header__right-icon--open {
   transform: rotate(180deg);
 }
 
-.expansion-menu-item__content {
+.youi-expansion-menu-item__content {
   text-align: initial;
   overflow: hidden;
 }

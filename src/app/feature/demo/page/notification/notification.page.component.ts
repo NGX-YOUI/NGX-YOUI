@@ -64,11 +64,11 @@ export class NotifyPageComponent implements OnInit {
       icon: 'thumb_up',
       timeout: 5000,
       styles: {
-        iconCSSClass: 'custom-notification-icon',
+        iconCSSClass: 'custom-youi-notification-icon',
         wrapperClass: 'custom-notification-wrapper',
-        titleCSSClass: 'custom-notification-title',
+        titleCSSClass: 'custom-youi-notification-title',
         contentCSSClass: 'custom-notification-content',
-        closeCSSClass: 'custom-notification-close'
+        closeCSSClass: 'custom-youi-notification-close'
       }
     }, null)
   }

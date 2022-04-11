@@ -178,8 +178,8 @@ export class YourModuleClass {}`
       {
         title: 'component.html',
         code: `<youi-pagination
-  buttonCSSClass="custom-pagination-button"
-  activeNumberCSSClass="custom-pagination-button--active"
+  buttonCSSClass="custom-youi-pagination-button"
+  activeNumberCSSClass="custom-youi-pagination-button--active"
   [(currentPage)]="pagination.currentPage"
   [maxPages]="10"
   [maxDsiplayPages]="5"
@@ -198,18 +198,18 @@ export class YourModuleClass {}`
       },
       {
         title: 'component.css',
-        code: `::ng-deep .custom-pagination-button {
+        code: `::ng-deep .custom-youi-pagination-button {
   border-width: 1px;
   border-color: rgb(147 197 253);
   color: rgb(59 130 246);
 }
 
-::ng-deep .custom-pagination-button:enabled:hover {
+::ng-deep .custom-youi-pagination-button:enabled:hover {
   background-color: rgb(219 234 254);
   color: rgb(59 130 246);
 }
 
-::ng-deep .custom-pagination-button--active {
+::ng-deep .custom-youi-pagination-button--active {
   border-width: 1px;
   background-color: rgb(59 130 246);
   color: rgb(255 255 255);

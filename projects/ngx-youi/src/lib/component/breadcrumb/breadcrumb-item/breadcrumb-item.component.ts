@@ -24,7 +24,7 @@ export class BreadcrumbItemComponent implements OnInit {
 
   get itemCSSClass () {
     return [
-      this.breadcrumb.breadcrumbItems.last === this ? 'breadcrumb-item-content-active ' + this.breadcrumb.itemActiveCSSClass : this.breadcrumb.itemCSSClass
+      this.breadcrumb.breadcrumbItems.last === this ? 'youi-breadcrumb-item-content-active ' + this.breadcrumb.itemActiveCSSClass : this.breadcrumb.itemCSSClass
     ]
   }
 

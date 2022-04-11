@@ -1,6 +1,6 @@
 {
   "name": "ngx-youi",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "NGX-YOUI is a Highly customizable library of Angular UI components for content and styles",
   "author": "Ted Chang",
   "keywords": [
@@ -13,7 +13,7 @@
     "typescript",
     "components",
     "ui-components",
-    "angular-ui-components",
+    "angular-ui-components"
   ],
   "repository": {
     "type": "git",

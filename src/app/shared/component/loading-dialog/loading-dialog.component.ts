@@ -20,7 +20,7 @@ export class LoadingDialogComponent extends DialogBase implements OnInit {
   }
 
   @HostBinding('class') get bindContainerCSS () {
-    return `dialog-container loading-dialog-container ` + this.styles.containerCSSClass ?? ''
+    return `youi-dialog-container loading-dialog-container ` + this.styles.containerCSSClass ?? ''
   }
 
   ngOnInit(): void {

@@ -5,7 +5,7 @@ youi-select {
   user-select: none;
 }
 
-.select-body-wrapper {
+.youi-select-body-wrapper {
   display: flex;
   justify-content: space-between;
   padding: 7px;
@@ -13,28 +13,28 @@ youi-select {
   border-radius: 0.5rem;
 }
 
-.select-body-wrapper:focus {
+.youi-select-body-wrapper:focus {
   border: 1px solid #aaa;
 }
 
-.select-body-wrapper--disabled {
+.youi-select-body-wrapper--disabled {
   cursor: not-allowed;
   background: #f9f9f9;
   color: #aaa;
 }
 
-.select-body-value {
+.youi-select-body-value {
   padding: 0 5px;
 }
 
-.select-body-arrow {
+.youi-select-body-arrow {
 }
 
-.select-body-arrow-rotate {
+.youi-select-body-arrow-rotate {
   transform: rotate(180deg);
 }
 
-.select-options-wrapper {
+.youi-select-options-wrapper {
   position: absolute;
   width: 100%;
 

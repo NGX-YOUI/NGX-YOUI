@@ -3,7 +3,7 @@ youi-pagination {
   align-items: center;
 }
 
-.pagination-wrapper {
+.youi-pagination-wrapper {
   display: flex;
   max-width: 100%;
 }
@@ -14,7 +14,7 @@ youi-pagination {
   min-width: 37px;
 }
 
-.pagination-button {
+.youi-pagination-button {
   display: inline-flex;
   align-items: center;
   padding: 5px 10px;
@@ -26,24 +26,24 @@ youi-pagination {
   white-space: pre-wrap;
 }
 
-.pagination-button:enabled:hover {
+.youi-pagination-button:enabled:hover {
   background-color: #efefef;
 }
 
-.pagination-button--active {
+.youi-pagination-button--active {
   background-color: #666;
   color: white;
 }
 
-.pagination-button--active:hover {
+.youi-pagination-button--active:hover {
   color: #666;
 }
 
-.pagination-arrow {
+.youi-pagination-arrow {
   color:#bbb;
 }
 
-.pagination-arrow-icon {
+.youi-pagination-arrow {
   line-height: initial;
   font-size: 100%;
 }

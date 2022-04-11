@@ -1,13 +1,13 @@
-::ng-deep .custom-pagination-button {
+::ng-deep .custom-youi-pagination-button {
   @apply border border-blue-300 text-blue-500;
 }
 
-::ng-deep .custom-pagination-button:enabled:hover {
+::ng-deep .custom-youi-pagination-button:enabled:hover {
   @apply bg-blue-100 text-blue-500;
 }
 
 
-::ng-deep .custom-pagination-button--active {
+::ng-deep .custom-youi-pagination-button--active {
   @apply border bg-blue-500 text-white;
 }
 

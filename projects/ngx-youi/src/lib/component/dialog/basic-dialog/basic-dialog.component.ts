@@ -35,6 +35,6 @@ export class BasicDialogComponent extends DialogBase implements OnInit {
   }
 
   @HostBinding('class') override get bindContainerCSS () {
-    return `dialog-container ${this.styles?.containerCSSClass}`
+    return `youi-dialog-container ${this.styles?.containerCSSClass}`
   }
 }

@@ -1,16 +1,16 @@
 <div class="youi-expansion-youi-menu-item">
   <button
-    class="expansion-menu-item__header"
+    class="youi-expansion-menu-item__header"
     (click)="toggleCollapsed()"
     [ngClass]="headerEventCSS"
     [attr.disabled]="disabled ? true : null"
   >
-    <div class="expansion-menu-item__header__left" [ngStyle]="headerInsetStyle">
-      <div class="expansion-menu-item__header__left-prepend" *ngIf="preIconName || prepend">
-        <span *ngIf="preIconName && !prepend" class="expansion-menu-item__header__left-icon material-icons">{{preIconName}}</span>
+    <div class="youi-expansion-menu-item__header__left" [ngStyle]="headerInsetStyle">
+      <div class="youi-expansion-menu-item__header__left-prepend" *ngIf="preIconName || prepend">
+        <span *ngIf="preIconName && !prepend" class="youi-expansion-menu-item__header__left-icon material-icons">{{preIconName}}</span>
         <ng-container *ngTemplateOutlet="prepend"></ng-container>
       </div>
-      <div class="expansion-menu-item__header__left-title" *ngIf="titleLabel && !title">{{titleLabel}}</div>
+      <div class="youi-expansion-menu-item__header__left-title" *ngIf="titleLabel && !title">{{titleLabel}}</div>
       <ng-container *ngTemplateOutlet="title"></ng-container>
     </div>
     <div class="expansion-menu-item__header__right">
@@ -20,7 +20,7 @@
     </div>
   </button>
   <div
-    class="expansion-menu-item__content"
+    class="youi-expansion-menu-item__content"
     [@contentExpansion]="collapsed ? 'collapsed' : 'expanded'"
   >
     <div class="expansion-menu-item__content__inner" [ngClass]="contentCSSClass" [ngStyle]="contentInsetStyle">

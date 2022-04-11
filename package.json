@@ -25,7 +25,7 @@
     "hammerjs": "^2.0.8",
     "highlightjs-line-numbers.js": "^2.8.0",
     "ngx-highlightjs": "^6.1.2",
-    "ngx-youi": "^0.3.0",
+    "ngx-youi": "^0.4.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

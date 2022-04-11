@@ -29,7 +29,7 @@ import { Component, OnInit } from '@angular/core';
           style({ opacity: 1 }))
       ]),
       transition(':leave', [
-        query('.spinner-svg, .spinner-template', style({ display: 'none' })),
+        query('.youi-spinner-svg, .youi-spinner-template', style({ display: 'none' })),
         style({ opacity: 1 }),
         animate('300ms ease',
           style({ opacity: 0 }))

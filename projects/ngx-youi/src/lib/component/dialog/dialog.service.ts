@@ -31,8 +31,8 @@ export class DialogService {
       body: prop.body,
       ok: prop.ok,
       styles: {
-        titleCSSClass: 'dialog-title_info',
-        actionsBtnCSSClass: 'dialog-actions__btn_info'
+        titleCSSClass: 'youi-youi-dialog-title_info',
+        actionsBtnCSSClass: 'youi-dialog-actions__btn_info'
       }
     }, data, backdropConfig)
   }
@@ -43,8 +43,8 @@ export class DialogService {
       body: prop.body,
       ok: prop.ok,
       styles: {
-        titleCSSClass: 'dialog-title_info',
-        actionsBtnCSSClass: 'dialog-actions__btn_info'
+        titleCSSClass: 'youi-youi-dialog-title_info',
+        actionsBtnCSSClass: 'youi-dialog-actions__btn_info'
       }
     }, data, backdropConfig)
   }
@@ -55,8 +55,8 @@ export class DialogService {
       body: prop.body,
       ok: prop.ok,
       styles: {
-        titleCSSClass: 'dialog-title_alert',
-        actionsBtnCSSClass: 'dialog-actions__btn_alert'
+        titleCSSClass: 'youi-dialog-title_alert',
+        actionsBtnCSSClass: 'youi-dialog-actions__btn_alert'
       }
     }, data, backdropConfig)
   }
@@ -67,8 +67,8 @@ export class DialogService {
       body: prop.body,
       ok: prop.ok,
       styles: {
-        titleCSSClass: 'dialog-title_warning',
-        actionsBtnCSSClass: 'dialog-actions__btn_warning'
+        titleCSSClass: 'youi-dialog-title_warning',
+        actionsBtnCSSClass: 'youi-dialog-actions__btn_warning'
       }
     }, data, backdropConfig)
   }
@@ -100,7 +100,7 @@ export class DialogService {
     }
 
     if (!backdropConfig.closeAfterClick) {
-      backdropConfig.backdropCSSClass += ' dialog-backdrop--block'
+      backdropConfig.backdropCSSClass += ' youi-dialog-backdrop--block'
     }
     
     const overlayRef = this.createOverlay(backdropConfig.hasBackdrop, backdropConfig.backdropCSSClass);
@@ -144,7 +144,7 @@ export class DialogService {
 
     const overlayConfig = new OverlayConfig({
       hasBackdrop: hasBackdrop,
-      backdropClass: ['dialog-backdrop', ...backdropClass.split(' ')],
+      backdropClass: ['youi-dialog-backdrop', ...backdropClass.split(' ')],
       panelClass: '',
       scrollStrategy: this.overlay.scrollStrategies.block(),
       positionStrategy

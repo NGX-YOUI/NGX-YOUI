@@ -35,16 +35,16 @@ export class YourModuleClass {}`
       },
       {
         title: 'component.css',
-        code: `::ng-deep .custom-dialog-title {
+        code: `::ng-deep .custom-youi-dialog-title {
   background-color: rgb(251 207 232);
   color: rgb(190 24 93);
 }
 
-::ng-deep .custom-dialog-body {
+::ng-deep .custom-youi-dialog-body {
   color: rgb(219 39 119);
 }
 
-::ng-deep .custom-dialog-actions {
+::ng-deep .custom-youi-dialog-actions {
   background-color: rgb(251 207 232);
 }
 
@@ -136,9 +136,9 @@ export class YourComponentClass {
         cssClass: 'custom-dialog-actions__button-ok'
       },
       styles: {
-        titleCSSClass: 'custom-dialog-title',
-        bodyCSSClass: 'custom-dialog-body',
-        actionsCSSClass: 'custom-dialog-actions',
+        titleCSSClass: 'custom-youi-dialog-title',
+        bodyCSSClass: 'custom-youi-dialog-body',
+        actionsCSSClass: 'custom-youi-dialog-actions',
         actionsBtnCSSClass: 'custom-dialog-actions__button'
       }
     })
@@ -162,16 +162,16 @@ export class YourComponentClass {
       },
       {
         title: 'component.css',
-        code: `::ng-deep .custom-dialog-title {
+        code: `::ng-deep .custom-youi-dialog-title {
   background-color: rgb(251 207 232);
   color: rgb(190 24 93);
 }
 
-::ng-deep .custom-dialog-body {
+::ng-deep .custom-youi-dialog-body {
   color: rgb(219 39 119);
 }
 
-::ng-deep .custom-dialog-actions {
+::ng-deep .custom-youi-dialog-actions {
   background-color: rgb(251 207 232);
 }
 
@@ -234,9 +234,9 @@ export class YourComponentClass {
         cssClass: 'custom-dialog-actions__button-close'
       },
       styles: {
-        titleCSSClass: 'custom-dialog-title',
-        bodyCSSClass: 'custom-dialog-body',
-        actionsCSSClass: 'custom-dialog-actions',
+        titleCSSClass: 'custom-youi-dialog-title',
+        bodyCSSClass: 'custom-youi-dialog-body',
+        actionsCSSClass: 'custom-youi-dialog-actions',
         actionsBtnCSSClass: 'custom-dialog-actions__button'
       }
     })

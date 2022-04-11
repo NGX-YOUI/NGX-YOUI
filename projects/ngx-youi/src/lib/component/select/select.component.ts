@@ -62,7 +62,7 @@ export class SelectComponent implements AfterViewInit, ControlValueAccessor {
 
   get dynamicBodyCSSClass () {
     const bodyCSSClass = !this.disabled ? this.bodyCSSClass : ''
-    const disabledCSSClass = this.disabled ? 'select-body-wrapper--disabled ' + this.bodyDisableCSSClass : ''
+    const disabledCSSClass = this.disabled ? 'youi-select-body-wrapper--disabled ' + this.bodyDisableCSSClass : ''
     return [bodyCSSClass, disabledCSSClass]
   }
 
