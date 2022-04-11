@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 import { MenuItemSample } from './menu-item.page.sample';
 
 @Component({
@@ -11,8 +13,10 @@ export class MenuItemPageComponent implements OnInit {
 
   activeItem: string = 'item 1'
 
-  constructor() { }
+  constructor(private route: ActivatedRoute
+    , private titleService: Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle(this.route.snapshot.data['title'])
   }
 }

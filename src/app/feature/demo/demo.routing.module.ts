@@ -15,16 +15,16 @@ const routes: Routes = [
   {
     path: '',
     children: [
-      { path: 'breadcrumb', component: BreadcrumbPageComponent },
-      { path: 'youi-menu-item', component: MenuItemPageComponent },
-      { path: 'youi-expansion-youi-menu-item', component: ExpansionMenuItemPageComponent },
-      { path: 'spinner', component: SpinnerPageComponent },
-      { path: 'notification', component: NotifyPageComponent },
-      { path: 'dialog', component: DialogPageComponent },
-      { path: 'dropdown', component: DropdownPageComponent },
-      { path: 'select', component: SelectPageComponent },
-      { path: 'pagination', component: PaginationPageComponent },
-      { path: 'datatable', component: DatatablePageComponent }
+      { path: 'breadcrumb', component: BreadcrumbPageComponent, data: { title: 'NGX-YOUI - Breadcrumb' } },
+      { path: 'youi-menu-item', component: MenuItemPageComponent, data: { title: 'NGX-YOUI - Menu Item' } },
+      { path: 'youi-expansion-menu-item', component: ExpansionMenuItemPageComponent, data: { title: 'NGX-YOUI - Expansion Menu Item' } },
+      { path: 'spinner', component: SpinnerPageComponent, data: { title: 'NGX-YOUI - Spinner' } },
+      { path: 'notification', component: NotifyPageComponent, data: { title: 'NGX-YOUI - Notification' } },
+      { path: 'dialog', component: DialogPageComponent, data: { title: 'NGX-YOUI - Dialog' } },
+      { path: 'dropdown', component: DropdownPageComponent, data: { title: 'NGX-YOUI - Dropdown' } },
+      { path: 'select', component: SelectPageComponent, data: { title: 'NGX-YOUI - Select' } },
+      { path: 'pagination', component: PaginationPageComponent, data: { title: 'NGX-YOUI - Pagination' } },
+      { path: 'datatable', component: DatatablePageComponent, data: { title: 'NGX-YOUI - Datatable' } }
     ]
   }
 ]

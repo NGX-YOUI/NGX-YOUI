@@ -1,4 +1,6 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 import { DialogService, ITable, NotificationPositionEnum, NotificationService } from 'ngx-youi';
 import { CustomDialogComponent } from '../../demo/page/dialog/custom-dialog/custom-dialog.component';
 import { HomeSample } from './home.sample';
@@ -12,7 +14,9 @@ export class HomeComponent implements OnInit {
   sampleCode = JSON.parse(JSON.stringify(HomeSample))
 
   constructor( private dialogService: DialogService
-            ,  private notificationService: NotificationService) { }
+            ,  private notificationService: NotificationService
+            ,  private route: ActivatedRoute
+            ,  private titleService: Title) { }
 
   columnTemplateTable: ITable<any> = {
     columns: [
@@ -94,5 +98,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.titleService.setTitle(this.route.snapshot.data['title'])
   }
 }

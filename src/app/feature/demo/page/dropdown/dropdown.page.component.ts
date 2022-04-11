@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 import { DropdownSample } from './dropdown.page.sample';
 
 @Component({
@@ -9,9 +11,11 @@ import { DropdownSample } from './dropdown.page.sample';
 export class DropdownPageComponent implements OnInit {
   sampleCode = JSON.parse(JSON.stringify(DropdownSample))
 
-  constructor() { }
+  constructor(private route: ActivatedRoute
+    , private titleService: Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle(this.route.snapshot.data['title'])
   }
 
 }

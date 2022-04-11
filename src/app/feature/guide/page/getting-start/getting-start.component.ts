@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 import { GettingStartSample } from './getting-start.sample';
 
 @Component({
@@ -9,9 +11,11 @@ import { GettingStartSample } from './getting-start.sample';
 export class GettingStartComponent implements OnInit {
   sampleCode = JSON.parse(JSON.stringify(GettingStartSample))
 
-  constructor() { }
+  constructor(private route: ActivatedRoute
+    , private titleService: Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle(this.route.snapshot.data['title'])
   }
 
 }

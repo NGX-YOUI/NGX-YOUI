@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: '',
     children: [
-      { path: 'getting-start', component: GettingStartComponent },
+      { path: 'getting-start', component: GettingStartComponent, data: { title: 'NGX-YOUI - Getting Start' } },
     ]
   }
 ];

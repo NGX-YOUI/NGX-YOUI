@@ -1,4 +1,5 @@
 import { AfterViewInit, ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DialogService, NotificationPositionEnum, NotificationService } from 'ngx-youi';
 import { take } from 'rxjs/operators';
@@ -18,9 +19,11 @@ export class UserReadComponent implements AfterViewInit {
     , protected route: ActivatedRoute
     , private userService: UserService
     , private dialogService: DialogService
-    , private notificationService: NotificationService) { }
+    , private notificationService: NotificationService
+    , private titleService: Title) { }
 
   ngAfterViewInit(): void {
+    this.titleService.setTitle(this.route.snapshot.data['title'])
     this.getData()
   }
 

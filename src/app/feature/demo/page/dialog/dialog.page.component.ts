@@ -1,4 +1,6 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 import { DialogService } from 'ngx-youi';
 import { CustomDialogComponent } from './custom-dialog/custom-dialog.component';
 import { DialogSample } from './dialog.page.sample';
@@ -15,9 +17,12 @@ export class DialogPageComponent implements OnInit {
   @ViewChild('bodyTemplate', { static: false }) bodyTemplate: TemplateRef<any>
   @ViewChild('actionsTemplate', { static: false }) actionsTemplate: TemplateRef<any>
 
-  constructor(private dialogService: DialogService) { }
+  constructor(private dialogService: DialogService
+            , private route: ActivatedRoute
+            , private titleService: Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle(this.route.snapshot.data['title'])
   }
 
 

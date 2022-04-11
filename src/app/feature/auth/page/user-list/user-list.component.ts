@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
+import { Title } from "@angular/platform-browser";
 import { ActivatedRoute, Router } from '@angular/router';
 import { DialogService, ITable, ITableSelected, NotificationPositionEnum, NotificationService } from 'ngx-youi';
 import { finalize, take } from "rxjs/operators";
@@ -60,8 +61,14 @@ export class UserListComponent extends ListPageMixin<IUserList>() {
             , public userService: UserService
             , private formBuilder: FormBuilder
             , private dialogService: DialogService
-            , private notificationService: NotificationService) {
+            , private notificationService: NotificationService
+            , private titleService: Title) {
     super(router, route)
+  }
+
+  ngOnInit () {
+    super.ngOnInit()
+    this.titleService.setTitle(this.route.snapshot.data['title'])
   }
 
   async searchData () {

@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 import { NotificationPositionEnum, NotificationService } from 'ngx-youi';
 import { UserCrudComponent } from '../../component/user-crud-wrapper/user-crud-wrapper.component';
 
@@ -10,9 +12,12 @@ import { UserCrudComponent } from '../../component/user-crud-wrapper/user-crud-w
 export class UserCreateComponent implements OnInit {
   @ViewChild('crud_wrapper', {static: false}) crud_wrapper: UserCrudComponent
 
-  constructor(private notificationService: NotificationService) { }
+  constructor(private notificationService: NotificationService
+            , private route: ActivatedRoute
+            , private titleService: Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle(this.route.snapshot.data['title'])
   }
 
   public submitForm() {

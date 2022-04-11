@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '', 
     component: BackendComponent,
     children: [
-      { path: '', component: HomeComponent },
+      { path: '', component: HomeComponent, data: { title: 'NGX-YOUI' } },
       { path: 'guide', loadChildren: () => import('src/app/feature/guide/guide.module').then(m => m.GuideModule) },
       { path: 'auth', loadChildren: () => import('src/app/feature/auth/auth.module').then(m => m.AuthModule) },
       { path: 'demo', loadChildren: () => import('src/app/feature/demo/demo.module').then(m => m.DemoModule) }

@@ -15,7 +15,7 @@
       [routerLinkActiveOptions]="{ exact: true }"
     >
     </youi-menu-item>
-    <youi-expansion-youi-menu-item
+    <youi-expansion-menu-item
       titleLabel="Guide"
       preIconName="anchor"
       [isActive]="routeContainPath('/guide')"
@@ -39,7 +39,7 @@
         activeCSSClass="text-white"
       >
       </youi-menu-item> -->
-    </youi-expansion-youi-menu-item>
+    </youi-expansion-menu-item>
     <youi-menu-item
       preIconName="person"
       titleLabel="User List"
@@ -50,7 +50,7 @@
       [routerLinkActiveOptions]="{ exact: false }"
     >
     </youi-menu-item>
-    <youi-expansion-youi-menu-item
+    <youi-expansion-menu-item
       titleLabel="UI Component"
       preIconName="build"
       [isActive]="routeContainPath('/demo')"
@@ -82,7 +82,7 @@
         [insetLevel]="1"
         cssClass="sider-youi-menu-item"
         activeCSSClass="text-white"
-        routerLink="/demo/youi-expansion-youi-menu-item"
+        routerLink="/demo/youi-expansion-menu-item"
         routerLinkActive="sider-youi-menu-item-active"
         [routerLinkActiveOptions]="{ exact: false }"
       >
@@ -156,7 +156,7 @@
         [routerLinkActiveOptions]="{ exact: false }"
       >
       </youi-menu-item>
-    </youi-expansion-youi-menu-item>
+    </youi-expansion-menu-item>
   </layout-sider>
 
   <layout-header [fixed]="true" class="app-header">

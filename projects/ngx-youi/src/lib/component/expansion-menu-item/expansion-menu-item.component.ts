@@ -2,7 +2,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { AfterContentInit, ChangeDetectionStrategy, Component, ContentChild, EventEmitter, Input, OnInit, Output, TemplateRef, ViewEncapsulation} from '@angular/core';
 
 @Component({
-  selector: 'youi-expansion-youi-menu-item',
+  selector: 'youi-expansion-menu-item',
   templateUrl: './expansion-menu-item.component.html',
   animations: [
     trigger('contentExpansion', [

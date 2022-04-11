@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 import { ITable, ITableSelected } from 'ngx-youi';
 import { DatatableSample } from './datatable.page.sample';
 
@@ -96,9 +98,11 @@ export class DatatablePageComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor(private route: ActivatedRoute
+    , private titleService: Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle(this.route.snapshot.data['title'])
   }
 
   getOptionText (name: string, value: any) {

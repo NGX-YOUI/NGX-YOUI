@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 import { ExpansionMenuItemSample } from './expansion-menu-item.page.sample';
 
 @Component({
@@ -12,9 +14,11 @@ export class ExpansionMenuItemPageComponent implements OnInit {
   collapsed: boolean = false
   collapsed2: boolean = true
 
-  constructor() { }
+  constructor(private route: ActivatedRoute
+    , private titleService: Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle(this.route.snapshot.data['title'])
   }
 
 }

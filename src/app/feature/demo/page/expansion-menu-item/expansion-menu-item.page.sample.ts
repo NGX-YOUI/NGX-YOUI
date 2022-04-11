@@ -26,12 +26,12 @@ export class YourModuleClass {}`
     examples: [
       {
         title: 'component.html',
-        code: `<youi-expansion-youi-menu-item titleLabel="Area 1" preIconName="home">
+        code: `<youi-expansion-menu-item titleLabel="Area 1" preIconName="home">
   <youi-menu-item titleLabel="Page 1" [insetLevel]="1"> </youi-menu-item>
   <youi-menu-item titleLabel="Page 2" [insetLevel]="1"> </youi-menu-item>
-</youi-expansion-youi-menu-item>
+</youi-expansion-menu-item>
 
-<youi-expansion-youi-menu-item
+<youi-expansion-menu-item
   titleLabel="Area 2"
   preIconName="person"
   lastIconName="flash_off"
@@ -39,9 +39,9 @@ export class YourModuleClass {}`
 >
   <youi-menu-item titleLabel="Page 1" [insetLevel]="1"> </youi-menu-item>
   <youi-menu-item titleLabel="Page 2" [insetLevel]="1"> </youi-menu-item>
-</youi-expansion-youi-menu-item>
+</youi-expansion-menu-item>
 
-<youi-expansion-youi-menu-item
+<youi-expansion-menu-item
   headerCSSClass="bg-gray-200"
   contentCSSClass="p-3 bg-gray-100"
   titleLabel="Lorem ipsum dolor"
@@ -57,9 +57,9 @@ export class YourModuleClass {}`
   ut porttitor at, rutrum sit amet ipsum. Etiam at molestie odio. Quisque
   viverra erat maximus metus vulputate, ut sodales enim tincidunt. Etiam
   et turpis cursus, sagittis est id, pharetra nibh.
-</youi-expansion-youi-menu-item>
+</youi-expansion-menu-item>
 
-<youi-expansion-youi-menu-item
+<youi-expansion-menu-item
   headerCSSClass="bg-gray-200"
   contentCSSClass="p-3 bg-gray-100"
   titleLabel="Lorem ipsum dolor"
@@ -76,7 +76,7 @@ export class YourModuleClass {}`
   ut porttitor at, rutrum sit amet ipsum. Etiam at molestie odio. Quisque
   viverra erat maximus metus vulputate, ut sodales enim tincidunt. Etiam
   et turpis cursus, sagittis est id, pharetra nibh.
-</youi-expansion-youi-menu-item>`
+</youi-expansion-menu-item>`
       }
     ] 
   },
@@ -85,7 +85,7 @@ export class YourModuleClass {}`
     examples: [
       {
         title: 'component.html',
-        code: `<youi-expansion-youi-menu-item
+        code: `<youi-expansion-menu-item
   class="custom-lorem-expansion"
   titleLabel="Custom Lorem Expansion"
   headerCSSClass="custom-lorem-expansion-header"
@@ -101,9 +101,9 @@ export class YourModuleClass {}`
   ut porttitor at, rutrum sit amet ipsum. Etiam at molestie odio. Quisque
   viverra erat maximus metus vulputate, ut sodales enim tincidunt. Etiam
   et turpis cursus, sagittis est id, pharetra nibh.
-</youi-expansion-youi-menu-item>
+</youi-expansion-menu-item>
 
-<youi-expansion-youi-menu-item
+<youi-expansion-menu-item
   titleLabel="Custom Style"
   headerCSSClass="custom-expansion-menu-header"
   contentCSSClass="custom-expansion-menu-content"
@@ -113,9 +113,9 @@ export class YourModuleClass {}`
   </youi-menu-item>
   <youi-menu-item titleLabel="Page 2" [insetLevel]="1" preIconName="add">
   </youi-menu-item>
-</youi-expansion-youi-menu-item>
+</youi-expansion-menu-item>
 
-<youi-expansion-youi-menu-item
+<youi-expansion-menu-item
   titleLabel="Custom Style (Active)"
   headerCSSClass="custom-expansion-menu-header"
   headerActiveCSSClass="custom-expansion-menu-header-active"
@@ -127,9 +127,9 @@ export class YourModuleClass {}`
   </youi-menu-item>
   <youi-menu-item titleLabel="Page 2" [insetLevel]="1" preIconName="add">
   </youi-menu-item>
-</youi-expansion-youi-menu-item>
+</youi-expansion-menu-item>
 
-<youi-expansion-youi-menu-item
+<youi-expansion-menu-item
   titleLabel="Custom Style (Disabled)"
   headerCSSClass="custom-expansion-menu-header"
   headerActiveCSSClass="custom-expansion-menu-header-active"
@@ -141,7 +141,7 @@ export class YourModuleClass {}`
   </youi-menu-item>
   <youi-menu-item titleLabel="Page 2" [insetLevel]="1" preIconName="add">
   </youi-menu-item>
-</youi-expansion-youi-menu-item>`
+</youi-expansion-menu-item>`
       },
       {
         title: 'component.css',
@@ -210,16 +210,16 @@ export class YourModuleClass {}`
     examples: [
       {
         title: 'component.html',
-        code: `<youi-expansion-youi-menu-item
+        code: `<youi-expansion-menu-item
   titleLabel="Default Open"
   [(collapsed)]="collapsed"
   preIconName="tips_and_updates"
 >
   <youi-menu-item titleLabel="Page 1" [insetLevel]="1"> </youi-menu-item>
   <youi-menu-item titleLabel="Page 2" [insetLevel]="1"> </youi-menu-item>
-</youi-expansion-youi-menu-item>
+</youi-expansion-menu-item>
 
-<youi-expansion-youi-menu-item
+<youi-expansion-menu-item
   titleLabel="Default Open (disabled)"
   [disabled]="true"
   [(collapsed)]="collapsed"
@@ -227,16 +227,16 @@ export class YourModuleClass {}`
 >
   <youi-menu-item titleLabel="Page 1" [insetLevel]="1"> </youi-menu-item>
   <youi-menu-item titleLabel="Page 2" [insetLevel]="1"> </youi-menu-item>
-</youi-expansion-youi-menu-item>
+</youi-expansion-menu-item>
 
-<youi-expansion-youi-menu-item
+<youi-expansion-menu-item
   titleLabel="Default Closed"
   [(collapsed)]="collapsed2"
   preIconName="bedtime_off"
 >
   <youi-menu-item titleLabel="Page 1" [insetLevel]="1"> </youi-menu-item>
   <youi-menu-item titleLabel="Page 2" [insetLevel]="1"> </youi-menu-item>
-</youi-expansion-youi-menu-item>`
+</youi-expansion-menu-item>`
       },
       {
         title: 'component.ts',
@@ -252,21 +252,21 @@ export class YourModuleClass {}`
     examples: [
       {
         title: 'component.html',
-        code: `<youi-expansion-youi-menu-item titleLabel="Level 0">
-  <youi-expansion-youi-menu-item titleLabel="Level 1" [headerInsetLevel]="1">
-    <youi-expansion-youi-menu-item titleLabel="Level 2" [headerInsetLevel]="2">
+        code: `<youi-expansion-menu-item titleLabel="Level 0">
+  <youi-expansion-menu-item titleLabel="Level 1" [headerInsetLevel]="1">
+    <youi-expansion-menu-item titleLabel="Level 2" [headerInsetLevel]="2">
       <youi-menu-item titleLabel="Level 3" [insetLevel]="3"> </youi-menu-item>
-    </youi-expansion-youi-menu-item>
-  </youi-expansion-youi-menu-item>
-</youi-expansion-youi-menu-item>
+    </youi-expansion-menu-item>
+  </youi-expansion-menu-item>
+</youi-expansion-menu-item>
 
-<youi-expansion-youi-menu-item titleLabel="Level 0" preIconName="navigate_next">
-  <youi-expansion-youi-menu-item
+<youi-expansion-menu-item titleLabel="Level 0" preIconName="navigate_next">
+  <youi-expansion-menu-item
     titleLabel="Level 1"
     [headerInsetLevel]="1"
     preIconName="navigate_next"
   >
-    <youi-expansion-youi-menu-item
+    <youi-expansion-menu-item
       titleLabel="Level 2"
       [headerInsetLevel]="2"
       preIconName="navigate_next"
@@ -277,12 +277,12 @@ export class YourModuleClass {}`
         preIconName="navigate_next"
       >
       </youi-menu-item>
-    </youi-expansion-youi-menu-item>
-  </youi-expansion-youi-menu-item>
-</youi-expansion-youi-menu-item>
+    </youi-expansion-menu-item>
+  </youi-expansion-menu-item>
+</youi-expansion-menu-item>
 
-<youi-expansion-youi-menu-item titleLabel="Level 0" preIconName="navigate_next">
-  <youi-expansion-youi-menu-item
+<youi-expansion-menu-item titleLabel="Level 0" preIconName="navigate_next">
+  <youi-expansion-menu-item
     titleLabel="Level 1"
     [headerInsetLevel]="1"
     preIconName="navigate_next"
@@ -297,8 +297,8 @@ export class YourModuleClass {}`
     ut porttitor at, rutrum sit amet ipsum. Etiam at molestie odio. Quisque
     viverra erat maximus metus vulputate, ut sodales enim tincidunt. Etiam
     et turpis cursus, sagittis est id, pharetra nibh.
-  </youi-expansion-youi-menu-item>
-</youi-expansion-youi-menu-item>`
+  </youi-expansion-menu-item>
+</youi-expansion-menu-item>`
       }
     ]
   },
@@ -307,21 +307,21 @@ export class YourModuleClass {}`
     examples: [
       {
         title: 'component.html',
-        code: `<youi-expansion-youi-menu-item titleLabel="Level 0" [contentInsetLevel]="1">
-  <youi-expansion-youi-menu-item titleLabel="Level 1" [contentInsetLevel]="1">
-    <youi-expansion-youi-menu-item titleLabel="Level 2" [contentInsetLevel]="1">
+        code: `<youi-expansion-menu-item titleLabel="Level 0" [contentInsetLevel]="1">
+  <youi-expansion-menu-item titleLabel="Level 1" [contentInsetLevel]="1">
+    <youi-expansion-menu-item titleLabel="Level 2" [contentInsetLevel]="1">
       <youi-menu-item titleLabel="Level 3"></youi-menu-item>
-    </youi-expansion-youi-menu-item>
-  </youi-expansion-youi-menu-item>
-</youi-expansion-youi-menu-item>
+    </youi-expansion-menu-item>
+  </youi-expansion-menu-item>
+</youi-expansion-menu-item>
 
-<youi-expansion-youi-menu-item titleLabel="Level 0" preIconName="navigate_next" [contentInsetLevel]="1">
-  <youi-expansion-youi-menu-item
+<youi-expansion-menu-item titleLabel="Level 0" preIconName="navigate_next" [contentInsetLevel]="1">
+  <youi-expansion-menu-item
     titleLabel="Level 1"
     [contentInsetLevel]="1"
     preIconName="navigate_next"
   >
-    <youi-expansion-youi-menu-item
+    <youi-expansion-menu-item
       titleLabel="Level 2"
       [contentInsetLevel]="1"
       preIconName="navigate_next"
@@ -331,12 +331,12 @@ export class YourModuleClass {}`
         preIconName="navigate_next"
       >
       </youi-menu-item>
-    </youi-expansion-youi-menu-item>
-  </youi-expansion-youi-menu-item>
-</youi-expansion-youi-menu-item>
+    </youi-expansion-menu-item>
+  </youi-expansion-menu-item>
+</youi-expansion-menu-item>
 
-<youi-expansion-youi-menu-item titleLabel="Level 0" preIconName="navigate_next">
-  <youi-expansion-youi-menu-item
+<youi-expansion-menu-item titleLabel="Level 0" preIconName="navigate_next">
+  <youi-expansion-menu-item
     contentCSSClass="p-2"
     titleLabel="Level 1"
     [headerInsetLevel]="1"
@@ -353,8 +353,8 @@ export class YourModuleClass {}`
     ut porttitor at, rutrum sit amet ipsum. Etiam at molestie odio.
     Quisque viverra erat maximus metus vulputate, ut sodales enim
     tincidunt. Etiam et turpis cursus, sagittis est id, pharetra nibh.
-  </youi-expansion-youi-menu-item>
-</youi-expansion-youi-menu-item>`
+  </youi-expansion-menu-item>
+</youi-expansion-menu-item>`
       }
     ]
   },
@@ -363,21 +363,21 @@ export class YourModuleClass {}`
     examples: [
       {
         title: 'component.html',
-        code: `<youi-expansion-youi-menu-item titleLabel="Level 0" preIconName="room">
+        code: `<youi-expansion-menu-item titleLabel="Level 0" preIconName="room">
   <youi-menu-item titleLabel="Level 1" [insetLevel]="1"> </youi-menu-item>
-  <youi-expansion-youi-menu-item titleLabel="Level 1" [headerInsetLevel]="1">
+  <youi-expansion-menu-item titleLabel="Level 1" [headerInsetLevel]="1">
     <youi-menu-item titleLabel="Level 2" [insetLevel]="2"> </youi-menu-item>
-  </youi-expansion-youi-menu-item>
-  <youi-expansion-youi-menu-item
+  </youi-expansion-menu-item>
+  <youi-expansion-menu-item
     titleLabel="Level 1"
     [headerInsetLevel]="1"
     preIconName="room"
   >
     <youi-menu-item titleLabel="Level 2" [insetLevel]="2"> </youi-menu-item>
-  </youi-expansion-youi-menu-item>
-</youi-expansion-youi-menu-item>
+  </youi-expansion-menu-item>
+</youi-expansion-menu-item>
 
-<youi-expansion-youi-menu-item
+<youi-expansion-menu-item
   titleLabel="Level 0"
   preIconName="room"
   [isActive]="true"
@@ -393,18 +393,18 @@ export class YourModuleClass {}`
     activeCSSClass="text-blue-500"
   >
   </youi-menu-item>
-  <youi-expansion-youi-menu-item
+  <youi-expansion-menu-item
     titleLabel="Level 1"
     [headerInsetLevel]="1"
     preIconName="room"
   >
     <youi-menu-item titleLabel="Level 2" [insetLevel]="2" preIconName="pets">
     </youi-menu-item>
-  </youi-expansion-youi-menu-item>
-  <youi-expansion-youi-menu-item titleLabel="Level 1" [headerInsetLevel]="1">
+  </youi-expansion-menu-item>
+  <youi-expansion-menu-item titleLabel="Level 1" [headerInsetLevel]="1">
     <youi-menu-item titleLabel="Level 2" [insetLevel]="2"> </youi-menu-item>
-  </youi-expansion-youi-menu-item>
-</youi-expansion-youi-menu-item>`
+  </youi-expansion-menu-item>
+</youi-expansion-menu-item>`
       },
       {
         title: 'component.css',
@@ -419,7 +419,7 @@ export class YourModuleClass {}`
     examples: [
       {
         title: 'component.html',
-        code: `<youi-expansion-youi-menu-item>
+        code: `<youi-expansion-menu-item>
   <youi-menu-item
     titleLabel="Level 1"
     preIconName="snowshoeing"
@@ -450,7 +450,7 @@ export class YourModuleClass {}`
       <span class="text-rose-700 font-bold">Append</span>
     </div>
   </ng-template>
-</youi-expansion-youi-menu-item>`
+</youi-expansion-menu-item>`
       },
       {
         title: 'component.css',

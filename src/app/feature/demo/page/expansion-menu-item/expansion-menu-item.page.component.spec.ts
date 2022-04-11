@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExpansionMenuItemPageComponent } from './youi-expansion-youi-menu-item.page.component';
+import { ExpansionMenuItemPageComponent } from './youi-expansion-menu-item.page.component';
 
 describe('ExpansionMenuItemPageComponent', () => {
   let component: ExpansionMenuItemPageComponent;

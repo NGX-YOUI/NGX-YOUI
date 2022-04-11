@@ -9,10 +9,10 @@ const routes: Routes = [
   {
     path: 'user',
     children: [
-      { path: 'list', component: UserListComponent },
-      { path: 'create', component: UserCreateComponent },
-      { path: 'edit/:id', component: UserEditComponent },
-      { path: 'read/:id', component: UserReadComponent }
+      { path: 'list', component: UserListComponent, data: { title: 'NGX-YOUI - User List' } },
+      { path: 'create', component: UserCreateComponent, data: { title: 'NGX-YOUI - Add User' } },
+      { path: 'edit/:id', component: UserEditComponent, data: { title: 'NGX-YOUI - Edit User' } },
+      { path: 'read/:id', component: UserReadComponent, data: { title: 'NGX-YOUI - Browse User' } }
     ]
   }
 ]

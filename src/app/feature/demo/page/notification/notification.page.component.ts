@@ -1,4 +1,6 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 import { NotificationService, NotificationPositionEnum } from 'ngx-youi';
 import { NotificationSample } from './notification.page.sample';
 
@@ -15,9 +17,12 @@ export class NotifyPageComponent implements OnInit {
   @ViewChild('notifyContent', { static: false }) notifyContent: TemplateRef<any>
   @ViewChild('notifyClose', { static: false }) notifyClose: TemplateRef<any>
 
-  constructor(private notificationService: NotificationService) { }
+  constructor(private notificationService: NotificationService
+            , private route: ActivatedRoute
+            , private titleService: Title) { }
 
   ngOnInit() {
+    this.titleService.setTitle(this.route.snapshot.data['title'])
   }
 
   showSuccessNotify () {

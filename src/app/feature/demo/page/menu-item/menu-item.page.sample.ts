@@ -232,7 +232,7 @@ export class YourModuleClass {}`
     examples: [
       {
         title: 'component.html',
-        code: `<youi-expansion-youi-menu-item
+        code: `<youi-expansion-menu-item
   titleLabel="Level 0"
   preIconName="room"
 >
@@ -241,7 +241,7 @@ export class YourModuleClass {}`
     [insetLevel]="1"
   >
   </youi-menu-item>
-  <youi-expansion-youi-menu-item
+  <youi-expansion-menu-item
     titleLabel="Level 1"
     [headerInsetLevel]="1"
   >
@@ -250,8 +250,8 @@ export class YourModuleClass {}`
       [insetLevel]="2"
     >
     </youi-menu-item>
-  </youi-expansion-youi-menu-item>
-  <youi-expansion-youi-menu-item
+  </youi-expansion-menu-item>
+  <youi-expansion-menu-item
     titleLabel="Level 1"
     [headerInsetLevel]="1"
     preIconName="room"
@@ -262,10 +262,10 @@ export class YourModuleClass {}`
       preIconName="room"
     >
     </youi-menu-item>
-  </youi-expansion-youi-menu-item>
-</youi-expansion-youi-menu-item>
+  </youi-expansion-menu-item>
+</youi-expansion-menu-item>
 
-<youi-expansion-youi-menu-item
+<youi-expansion-menu-item
   titleLabel="Level 0"
   preIconName="room"
   [isActive]="true"
@@ -285,7 +285,7 @@ export class YourModuleClass {}`
     activeCSSClass="text-blue-500"
   >
   </youi-menu-item>
-  <youi-expansion-youi-menu-item
+  <youi-expansion-menu-item
     titleLabel="Level 1"
     [headerInsetLevel]="1"
     preIconName="room"
@@ -296,8 +296,8 @@ export class YourModuleClass {}`
       preIconName="pets"
     >
     </youi-menu-item>
-  </youi-expansion-youi-menu-item>
-  <youi-expansion-youi-menu-item
+  </youi-expansion-menu-item>
+  <youi-expansion-menu-item
     titleLabel="Level 1"
     [headerInsetLevel]="1"
   >
@@ -306,8 +306,8 @@ export class YourModuleClass {}`
       [insetLevel]="2"
     >
     </youi-menu-item>
-  </youi-expansion-youi-menu-item>
-</youi-expansion-youi-menu-item>`
+  </youi-expansion-menu-item>
+</youi-expansion-menu-item>`
       },
       {
         title: 'component.css',

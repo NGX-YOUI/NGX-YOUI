@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 import { IOption } from 'ngx-youi'
 import { SelectSample } from './select.page.sample';
 
@@ -17,8 +19,10 @@ export class SelectPageComponent implements OnInit {
 
   ngModelBinding = 0
 
-  constructor() { }
+  constructor(private route: ActivatedRoute
+    , private titleService: Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle(this.route.snapshot.data['title'])
   }
 }

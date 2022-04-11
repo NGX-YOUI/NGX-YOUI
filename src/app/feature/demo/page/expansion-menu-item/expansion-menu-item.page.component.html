@@ -31,12 +31,12 @@
     <app-code-tab [sample]="sampleCode.basic"></app-code-tab>
 
     <div class="space-y-2">
-      <youi-expansion-youi-menu-item titleLabel="Area 1" preIconName="home">
+      <youi-expansion-menu-item titleLabel="Area 1" preIconName="home">
         <youi-menu-item titleLabel="Page 1" [insetLevel]="1"> </youi-menu-item>
         <youi-menu-item titleLabel="Page 2" [insetLevel]="1"> </youi-menu-item>
-      </youi-expansion-youi-menu-item>
+      </youi-expansion-menu-item>
 
-      <youi-expansion-youi-menu-item
+      <youi-expansion-menu-item
         titleLabel="Area 2"
         preIconName="person"
         lastIconName="flash_off"
@@ -44,9 +44,9 @@
       >
         <youi-menu-item titleLabel="Page 1" [insetLevel]="1"> </youi-menu-item>
         <youi-menu-item titleLabel="Page 2" [insetLevel]="1"> </youi-menu-item>
-      </youi-expansion-youi-menu-item>
+      </youi-expansion-menu-item>
 
-      <youi-expansion-youi-menu-item
+      <youi-expansion-menu-item
         headerCSSClass="bg-gray-200"
         contentCSSClass="p-3 bg-gray-100"
         titleLabel="Lorem ipsum dolor"
@@ -62,9 +62,9 @@
         ut porttitor at, rutrum sit amet ipsum. Etiam at molestie odio. Quisque
         viverra erat maximus metus vulputate, ut sodales enim tincidunt. Etiam
         et turpis cursus, sagittis est id, pharetra nibh.
-      </youi-expansion-youi-menu-item>
+      </youi-expansion-menu-item>
 
-      <youi-expansion-youi-menu-item
+      <youi-expansion-menu-item
         headerCSSClass="bg-gray-200"
         contentCSSClass="p-3 bg-gray-100"
         titleLabel="Lorem ipsum dolor"
@@ -81,7 +81,7 @@
         ut porttitor at, rutrum sit amet ipsum. Etiam at molestie odio. Quisque
         viverra erat maximus metus vulputate, ut sodales enim tincidunt. Etiam
         et turpis cursus, sagittis est id, pharetra nibh.
-      </youi-expansion-youi-menu-item>
+      </youi-expansion-menu-item>
     </div>
   </div>
 
@@ -95,7 +95,7 @@
     <app-code-tab [sample]="sampleCode.style"></app-code-tab>
 
     <div class="space-y-2">
-      <youi-expansion-youi-menu-item
+      <youi-expansion-menu-item
         class="custom-lorem-expansion"
         titleLabel="Custom Lorem Expansion"
         headerCSSClass="custom-lorem-expansion-header"
@@ -111,9 +111,9 @@
         ut porttitor at, rutrum sit amet ipsum. Etiam at molestie odio. Quisque
         viverra erat maximus metus vulputate, ut sodales enim tincidunt. Etiam
         et turpis cursus, sagittis est id, pharetra nibh.
-      </youi-expansion-youi-menu-item>
+      </youi-expansion-menu-item>
 
-      <youi-expansion-youi-menu-item
+      <youi-expansion-menu-item
         titleLabel="Custom Style"
         headerCSSClass="custom-expansion-menu-header"
         contentCSSClass="custom-expansion-menu-content"
@@ -123,9 +123,9 @@
         </youi-menu-item>
         <youi-menu-item titleLabel="Page 2" [insetLevel]="1" preIconName="add">
         </youi-menu-item>
-      </youi-expansion-youi-menu-item>
+      </youi-expansion-menu-item>
 
-      <youi-expansion-youi-menu-item
+      <youi-expansion-menu-item
         titleLabel="Custom Style (Active)"
         headerCSSClass="custom-expansion-menu-header"
         headerActiveCSSClass="custom-expansion-menu-header-active"
@@ -137,9 +137,9 @@
         </youi-menu-item>
         <youi-menu-item titleLabel="Page 2" [insetLevel]="1" preIconName="add">
         </youi-menu-item>
-      </youi-expansion-youi-menu-item>
+      </youi-expansion-menu-item>
 
-      <youi-expansion-youi-menu-item
+      <youi-expansion-menu-item
         titleLabel="Custom Style (Disabled)"
         headerCSSClass="custom-expansion-menu-header"
         headerActiveCSSClass="custom-expansion-menu-header-active"
@@ -151,7 +151,7 @@
         </youi-menu-item>
         <youi-menu-item titleLabel="Page 2" [insetLevel]="1" preIconName="add">
         </youi-menu-item>
-      </youi-expansion-youi-menu-item>
+      </youi-expansion-menu-item>
     </div>
   </div>
 
@@ -164,16 +164,16 @@
 
     <app-code-tab [sample]="sampleCode.collapsedBinding"></app-code-tab>
     
-    <youi-expansion-youi-menu-item
+    <youi-expansion-menu-item
       titleLabel="Default Open"
       [(collapsed)]="collapsed"
       preIconName="tips_and_updates"
     >
       <youi-menu-item titleLabel="Page 1" [insetLevel]="1"> </youi-menu-item>
       <youi-menu-item titleLabel="Page 2" [insetLevel]="1"> </youi-menu-item>
-    </youi-expansion-youi-menu-item>
+    </youi-expansion-menu-item>
 
-    <youi-expansion-youi-menu-item
+    <youi-expansion-menu-item
       titleLabel="Default Open (disabled)"
       [disabled]="true"
       [(collapsed)]="collapsed"
@@ -181,16 +181,16 @@
     >
       <youi-menu-item titleLabel="Page 1" [insetLevel]="1"> </youi-menu-item>
       <youi-menu-item titleLabel="Page 2" [insetLevel]="1"> </youi-menu-item>
-    </youi-expansion-youi-menu-item>
+    </youi-expansion-menu-item>
 
-    <youi-expansion-youi-menu-item
+    <youi-expansion-menu-item
       titleLabel="Default Closed"
       [(collapsed)]="collapsed2"
       preIconName="bedtime_off"
     >
       <youi-menu-item titleLabel="Page 1" [insetLevel]="1"> </youi-menu-item>
       <youi-menu-item titleLabel="Page 2" [insetLevel]="1"> </youi-menu-item>
-    </youi-expansion-youi-menu-item>
+    </youi-expansion-menu-item>
   </div>
 
   <div class="card p-4">
@@ -202,21 +202,21 @@
 
     <app-code-tab [sample]="sampleCode.headerInsetLevel"></app-code-tab>
 
-    <youi-expansion-youi-menu-item titleLabel="Level 0">
-      <youi-expansion-youi-menu-item titleLabel="Level 1" [headerInsetLevel]="1">
-        <youi-expansion-youi-menu-item titleLabel="Level 2" [headerInsetLevel]="2">
+    <youi-expansion-menu-item titleLabel="Level 0">
+      <youi-expansion-menu-item titleLabel="Level 1" [headerInsetLevel]="1">
+        <youi-expansion-menu-item titleLabel="Level 2" [headerInsetLevel]="2">
           <youi-menu-item titleLabel="Level 3" [insetLevel]="3"> </youi-menu-item>
-        </youi-expansion-youi-menu-item>
-      </youi-expansion-youi-menu-item>
-    </youi-expansion-youi-menu-item>
+        </youi-expansion-menu-item>
+      </youi-expansion-menu-item>
+    </youi-expansion-menu-item>
 
-    <youi-expansion-youi-menu-item titleLabel="Level 0" preIconName="navigate_next">
-      <youi-expansion-youi-menu-item
+    <youi-expansion-menu-item titleLabel="Level 0" preIconName="navigate_next">
+      <youi-expansion-menu-item
         titleLabel="Level 1"
         [headerInsetLevel]="1"
         preIconName="navigate_next"
       >
-        <youi-expansion-youi-menu-item
+        <youi-expansion-menu-item
           titleLabel="Level 2"
           [headerInsetLevel]="2"
           preIconName="navigate_next"
@@ -227,12 +227,12 @@
             preIconName="navigate_next"
           >
           </youi-menu-item>
-        </youi-expansion-youi-menu-item>
-      </youi-expansion-youi-menu-item>
-    </youi-expansion-youi-menu-item>
+        </youi-expansion-menu-item>
+      </youi-expansion-menu-item>
+    </youi-expansion-menu-item>
 
-    <youi-expansion-youi-menu-item titleLabel="Level 0" preIconName="navigate_next">
-      <youi-expansion-youi-menu-item
+    <youi-expansion-menu-item titleLabel="Level 0" preIconName="navigate_next">
+      <youi-expansion-menu-item
         titleLabel="Level 1"
         [headerInsetLevel]="1"
         preIconName="navigate_next"
@@ -247,8 +247,8 @@
         ut porttitor at, rutrum sit amet ipsum. Etiam at molestie odio. Quisque
         viverra erat maximus metus vulputate, ut sodales enim tincidunt. Etiam
         et turpis cursus, sagittis est id, pharetra nibh.
-      </youi-expansion-youi-menu-item>
-    </youi-expansion-youi-menu-item>
+      </youi-expansion-menu-item>
+    </youi-expansion-menu-item>
   </div>
 
   <div class="card p-4">
@@ -261,21 +261,21 @@
     <app-code-tab [sample]="sampleCode.contentInsetLevel"></app-code-tab>
 
     <div class="space-y-2">
-      <youi-expansion-youi-menu-item titleLabel="Level 0" [contentInsetLevel]="1">
-        <youi-expansion-youi-menu-item titleLabel="Level 1" [contentInsetLevel]="1">
-          <youi-expansion-youi-menu-item titleLabel="Level 2" [contentInsetLevel]="1">
+      <youi-expansion-menu-item titleLabel="Level 0" [contentInsetLevel]="1">
+        <youi-expansion-menu-item titleLabel="Level 1" [contentInsetLevel]="1">
+          <youi-expansion-menu-item titleLabel="Level 2" [contentInsetLevel]="1">
             <youi-menu-item titleLabel="Level 3"></youi-menu-item>
-          </youi-expansion-youi-menu-item>
-        </youi-expansion-youi-menu-item>
-      </youi-expansion-youi-menu-item>
+          </youi-expansion-menu-item>
+        </youi-expansion-menu-item>
+      </youi-expansion-menu-item>
 
-      <youi-expansion-youi-menu-item titleLabel="Level 0" preIconName="navigate_next" [contentInsetLevel]="1">
-        <youi-expansion-youi-menu-item
+      <youi-expansion-menu-item titleLabel="Level 0" preIconName="navigate_next" [contentInsetLevel]="1">
+        <youi-expansion-menu-item
           titleLabel="Level 1"
           [contentInsetLevel]="1"
           preIconName="navigate_next"
         >
-          <youi-expansion-youi-menu-item
+          <youi-expansion-menu-item
             titleLabel="Level 2"
             [contentInsetLevel]="1"
             preIconName="navigate_next"
@@ -285,12 +285,12 @@
               preIconName="navigate_next"
             >
             </youi-menu-item>
-          </youi-expansion-youi-menu-item>
-        </youi-expansion-youi-menu-item>
-      </youi-expansion-youi-menu-item>
+          </youi-expansion-menu-item>
+        </youi-expansion-menu-item>
+      </youi-expansion-menu-item>
 
-      <youi-expansion-youi-menu-item titleLabel="Level 0" preIconName="navigate_next">
-        <youi-expansion-youi-menu-item
+      <youi-expansion-menu-item titleLabel="Level 0" preIconName="navigate_next">
+        <youi-expansion-menu-item
           contentCSSClass="p-2"
           titleLabel="Level 1"
           [headerInsetLevel]="1"
@@ -307,8 +307,8 @@
           ut porttitor at, rutrum sit amet ipsum. Etiam at molestie odio.
           Quisque viverra erat maximus metus vulputate, ut sodales enim
           tincidunt. Etiam et turpis cursus, sagittis est id, pharetra nibh.
-        </youi-expansion-youi-menu-item>
-      </youi-expansion-youi-menu-item>
+        </youi-expansion-menu-item>
+      </youi-expansion-menu-item>
     </div>
   </div>
 
@@ -322,21 +322,21 @@
     <app-code-tab [sample]="sampleCode.withMenu"></app-code-tab>
 
     <div class="space-y-2">
-      <youi-expansion-youi-menu-item titleLabel="Level 0" preIconName="room">
+      <youi-expansion-menu-item titleLabel="Level 0" preIconName="room">
         <youi-menu-item titleLabel="Level 1" [insetLevel]="1"> </youi-menu-item>
-        <youi-expansion-youi-menu-item titleLabel="Level 1" [headerInsetLevel]="1">
+        <youi-expansion-menu-item titleLabel="Level 1" [headerInsetLevel]="1">
           <youi-menu-item titleLabel="Level 2" [insetLevel]="2"> </youi-menu-item>
-        </youi-expansion-youi-menu-item>
-        <youi-expansion-youi-menu-item
+        </youi-expansion-menu-item>
+        <youi-expansion-menu-item
           titleLabel="Level 1"
           [headerInsetLevel]="1"
           preIconName="room"
         >
           <youi-menu-item titleLabel="Level 2" [insetLevel]="2"> </youi-menu-item>
-        </youi-expansion-youi-menu-item>
-      </youi-expansion-youi-menu-item>
+        </youi-expansion-menu-item>
+      </youi-expansion-menu-item>
 
-      <youi-expansion-youi-menu-item
+      <youi-expansion-menu-item
         titleLabel="Level 0"
         preIconName="room"
         [isActive]="true"
@@ -352,18 +352,18 @@
           activeCSSClass="text-blue-500"
         >
         </youi-menu-item>
-        <youi-expansion-youi-menu-item
+        <youi-expansion-menu-item
           titleLabel="Level 1"
           [headerInsetLevel]="1"
           preIconName="room"
         >
           <youi-menu-item titleLabel="Level 2" [insetLevel]="2" preIconName="pets">
           </youi-menu-item>
-        </youi-expansion-youi-menu-item>
-        <youi-expansion-youi-menu-item titleLabel="Level 1" [headerInsetLevel]="1">
+        </youi-expansion-menu-item>
+        <youi-expansion-menu-item titleLabel="Level 1" [headerInsetLevel]="1">
           <youi-menu-item titleLabel="Level 2" [insetLevel]="2"> </youi-menu-item>
-        </youi-expansion-youi-menu-item>
-      </youi-expansion-youi-menu-item>
+        </youi-expansion-menu-item>
+      </youi-expansion-menu-item>
     </div>
   </div>
 
@@ -376,7 +376,7 @@
 
     <app-code-tab [sample]="sampleCode.template"></app-code-tab>
 
-    <youi-expansion-youi-menu-item>
+    <youi-expansion-menu-item>
       <youi-menu-item
         titleLabel="Level 1"
         preIconName="snowshoeing"
@@ -407,6 +407,6 @@
           <span class="text-rose-700 font-bold">Append</span>
         </div>
       </ng-template>
-    </youi-expansion-youi-menu-item>
+    </youi-expansion-menu-item>
   </div>
 </div>
