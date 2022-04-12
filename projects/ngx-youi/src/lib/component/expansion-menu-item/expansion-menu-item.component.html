@@ -13,9 +13,9 @@
       <div class="youi-expansion-menu-item__header__left-title" *ngIf="titleLabel && !title">{{titleLabel}}</div>
       <ng-container *ngTemplateOutlet="title"></ng-container>
     </div>
-    <div class="expansion-menu-item__header__right">
-      <span *ngIf="lastIconName && !append" class="expansion-menu-item__header__right-icon material-icons">{{ collapsed ? lastIconName : lastOpenIconName || lastIconName }}</span>
-      <span *ngIf="!lastIconName && !append" class="expansion-menu-item__header__right-icon material-icons" [class.expansion-menu-item__header__right-icon--open]="!collapsed">expand_more</span>
+    <div class="youi-expansion-menu-item__header__right">
+      <span *ngIf="lastIconName && !append" class="youi-expansion-menu-item__header__right-icon material-icons">{{ collapsed ? lastIconName : lastOpenIconName || lastIconName }}</span>
+      <span *ngIf="!lastIconName && !append" class="youi-expansion-menu-item__header__right-icon material-icons" [class.youi-expansion-menu-item__header__right-icon--open]="!collapsed">expand_more</span>
       <ng-container *ngTemplateOutlet="append"></ng-container>
     </div>
   </button>
@@ -23,7 +23,7 @@
     class="youi-expansion-menu-item__content"
     [@contentExpansion]="collapsed ? 'collapsed' : 'expanded'"
   >
-    <div class="expansion-menu-item__content__inner" [ngClass]="contentCSSClass" [ngStyle]="contentInsetStyle">
+    <div class="youi-expansion-menu-item__content__inner" [ngClass]="contentCSSClass" [ngStyle]="contentInsetStyle">
       <ng-content></ng-content>
     </div>
   </div>
