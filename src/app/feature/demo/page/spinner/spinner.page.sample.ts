@@ -5,6 +5,24 @@ export const SpinnerSample: {[key:string]: ICodeTab } = {
     expanded: true,
     examples: [
       {
+        title: 'angular.json',
+        code: `"architect": {
+  ...,
+  "build": {
+    ...,
+    "options": {"
+      "assets": {
+        {
+          "glob": "**/*",
+          "input": "./node_modules/svg-loaders/svg-smil-loaders",
+          "output": "/assets/svg-loaders/"
+        }
+      }
+    }
+  }
+}`
+      },
+      {
         title: 'style.css',
         code: `@import '~ngx-youi/style/component/spinner.css';`
       },

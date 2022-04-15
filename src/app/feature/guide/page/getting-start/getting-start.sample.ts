@@ -10,6 +10,29 @@ export const GettingStartSample: { [key:string]: ICodeTab } = {
       }
     ]
   },
+  importSvgLoaders: {
+    expanded: true,
+    examples: [
+      {
+        title: 'angular.json',
+        code: `"architect": {
+  ...,
+  "build": {
+    ...,
+    "options": {"
+      "assets": {
+        {
+          "glob": "**/*",
+          "input": "./node_modules/svg-loaders/svg-smil-loaders",
+          "output": "/assets/svg-loaders/"
+        }
+      }
+    }
+  }
+}`
+      }
+    ]
+  },
   importAllCss: {
     expanded: true,
     examples: [

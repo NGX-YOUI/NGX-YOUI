@@ -20,6 +20,26 @@ https://www.npmjs.com/package/ngx-youi
 npm i ngx-youi --save
 ```
 
+## Import SVG Loaders
+### Append Below setting in "YOUR_PROJECT.architect.build.options.assets" of angular.json
+```
+architect": {
+  ...,
+  "build": {
+    ...,
+    "options": {"
+      "assets": {
+        {
+          "glob": "**/*",
+          "input": "./node_modules/svg-loaders/svg-smil-loaders",
+          "output": "/assets/svg-loaders/"
+        }
+      }
+    }
+  }
+}
+```
+
 ## Import CSS
 ### Import a CSS file for all components
 ```css
