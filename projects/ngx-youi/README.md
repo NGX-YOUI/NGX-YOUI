@@ -1,7 +1,7 @@
 # NGX-YOUI
 
 NGX-YOUI is an Angular UI Library that can be <strong>highly customized with content and styles.</strong>
-You can easily integrate with other CSS frameworks, such as Tailwind or Bootstrap.
+You can easily integrate with other CSS frameworks and UI Library, such as Tailwind, Bootstrap, PrimeNG, Angular Material etc.
 
 1. Customize the presentation content of components through ng-template or dynamic custom components.
 1. Customize the rendering style of the component through CSSClass properties.
@@ -12,22 +12,20 @@ https://ngx-youi.github.io/NGX-YOUI/
 ## Demo
 https://ngx-youi.github.io/NGX-YOUI/auth/user/list
 
-## NPM
-https://www.npmjs.com/package/ngx-youi
-
-## How To Install
+## Getting Start
+### How To Install
 ```
 npm i ngx-youi --save
 ```
 
-## Import SVG Loaders
-### Append Below setting in "YOUR_PROJECT.architect.build.options.assets" of angular.json
+### Import SVG Loaders
+#### Append Below setting in "YOUR_PROJECT.architect.build.options.assets" of angular.json
 ```
 architect": {
   ...,
   "build": {
     ...,
-    "options": {"
+    "options": {
       "assets": {
         {
           "glob": "**/*",
@@ -40,23 +38,26 @@ architect": {
 }
 ```
 
-## Import CSS
-### Import a CSS file for all components
+### Import CSS
+#### Import a CSS file for all components
 ```css
 /* style.css */
 
 @import '~ngx-youi/style/index.css';
 ```
 
-### Import a CSS file for a single component
+#### Import a CSS file for a single component
 ```css
 /* style.css */
+
+/* import youi-common.css before import css of component */
+@import "./youi-common.css";
 
 @import '~ngx-youi/style/component/breadcrumb.css';
 ```
 
-## Import Module
-### Import a module file for all components
+### Import Module
+#### Import a module file for all components
 ```ts
 // app.module.ts
 
@@ -70,7 +71,7 @@ import { NgxYouiModule } from "ngx-youi"
 export class AppModule {}
 ```
 
-### Import a module file for a single component
+#### Import a module file for a single component
 ```ts
 // app.module.ts
 

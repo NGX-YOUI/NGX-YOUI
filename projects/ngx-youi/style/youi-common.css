@@ -1,0 +1,6 @@
+@import "~@angular/cdk/overlay-prebuilt.css";
+@import "./material-icons.css";
+
+.cdk-overlay-pane {
+  max-height: initial;
+}

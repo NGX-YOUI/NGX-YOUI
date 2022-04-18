@@ -1,5 +1,4 @@
-@import "~@angular/cdk/overlay-prebuilt.css";
-@import "./material-icons.css";
+@import "./youi-common.css";
 
 @import './component/breadcrumb.css';
 @import './component/datatable.css';
@@ -13,6 +12,3 @@
 @import './component/dialog.css';
 @import './component/tab.css';
 
-.cdk-overlay-pane {
-  max-height: initial;
-}
