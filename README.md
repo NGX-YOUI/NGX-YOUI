@@ -1,5 +1,14 @@
 # NGX-YOUI
 
+<a href="https://www.npmjs.com/package/ngx-youi">
+  <img src="https://img.shields.io/npm/v/ngx-youi.svg" alt="npm">
+</a>
+
+<a href="LICENSE">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT">
+</a>
+
+
 NGX-YOUI is an Angular UI Library that can be <strong>highly customized with content and styles.</strong>
 You can easily integrate with other CSS frameworks and UI Library, such as Tailwind, Bootstrap, PrimeNG, Angular Material etc.
 
