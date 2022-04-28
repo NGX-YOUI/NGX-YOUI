@@ -19,7 +19,7 @@ export class BreadcrumbComponent implements OnInit {
  @Input() separatorType: 'text' | 'icon' = 'text'
  @Input() separatorSpace: string = '10px'
 
- @ContentChild('separatorTemp', { static: false }) separatorTemp: TemplateRef<any>
+ @ContentChild('separatorTemplate', { static: false }) separatorTemplate: TemplateRef<any>
  @ContentChildren(BreadcrumbItemComponent) breadcrumbItems: QueryList<BreadcrumbItemComponent>
  
  @Input() iconCSSClass: string = '';

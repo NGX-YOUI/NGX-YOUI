@@ -94,7 +94,7 @@ export class YourModuleClass {}`
 <youi-breadcrumb separator="→">
   <youi-breadcrumb-item icon="home"> One </youi-breadcrumb-item>
   <youi-breadcrumb-item icon="maps_home_work"> Two </youi-breadcrumb-item>
-  <youi-breadcrumb-item con="format_list_numbered"> Three </youi-breadcrumb-item>
+  <youi-breadcrumb-item icon="format_list_numbered"> Three </youi-breadcrumb-item>
 </youi-breadcrumb>
 
 <youi-breadcrumb separatorType="icon" separator="play_arrow">
@@ -130,12 +130,22 @@ export class YourModuleClass {}`
       {
         title: 'component.html',
         code: `<youi-breadcrumb>
-  <ng-template #separatorTemp>
-    <div class="p-2 bg-green-200 text-green-700">separatorTemp</div>
+  <ng-template #separatorTemplate>
+    <div class="p-2 bg-green-200 text-green-700">separatorTemplate</div>
   </ng-template>
-  
-  <youi-breadcrumb-item icon="home"> One </youi-breadcrumb-item>
-  <youi-breadcrumb-item icon="maps_home_work"> Two </youi-breadcrumb-item>
+
+  <youi-breadcrumb-item>
+      <ng-template #iconTemplate>
+        <span class="p-2 bg-yellow-200 text-yellow-700">iconTemplate</span>
+      </ng-template>
+      One
+  </youi-breadcrumb-item>
+  <youi-breadcrumb-item>
+    <ng-template #iconTemplate>
+      <span class="p-2 bg-yellow-200 text-yellow-700">iconTemplate</span>
+    </ng-template>
+    Two
+  </youi-breadcrumb-item>
   <youi-breadcrumb-item icon="format_list_numbered"> Three </youi-breadcrumb-item>
 </youi-breadcrumb>`
       },

@@ -1,12 +1,13 @@
 <div class="youi-breadcrumb-item-content" [ngClass]="itemCSSClass">
-  <i class="material-icons youi-breadcrumb-item__icon" [ngClass]="[breadcrumb.iconCSSClass]" *ngIf="icon">{{ icon }}</i>
+  <i class="material-icons youi-breadcrumb-item__icon" [ngClass]="[breadcrumb.iconCSSClass]" *ngIf="icon && !iconTemplate">{{ icon }}</i>
+  <span class="youi-breadcrumb-item__icon"><ng-container *ngTemplateOutlet="iconTemplate"></ng-container></span>
   <ng-content></ng-content>
 </div>
 
-<div class="youi-breadcrumb_item_sperator" [ngClass]="breadcrumb.speratorCSSClass" [ngStyle]="separatorSpace"  *ngIf="breadcrumb.breadcrumbItems.last !== this && (breadcrumb.separator || breadcrumb.separatorTemp)">
-  <span class="youi-breadcrumb_item_sperator_inner" *ngIf="!breadcrumb.separatorTemp">
+<div class="youi-breadcrumb_item_sperator" [ngClass]="breadcrumb.speratorCSSClass" [ngStyle]="separatorSpace"  *ngIf="breadcrumb.breadcrumbItems.last !== this && (breadcrumb.separator || breadcrumb.separatorTemplate)">
+  <span class="youi-breadcrumb_item_sperator_inner" *ngIf="!breadcrumb.separatorTemplate">
     <ng-container *ngIf="breadcrumb.separatorType === 'text'">{{ breadcrumb.separator }}</ng-container>
     <i *ngIf="breadcrumb.separatorType === 'icon'" class="material-icons">{{ breadcrumb.separator }}</i>
   </span>
-  <ng-container *ngTemplateOutlet="breadcrumb.separatorTemp"></ng-container>
+  <ng-container *ngTemplateOutlet="breadcrumb.separatorTemplate"></ng-container>
 </div>

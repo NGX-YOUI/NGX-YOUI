@@ -1,3 +1,4 @@
+import { ContentChild, TemplateRef } from '@angular/core';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -17,6 +18,7 @@ import type { BreadcrumbComponent } from '../breadcrumb.component';
 })
 export class BreadcrumbItemComponent implements OnInit {
   @Input() icon: string;
+  @ContentChild('iconTemplate', { static: false }) iconTemplate: TemplateRef<any>
 
   constructor(@Inject(ABSTRACT_INJECT) public breadcrumb: BreadcrumbComponent) {}
 
