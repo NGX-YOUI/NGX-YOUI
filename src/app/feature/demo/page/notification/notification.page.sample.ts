@@ -124,7 +124,7 @@ export class YourComponentClass {
         contentCSSClass: 'custom-notification-content',
         closeCSSClass: 'custom-youi-notification-close'
       }
-    }, null)
+    })
   }
 }`
       }
@@ -156,7 +156,7 @@ export class YourComponentClass {
       styles: {
         wrapperClass: 'bg-gray-500 text-white'
       }
-    }, null)
+    })
   }
 }`
       }
@@ -355,7 +355,7 @@ export class YourComponentClass {
         contentTemplate: this.notifyContent,
         closeTemplate: this.notifyClose
       }
-    }, null)
+    })
     
     this.notificationService.basic(NotificationPositionEnum.topRight, {
       timeout: 5000,
@@ -372,7 +372,7 @@ export class YourComponentClass {
         contentCSSClass: 'text-blue-700 text-md',
         closeCSSClass: 'text-blue-700'
       }
-    }, null)
+    })
   }
 }`
       }

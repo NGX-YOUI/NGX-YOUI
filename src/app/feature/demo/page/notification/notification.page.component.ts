@@ -75,7 +75,7 @@ export class NotifyPageComponent implements OnInit {
         contentCSSClass: 'custom-notification-content',
         closeCSSClass: 'custom-youi-notification-close'
       }
-    }, null)
+    })
   }
 
   showNotifyPosition (position: string) {
@@ -85,7 +85,7 @@ export class NotifyPageComponent implements OnInit {
       styles: {
         wrapperClass: 'bg-gray-500 text-white'
       }
-    }, null)
+    })
   }
 
   showTimeoutNotify (timeout?: number) {
@@ -118,7 +118,7 @@ export class NotifyPageComponent implements OnInit {
         contentTemplate: this.notifyContent,
         closeTemplate: this.notifyClose
       }
-    }, null)
+    })
     
     this.notificationService.basic(NotificationPositionEnum.topRight, {
       timeout: 5000,
@@ -135,6 +135,6 @@ export class NotifyPageComponent implements OnInit {
         contentCSSClass: 'text-blue-700 text-md',
         closeCSSClass: 'text-blue-700'
       }
-    }, null)
+    })
   }
 }
