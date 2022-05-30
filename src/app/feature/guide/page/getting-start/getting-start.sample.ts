@@ -48,8 +48,7 @@ export const GettingStartSample: { [key:string]: ICodeTab } = {
       { 
         title: 'style.css',
         code: `/* import youi-common.css before import css of component */
-@import "./youi-common.css";
-
+@import "~ngx-youi/style/youi-common.css";
 @import '~ngx-youi/style/component/breadcrumb.css';`
       }
     ]
