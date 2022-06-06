@@ -10,6 +10,8 @@ youi-notification {
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   font-size: 14px;
+  word-break: break-word;
+  white-space: pre-wrap;
 }
 
 .youi-notification-icon {
