@@ -129,13 +129,6 @@ export class DialogService {
     return containerRef.instance;
   }
 
-  // private attachComponent<T extends DialogBase> (componentRef: ComponentRef<T>) {
-  //   this.appRef.attachView(componentRef.hostView);
-    
-  //   const componentEl = (componentRef.hostView as EmbeddedViewRef<any>).rootNodes[0]
-  //   document.append(componentEl)
-  // }
-
   private createOverlay(hasBackdrop: boolean, backdropClass: string) {
     const positionStrategy = this.overlay.position()
       .global()
