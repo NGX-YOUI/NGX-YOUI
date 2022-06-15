@@ -98,24 +98,6 @@ architect": {
 }
 ```
 
-### Preload material-icons font to \<head> of index.html
-```html
-<!doctype html>
-<html>
-  <head>
-    <!-- Material icon -->
-    <link rel="preload" href="assets/material-icons/iconfont/material-icons.woff" as="font" crossorigin>
-    <link rel="preload" href="assets/material-icons/iconfont/material-icons-outlined.woff" as="font" crossorigin>
-    <link rel="preload" href="assets/material-icons/iconfont/material-icons-round.woff" as="font" crossorigin>
-    <link rel="preload" href="assets/material-icons/iconfont/material-icons-sharp.woff" as="font" crossorigin>
-    <link rel="preload" href="assets/material-icons/iconfont/material-icons.woff2" as="font" crossorigin>
-    <link rel="preload" href="assets/material-icons/iconfont/material-icons-outlined.woff2" as="font" crossorigin>
-    <link rel="preload" href="assets/material-icons/iconfont/material-icons-round.woff2" as="font" crossorigin>
-    <link rel="preload" href="assets/material-icons/iconfont/material-icons-sharp.woff2" as="font" crossorigin>
-  </head>
-</html>
-```
-
 ### Import CSS
 #### Import a CSS file for all components
 ```css

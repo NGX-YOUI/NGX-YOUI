@@ -21,8 +21,6 @@ https://ngx-youi.github.io/NGX-YOUI/
 ## Demo
 https://ngx-youi.github.io/NGX-YOUI/auth/user/list
 
-## NPM
-https://www.npmjs.com/package/ngx-youi
 
 ## Getting Start
 ### How To Install
@@ -71,6 +69,9 @@ architect": {
     <link rel="preload" href="assets/material-icons/iconfont/material-icons-round.woff2" as="font" crossorigin>
     <link rel="preload" href="assets/material-icons/iconfont/material-icons-sharp.woff2" as="font" crossorigin>
   </head>
+  <body>
+    <app-root></app-root>
+  </body>
 </html>
 ```
 
@@ -95,28 +96,6 @@ architect": {
 }
 ```
 
-### Preload material-icons font to \<head> of index.html
-```html
-<!doctype html>
-<html>
-  <head>
-    <!-- Material icon -->
-    <link rel="preload" href="assets/material-icons/iconfont/material-icons.woff" as="font" crossorigin>
-    <link rel="preload" href="assets/material-icons/iconfont/material-icons-outlined.woff" as="font" crossorigin>
-    <link rel="preload" href="assets/material-icons/iconfont/material-icons-round.woff" as="font" crossorigin>
-    <link rel="preload" href="assets/material-icons/iconfont/material-icons-sharp.woff" as="font" crossorigin>
-    <link rel="preload" href="assets/material-icons/iconfont/material-icons.woff2" as="font" crossorigin>
-    <link rel="preload" href="assets/material-icons/iconfont/material-icons-outlined.woff2" as="font" crossorigin>
-    <link rel="preload" href="assets/material-icons/iconfont/material-icons-round.woff2" as="font" crossorigin>
-    <link rel="preload" href="assets/material-icons/iconfont/material-icons-sharp.woff2" as="font" crossorigin>
-  </head>
-
-  <body>
-    <app-root></app-root>
-  </body>
-</html>
-```
-
 ### Import CSS
 #### Import a CSS file for all components
 ```css
@@ -125,7 +104,7 @@ architect": {
 @import '~ngx-youi/style/index.css';
 ```
 
-#### Import a CSS file for a single component
+#### Import a CSS file for a single component (Tree Shaking)
 ```css
 /* style.css */
 
@@ -149,7 +128,7 @@ import { NgxYouiModule } from "ngx-youi"
 export class AppModule {}
 ```
 
-#### Import a module file for a single component
+#### Import a module file for a single component (Tree Shaking)
 ```ts
 // app.module.ts
 
