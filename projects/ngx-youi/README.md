@@ -1,5 +1,14 @@
 # NGX-YOUI
 
+<a href="https://www.npmjs.com/package/ngx-youi">
+  <img src="https://img.shields.io/npm/v/ngx-youi.svg" alt="npm">
+</a>
+
+<a href="LICENSE">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT">
+</a>
+
+
 NGX-YOUI is an Angular UI Library that can be <strong>highly customized with content and styles.</strong>
 You can easily integrate with other CSS frameworks and UI Library, such as Tailwind, Bootstrap, PrimeNG, Angular Material etc.
 
@@ -12,11 +21,59 @@ https://ngx-youi.github.io/NGX-YOUI/
 ## Demo
 https://ngx-youi.github.io/NGX-YOUI/auth/user/list
 
+## NPM
+https://www.npmjs.com/package/ngx-youi
+
 ## Getting Start
 ### How To Install
 ```
 npm i ngx-youi --save
 ```
+
+### Import Material Icon font
+#### Append Below setting in "YOUR_PROJECT.architect.build.options.assets" of angular.json
+```
+architect": {
+  ...,
+  "build": {
+    ...,
+    "options": {
+      "assets": {
+        {
+          "glob": "**/*.woff",
+          "input": "./node_modules/material-icons/iconfont",
+          "output": "/assets/material-icons/iconfont"
+        },
+        {
+          "glob": "**/*.woff2",
+          "input": "./node_modules/material-icons/iconfont",
+          "output": "/assets/material-icons/iconfont"
+        }
+      }
+    }
+  }
+}
+```
+
+#### Preload Material Icon Font in \<head> of index.html
+```
+<!doctype html>
+<html>
+  <head>
+    ...  
+    <!-- Material icon -->
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-outlined.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-round.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-sharp.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons.woff2" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-outlined.woff2" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-round.woff2" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-sharp.woff2" as="font" crossorigin>
+  </head>
+</html>
+```
+
 
 ### Import SVG Loaders
 #### Append Below setting in "YOUR_PROJECT.architect.build.options.assets" of angular.json
@@ -36,6 +93,28 @@ architect": {
     }
   }
 }
+```
+
+### Preload material-icons font to \<head> of index.html
+```html
+<!doctype html>
+<html>
+  <head>
+    <!-- Material icon -->
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-outlined.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-round.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-sharp.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons.woff2" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-outlined.woff2" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-round.woff2" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-sharp.woff2" as="font" crossorigin>
+  </head>
+
+  <body>
+    <app-root></app-root>
+  </body>
+</html>
 ```
 
 ### Import CSS

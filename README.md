@@ -30,6 +30,54 @@ https://www.npmjs.com/package/ngx-youi
 npm i ngx-youi --save
 ```
 
+### Import Material Icon font
+#### Append Below setting in "YOUR_PROJECT.architect.build.options.assets" of angular.json
+```
+architect": {
+  ...,
+  "build": {
+    ...,
+    "options": {
+      "assets": {
+        {
+          "glob": "**/*.woff",
+          "input": "./node_modules/material-icons/iconfont",
+          "output": "/assets/material-icons/iconfont"
+        },
+        {
+          "glob": "**/*.woff2",
+          "input": "./node_modules/material-icons/iconfont",
+          "output": "/assets/material-icons/iconfont"
+        }
+      }
+    }
+  }
+}
+```
+
+#### Preload Material Icon Font in \<head> of index.html
+```
+<!doctype html>
+<html>
+  <head>
+    ...  
+    <!-- Material icon -->
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-outlined.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-round.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-sharp.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons.woff2" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-outlined.woff2" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-round.woff2" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-sharp.woff2" as="font" crossorigin>
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
+</html>
+```
+
+
 ### Import SVG Loaders
 #### Append Below setting in "YOUR_PROJECT.architect.build.options.assets" of angular.json
 ```
@@ -48,6 +96,24 @@ architect": {
     }
   }
 }
+```
+
+### Preload material-icons font to \<head> of index.html
+```html
+<!doctype html>
+<html>
+  <head>
+    <!-- Material icon -->
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-outlined.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-round.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-sharp.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons.woff2" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-outlined.woff2" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-round.woff2" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-sharp.woff2" as="font" crossorigin>
+  </head>
+</html>
 ```
 
 ### Import CSS

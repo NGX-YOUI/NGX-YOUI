@@ -10,7 +10,7 @@ export const GettingStartSample: { [key:string]: ICodeTab } = {
       }
     ]
   },
-  importSvgLoaders: {
+  importMaterialIcon: { 
     expanded: true,
     examples: [
       {
@@ -21,11 +21,62 @@ export const GettingStartSample: { [key:string]: ICodeTab } = {
     ...,
     "options": {
       "assets": {
+        ... ,
+        {
+          "glob": "**/*.woff",
+          "input": "./node_modules/material-icons/iconfont",
+          "output": "/assets/material-icons/iconfont"
+        },
+        {
+          "glob": "**/*.woff2",
+          "input": "./node_modules/material-icons/iconfont",
+          "output": "/assets/material-icons/iconfont"
+        }
+      }
+    }
+  }
+}`
+      },
+      {
+        title: 'index.html',
+        code: `<!doctype html>
+<html>
+  <head>
+    ...     
+    <!-- Material icon -->
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-outlined.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-round.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-sharp.woff" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons.woff2" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-outlined.woff2" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-round.woff2" as="font" crossorigin>
+    <link rel="preload" href="assets/material-icons/iconfont/material-icons-sharp.woff2" as="font" crossorigin>
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
+</html>`
+      }
+    ]
+  },
+  importSvgLoadersAndIcon: {
+    expanded: true,
+    examples: [
+      {
+        title: 'angular.json',
+        code: `"architect": {
+  ...,
+  "build": {
+    ...,
+    "options": {
+      "assets": {
+        ... ,
         {
           "glob": "**/*",
           "input": "./node_modules/svg-loaders/svg-smil-loaders",
           "output": "/assets/svg-loaders/"
-        }
+        },
       }
     }
   }

@@ -1,6 +1,6 @@
 {
   "name": "ngx-youi",
-  "version": "0.5.3",
+  "version": "0.6.0",
   "description": "NGX-YOUI is a Highly customizable library of Angular UI components for content and styles",
   "author": "Ted Chang",
   "keywords": [
@@ -8,6 +8,7 @@
     "frontend",
     "angular",
     "angular 13",
+    "angular 14",
     "ngx",
     "ivy",
     "typescript",

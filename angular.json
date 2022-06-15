@@ -41,6 +41,16 @@
                 "glob": "**/*",
                 "input": "./node_modules/svg-loaders/svg-smil-loaders",
                 "output": "/assets/svg-loaders/"
+              },
+              {
+                "glob": "**/*.woff",
+                "input": "./node_modules/material-icons/iconfont",
+                "output": "/assets/material-icons/iconfont"
+              },
+              {
+                "glob": "**/*.woff2",
+                "input": "./node_modules/material-icons/iconfont",
+                "output": "/assets/material-icons/iconfont"
               }
             ],
             "stylePreprocessorOptions": {
