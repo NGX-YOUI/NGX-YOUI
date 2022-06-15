@@ -124,7 +124,7 @@ architect": {
 @import '~ngx-youi/style/index.css';
 ```
 
-#### Import a CSS file for a single component
+#### Import a CSS file for a single component (Tree Shaking)
 ```css
 /* style.css */
 
@@ -148,7 +148,7 @@ import { NgxYouiModule } from "ngx-youi"
 export class AppModule {}
 ```
 
-#### Import a module file for a single component
+#### Import a module file for a single component (Tree Shaking)
 ```ts
 // app.module.ts
 
