@@ -1,18 +1,19 @@
 <div class="page-wrapper">
   <youi-breadcrumb class="card breadcrumb">
-    <youi-breadcrumb-item>
-      UI Component
-    </youi-breadcrumb-item>
-    <youi-breadcrumb-item>
-      dropdown
-    </youi-breadcrumb-item>
+    <youi-breadcrumb-item>UI Component</youi-breadcrumb-item>
+    <youi-breadcrumb-item>dropdown</youi-breadcrumb-item>
   </youi-breadcrumb>
 
   <div class="card p-4">
     <div class="card-title">
       <span>Setup</span>
 
-      <button class="code-btn material-icons" (click)="sampleCode.setup.expanded = !sampleCode.setup.expanded">code</button>
+      <button
+        class="code-btn material-icons"
+        (click)="sampleCode.setup.expanded = !sampleCode.setup.expanded"
+      >
+        code
+      </button>
     </div>
 
     <app-code-tab [sample]="sampleCode.setup"></app-code-tab>
@@ -29,12 +30,23 @@
     <div class="card-title">
       <span>Basic</span>
 
-      <button class="code-btn material-icons" (click)="sampleCode.basic.expanded = !sampleCode.basic.expanded">code</button>
+      <button
+        class="code-btn material-icons"
+        (click)="sampleCode.basic.expanded = !sampleCode.basic.expanded"
+      >
+        code
+      </button>
     </div>
 
     <app-code-tab [sample]="sampleCode.basic"></app-code-tab>
 
-    <button class="btn btn-orange" youi-dropdown-trigger [targetDropdown]="dropdown">click</button>
+    <button
+      class="btn btn-orange"
+      youi-dropdown-trigger
+      [targetDropdown]="dropdown"
+    >
+      click
+    </button>
     <youi-dropdown-menu #dropdown="youiDropdownMenu">
       <youi-menu-item youi-dropdown-item titleLabel="item 1"></youi-menu-item>
       <youi-menu-item youi-dropdown-item titleLabel="item 2"></youi-menu-item>
@@ -46,17 +58,49 @@
     <div class="card-title">
       <span>Position</span>
 
-      <button class="code-btn material-icons" (click)="sampleCode.position.expanded = !sampleCode.position.expanded">code</button>
+      <button
+        class="code-btn material-icons"
+        (click)="sampleCode.position.expanded = !sampleCode.position.expanded"
+      >
+        code
+      </button>
     </div>
 
     <app-code-tab [sample]="sampleCode.position"></app-code-tab>
-    
+
     <div class="space-x-3">
-      <button class="btn btn-red" youi-dropdown-trigger [targetDropdown]="dropdown2">Left Down(Default)</button>
-      <button class="btn btn-yellow" youi-dropdown-trigger [targetDropdown]="dropdown2" position="rightBottom">Right Bottom</button>
-      <button class="btn btn-blue" youi-dropdown-trigger [targetDropdown]="dropdown2" position="leftTop">Left top</button>
-      <button class="btn btn-green" youi-dropdown-trigger [targetDropdown]="dropdown2" position="rightTop">Right top</button>
-    
+      <button
+        class="btn btn-red"
+        youi-dropdown-trigger
+        [targetDropdown]="dropdown2"
+      >
+        Left Down(Default)
+      </button>
+      <button
+        class="btn btn-yellow"
+        youi-dropdown-trigger
+        [targetDropdown]="dropdown2"
+        position="rightBottom"
+      >
+        Right Bottom
+      </button>
+      <button
+        class="btn btn-blue"
+        youi-dropdown-trigger
+        [targetDropdown]="dropdown2"
+        position="leftTop"
+      >
+        Left top
+      </button>
+      <button
+        class="btn btn-green"
+        youi-dropdown-trigger
+        [targetDropdown]="dropdown2"
+        position="rightTop"
+      >
+        Right top
+      </button>
+
       <youi-dropdown-menu #dropdown2="youiDropdownMenu">
         <youi-menu-item youi-dropdown-item titleLabel="item 1"></youi-menu-item>
         <youi-menu-item youi-dropdown-item titleLabel="item 2"></youi-menu-item>
@@ -69,17 +113,29 @@
     <div class="card-title">
       <span>Style</span>
 
-      <button class="code-btn material-icons" (click)="sampleCode.style.expanded = !sampleCode.style.expanded">code</button>
+      <button
+        class="code-btn material-icons"
+        (click)="sampleCode.style.expanded = !sampleCode.style.expanded"
+      >
+        code
+      </button>
     </div>
 
     <app-code-tab [sample]="sampleCode.style"></app-code-tab>
 
     <div class="space-x-3">
-      <button class="btn btn-gray" youi-dropdown-trigger [targetDropdown]="dropdown3">Style Dropdown</button>
-      <youi-dropdown-menu #dropdown3="youiDropdownMenu" dropdownCSSClass="custom-dropdown">
-        <div class="custom-dropdown-title">
-          Title
-        </div>
+      <button
+        class="btn btn-gray"
+        youi-dropdown-trigger
+        [targetDropdown]="dropdown3"
+      >
+        Style Dropdown
+      </button>
+      <youi-dropdown-menu
+        #dropdown3="youiDropdownMenu"
+        dropdownCSSClass="custom-dropdown"
+      >
+        <div class="custom-dropdown-title">Title</div>
         <youi-menu-item youi-dropdown-item titleLabel="item 1"></youi-menu-item>
         <youi-menu-item youi-dropdown-item titleLabel="item 2"></youi-menu-item>
         <youi-menu-item titleLabel="item 3 (not close)"></youi-menu-item>
@@ -91,24 +147,53 @@
     <div class="card-title">
       <span>Sub Menu</span>
 
-      <button class="code-btn material-icons" (click)="sampleCode.subMenu.expanded = !sampleCode.subMenu.expanded">code</button>
+      <button
+        class="code-btn material-icons"
+        (click)="sampleCode.subMenu.expanded = !sampleCode.subMenu.expanded"
+      >
+        code
+      </button>
     </div>
 
     <app-code-tab [sample]="sampleCode.subMenu"></app-code-tab>
 
     <div class="space-x-3">
-      <button class="btn btn-cyan" youi-dropdown-trigger [targetDropdown]="dropdown4">Sub Dropdown</button>
+      <button
+        class="btn btn-cyan"
+        youi-dropdown-trigger
+        [targetDropdown]="dropdown4"
+      >
+        Sub Dropdown
+      </button>
 
       <youi-dropdown-menu #dropdown4="youiDropdownMenu">
-        <youi-menu-item youi-dropdown-trigger [targetDropdown]="dropdown4_2" position="right" leftRight="right" titleLabel="item 1"></youi-menu-item>
-        
+        <youi-menu-item
+          youi-dropdown-trigger
+          [targetDropdown]="dropdown4_2"
+          position="right"
+          leftRight="right"
+          titleLabel="item 1"
+        ></youi-menu-item>
+
         <youi-dropdown-menu #dropdown4_2="youiDropdownMenu">
-          <youi-menu-item youi-dropdown-trigger titleLabel="sub_item 1_1" [targetDropdown]="dropdown4_3" position="right" leftRight="right">
+          <youi-menu-item
+            youi-dropdown-trigger
+            titleLabel="sub_item 1_1"
+            [targetDropdown]="dropdown4_3"
+            position="right"
+            leftRight="right"
+          >
           </youi-menu-item>
-          <youi-menu-item youi-dropdown-item titleLabel="sub_item 1_2"></youi-menu-item>
+          <youi-menu-item
+            youi-dropdown-item
+            titleLabel="sub_item 1_2"
+          ></youi-menu-item>
 
           <youi-dropdown-menu #dropdown4_3="youiDropdownMenu">
-            <youi-menu-item youi-dropdown-item titleLabel="sub_item 1_1_1"></youi-menu-item>
+            <youi-menu-item
+              youi-dropdown-item
+              titleLabel="sub_item 1_1_1"
+            ></youi-menu-item>
           </youi-dropdown-menu>
         </youi-dropdown-menu>
       </youi-dropdown-menu>
@@ -119,13 +204,24 @@
     <div class="card-title">
       <span>Context Menu</span>
 
-      <button class="code-btn material-icons" (click)="sampleCode.contextMenu.expanded = !sampleCode.contextMenu.expanded">code</button>
+      <button
+        class="code-btn material-icons"
+        (click)="
+          sampleCode.contextMenu.expanded = !sampleCode.contextMenu.expanded
+        "
+      >
+        code
+      </button>
     </div>
 
     <app-code-tab [sample]="sampleCode.contextMenu"></app-code-tab>
 
-    <div class="h-[150px] cursor-pointer border border-solid border-gray-300 flex justify-center items-center" 
-         youi-dropdown-trigger [targetDropdown]="dropdown5" [contextMode]="true">
+    <div
+      class="h-[150px] cursor-pointer border border-solid border-gray-300 flex justify-center items-center"
+      youi-dropdown-trigger
+      [targetDropdown]="dropdown5"
+      [contextMode]="true"
+    >
       Click right mouse
     </div>
     <youi-dropdown-menu #dropdown5="youiDropdownMenu">

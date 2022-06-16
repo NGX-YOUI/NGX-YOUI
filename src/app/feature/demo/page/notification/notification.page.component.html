@@ -1,18 +1,19 @@
 <div class="page-wrapper">
   <youi-breadcrumb class="card breadcrumb">
-    <youi-breadcrumb-item>
-      UI Component
-    </youi-breadcrumb-item>
-    <youi-breadcrumb-item>
-      Notification
-    </youi-breadcrumb-item>
+    <youi-breadcrumb-item>UI Component</youi-breadcrumb-item>
+    <youi-breadcrumb-item>Notification</youi-breadcrumb-item>
   </youi-breadcrumb>
 
   <div class="card p-4">
     <div class="card-title">
       <span>Setup</span>
 
-      <button class="code-btn material-icons" (click)="sampleCode.setup.expanded = !sampleCode.setup.expanded">code</button>
+      <button
+        class="code-btn material-icons"
+        (click)="sampleCode.setup.expanded = !sampleCode.setup.expanded"
+      >
+        code
+      </button>
     </div>
 
     <app-code-tab [sample]="sampleCode.setup"></app-code-tab>
@@ -29,17 +30,31 @@
     <div class="card-title">
       <span>Style</span>
 
-      <button class="code-btn material-icons" (click)="sampleCode.style.expanded = !sampleCode.style.expanded">code</button>
+      <button
+        class="code-btn material-icons"
+        (click)="sampleCode.style.expanded = !sampleCode.style.expanded"
+      >
+        code
+      </button>
     </div>
 
     <app-code-tab [sample]="sampleCode.style"></app-code-tab>
 
     <div class="space-x-2">
-      <button class="btn btn-green" (click)="showSuccessNotify()">success</button>
+      <button class="btn btn-green" (click)="showSuccessNotify()">
+        success
+      </button>
       <button class="btn btn-cyan" (click)="showInfoNotify()">info</button>
-      <button class="btn btn-yellow" (click)="showWarningNotify()">warning</button>
+      <button class="btn btn-yellow" (click)="showWarningNotify()">
+        warning
+      </button>
       <button class="btn btn-red" (click)="showDangerNotify()">danger</button>
-      <button class="btn btn-red bg-red-200 text-black" (click)="showCustomNotify()">custom</button>
+      <button
+        class="btn btn-red bg-red-200 text-black"
+        (click)="showCustomNotify()"
+      >
+        custom
+      </button>
     </div>
   </div>
 
@@ -47,20 +62,37 @@
     <div class="card-title">
       <span>Position</span>
 
-      <button class="code-btn material-icons" (click)="sampleCode.position.expanded = !sampleCode.position.expanded">code</button>
+      <button
+        class="code-btn material-icons"
+        (click)="sampleCode.position.expanded = !sampleCode.position.expanded"
+      >
+        code
+      </button>
     </div>
 
     <app-code-tab [sample]="sampleCode.position"></app-code-tab>
 
     <div class="space-x-2">
-      <button class="btn btn-gray" (click)="showNotifyPosition('topLeft')">topLeft</button>
-      <button class="btn btn-gray" (click)="showNotifyPosition('topCenter')">topCenter</button>
-      <button class="btn btn-gray" (click)="showNotifyPosition('topRight')">topRight</button>
+      <button class="btn btn-gray" (click)="showNotifyPosition('topLeft')">
+        topLeft
+      </button>
+      <button class="btn btn-gray" (click)="showNotifyPosition('topCenter')">
+        topCenter
+      </button>
+      <button class="btn btn-gray" (click)="showNotifyPosition('topRight')">
+        topRight
+      </button>
     </div>
     <div class="space-x-2">
-      <button class="btn btn-gray" (click)="showNotifyPosition('bottomLeft')">bottomLeft</button>
-      <button class="btn btn-gray" (click)="showNotifyPosition('bottomCenter')">bottomCenter</button>
-      <button class="btn btn-gray" (click)="showNotifyPosition('bottomRight')">bottomRight</button>
+      <button class="btn btn-gray" (click)="showNotifyPosition('bottomLeft')">
+        bottomLeft
+      </button>
+      <button class="btn btn-gray" (click)="showNotifyPosition('bottomCenter')">
+        bottomCenter
+      </button>
+      <button class="btn btn-gray" (click)="showNotifyPosition('bottomRight')">
+        bottomRight
+      </button>
     </div>
   </div>
 
@@ -68,15 +100,24 @@
     <div class="card-title">
       <span>Timeout (ms)</span>
 
-      <button class="code-btn material-icons" (click)="sampleCode.timeout.expanded = !sampleCode.timeout.expanded">code</button>
+      <button
+        class="code-btn material-icons"
+        (click)="sampleCode.timeout.expanded = !sampleCode.timeout.expanded"
+      >
+        code
+      </button>
     </div>
 
     <app-code-tab [sample]="sampleCode.timeout"></app-code-tab>
 
     <div class="space-x-2">
       <button class="btn btn-cyan" (click)="showTimeoutNotify(3000)">3s</button>
-      <button class="btn btn-cyan" (click)="showTimeoutNotify(0)">0: forever</button>
-      <button class="btn btn-cyan" (click)="showTimeoutNotify()">default (5s)</button>
+      <button class="btn btn-cyan" (click)="showTimeoutNotify(0)">
+        0: forever
+      </button>
+      <button class="btn btn-cyan" (click)="showTimeoutNotify()">
+        default (5s)
+      </button>
     </div>
   </div>
 
@@ -84,32 +125,48 @@
     <div class="card-title">
       <span>Template</span>
 
-      <button class="code-btn material-icons" (click)="sampleCode.template.expanded = !sampleCode.template.expanded">code</button>
+      <button
+        class="code-btn material-icons"
+        (click)="sampleCode.template.expanded = !sampleCode.template.expanded"
+      >
+        code
+      </button>
     </div>
 
     <app-code-tab [sample]="sampleCode.template"></app-code-tab>
 
     <div class="space-x-2">
-      <button class="btn btn-blue" (click)="showTemplateNotify()">template</button>
+      <button class="btn btn-blue" (click)="showTemplateNotify()">
+        template
+      </button>
     </div>
 
     <ng-template #notifyIcon>
-      <div class="shadow-md p-3 bg-blue-300 text-blue-700 ">iconTemplate</div>
+      <div class="shadow-md p-3 bg-blue-300 text-blue-700">iconTemplate</div>
     </ng-template>
-    
+
     <ng-template #notifyTitle>
-      <div class="shadow-md p-3 bg-rose-300 rounded-sm text-rose-700">titleTemplate</div>
+      <div class="shadow-md p-3 bg-rose-300 rounded-sm text-rose-700">
+        titleTemplate
+      </div>
     </ng-template>
-    
+
     <ng-template #notifyContent>
       <div class="text-gray-500 bg-white mt-1 flex items-center p-2">
-        <span class="material-icons text-3xl animate-spin mr-1">hourglass_empty</span>
+        <span class="material-icons text-3xl animate-spin mr-1"
+          >hourglass_empty</span
+        >
         <span>Content Template</span>
       </div>
     </ng-template>
-    
+
     <ng-template #notifyClose let-notify>
-      <div class="shadow-md p-3 bg-green-200 rounded-sm text-green-700 italic cursor-pointer" (click)="notify.close()">closeTemplate</div>
+      <div
+        class="shadow-md p-3 bg-green-200 rounded-sm text-green-700 italic cursor-pointer"
+        (click)="notify.close()"
+      >
+        closeTemplate
+      </div>
     </ng-template>
   </div>
 </div>
